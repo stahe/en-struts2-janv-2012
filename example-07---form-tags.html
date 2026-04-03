@@ -1,0 +1,1961 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to Struts 2 Through Examples">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/en-struts2-janv-2012/example-07---form-tags.html">
+      
+      
+        <link rel="prev" href="example-06---the-session.html">
+      
+      
+        <link rel="next" href="example-08---tags-associated-with-lists.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>9. Example 07 – Form Tags - An Introduction to Struts 2 Through Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to Struts 2 Through Examples";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-example-07-form-tags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to Struts 2 Through Examples" class="md-header__button md-logo" aria-label="An Introduction to Struts 2 Through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to Struts 2 Through Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9. Example 07 – Form Tags
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/en-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to Struts 2 Through Examples" class="md-nav__button md-logo" aria-label="An Introduction to Struts 2 Through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to Struts 2 Through Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/en-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a-first-example.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. A First Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-02---parameter-injection-into-the-action.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Example 02 – Parameter Injection into the Action
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-03---navigation-keys.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Example 03 – Navigation Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-04---internationalization.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Example 04 – Internationalization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-05---the-input-form.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Example 05 – The Input Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Example 05B – Navigating a Data Entry Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-06---the-session.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Example 06 – The Session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Example 07 – Form Tags
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="example-07---form-tags.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Example 07 – Form Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91-the-netbeans-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1. The NetBeans project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-struts-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. Struts Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-message-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. Message files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-the-formjsp-view-input-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4. The [Form.jsp] view – input section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-the-form-action-input-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5. The [Form] action – input section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96-the-formjsp-view-confirmation-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.6. The [Form.jsp] view – Confirmation section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#97-the-form-action-confirmation-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.7. The [Form] action – confirmation section
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#98-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.8. Tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#99-the-form1-action-and-the-form1jsp-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.9. The [Form1] action and the [Form1.jsp] view
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#910-the-form2-action-and-the-form2jsp-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.10. The [Form2] action and the [Form2.jsp] view
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-08---tags-associated-with-lists.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Example 08 - Tags Associated with Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-09---conversion-and-validation-of-integers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Example 09 - Conversion and validation of integers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-09b---model-validation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Example 09B – Model Validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-10---conversion-and-validation-of-real-numbers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Example 10 – Conversion and validation of real numbers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-11---date-conversion-and-validation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Example 11 – Date Conversion and Validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-12---various-conversions-and-validations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Example 12 – Various Conversions and Validations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-13---the-context-of-an-action.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Example 13 - The context of an action
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-15---struts-2--spring-integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Example 15 – Struts 2 / Spring Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="case-study-struts-2--tiles--spring--hibernate--mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="case-study---version-1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Case Study – Version 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="case-study---version-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Case Study – Version 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheading100511454977699"></a></p>
+<h1 id="9-example-07-form-tags">9. Example 07 – Form Tags</h1>
+<p>We will build and use the following form:</p>
+<p><img src="images/10000000000002450000026D0C92262D.png" style="width:8.64cm;height:9.234cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002450000026D0C92262D.png" /></p>
+<p><img src="images/100000000000015600000163ABE2A084.png" style="width:6.331cm;height:6.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000015600000163ABE2A084.png" /></p>
+<p>We will extend the concept of parameter injection seen for a text input field to other HTML elements in a form.</p>
+<p><a id="refheading100531454977699"></a></p>
+<h2 id="91-the-netbeans-project">9.1. The NetBeans project</h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031F000001CBEAC2C9EE.png" style="display:inline-block; margin:4px;width:10.571cm;height:6.073cm;" class="odt-zoomable" data-zoom-src="images/100000000000031F000001CBEAC2C9EE.png" /></td></tr></table>
+
+<ul>
+  <li>in [1], the project views [<i><b>Formx</b></i>.jsp]
+  </li>
+  <li>in [2], the Struts configuration file and internationalized messages
+  </li>
+  <li>in [3], the actions [<i><b>Formx</b></i>.java], and another Struts configuration file.
+  </li>
+</ul>
+
+<p><a id="refheading100551454977699"></a></p>
+<h2 id="92-struts-configuration">9.2. Struts Configuration</h2>
+<p>The [struts.xml] file is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="odt-code-line">&lt;!DOCTYPE struts PUBLIC</span>
+<span class="odt-code-line">    &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span>
+<span class="odt-code-line">    &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;struts&gt;</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;constant name=&quot;</span><span style="color:#0000ff">struts.custom.i18n.resources</span><span style="color:#800080">&quot; value=&quot;</span><span style="color:#0000ff">messages</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;include file=&quot;</span><span style="color:#0000ff">example/example.xml</span><span style="color:#800080">&quot;/&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;package name=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot; namespace=&quot;</span><span style="color:#0000ff">/</span><span style="color:#800080">&quot; extends=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;default-action-ref name=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result type=&quot;</span><span style="color:#0000ff">redirectAction</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#800080">&lt;param name=&quot;</span><span style="color:#0000ff">actionName</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">Form</span><span style="color:#800080">&lt;/param&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#800080">&lt;param name=&quot;</span><span style="color:#0000ff">namespace</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/example</span><span style="color:#800080">&lt;/param&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;/result&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span>
+<span class="odt-code-line">&lt;/struts&gt;</span>
+</code></pre></div>
+
+<ul>
+  <li>Line 9: Includes another configuration file [example.xml]. This file configures the actions.
+  </li>
+  <li>Lines 11–19: the <i>default</i> package. Defines a redirect address for the URL /. It will be redirected to the URL <i>/example/Form.action</i>.
+  </li>
+</ul>
+
+<p>The [example.xml] file that configures the actions is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="odt-code-line">&lt;!DOCTYPE struts PUBLIC</span>
+<span class="odt-code-line">        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span>
+<span class="odt-code-line">        &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">&lt;struts&gt;</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;package name=&quot;</span><span style="color:#0000ff">example</span><span style="color:#800080">&quot; namespace=&quot;</span><span style="color:#0000ff">/example</span><span style="color:#800080">&quot; extends=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Form</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">example.Form</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/example/Form.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Form1</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">example.Form1</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/example/Form1.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Form2</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">example.Form2</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/example/Form2.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span>
+<span class="odt-code-line">&lt;/struts&gt;</span>
+</code></pre></div>
+
+<ul>
+  <li>Lines 7–17: define the actions <i>/example/Form</i>, <i>/example/Form1</i>, <i>/example/Form2, </i>where <i>/example </i>is the namespace (line 7) and <i>Formx are </i>the actions.
+  </li>
+  <li>lines 8-10: executing the <i>Form</i> action will display the <i>/example/Form.jsp </i>view.
+  </li>
+  <li>lines 11-13: executing the <i>Form1</i> action will display the <i>/example/Form1.jsp </i>view.
+  </li>
+  <li>Lines 14–16: Executing the <i>Form2</i> action will display the <i>/example/Form2.jsp </i>view.
+  </li>
+</ul>
+
+<p><a id="refheading100571454977699"></a></p>
+<h2 id="93-message-files">9.3. Message files</h2>
+<p>We will not dwell on the internationalization of the project. We have already covered this in Example 01. We provide the contents of the [messages.properties] file so that the reader can understand the views that follow.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">francais=French</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">english=English</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">title=Struts 2 - Form Tags</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">message=Struts 2 - form tags</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">langues=langues</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">textfield=1-textfield</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">password=2-password</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">textarea=3-textarea</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">select1=4-select (multiple=false, size=1)</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.select1.header=</span><span style="color:#2a00ff">&lt;-- select1 --&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">select2=5-select (multiple=false, size=3)</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">select3=6-select (multiple=true, size=3)</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.radio =</span><span style="color:#2a00ff"> 7-radio</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.checkbox =</span><span style="color:#2a00ff"> 8-checkbox</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">checkboxlist=9-checkboxlist</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.hidden = 10 </span><span style="color:#2a00ff">- hidden</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.submitText = </span><span style="color:#2a00ff">Submit</span></span>
+<span class="odt-code-line"><span style="color:#000000">Form.</span><span style="color:#2a00ff">buttonRazText=Reset</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">message=Confirm entered values</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">field=field</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">value=value</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">textfield=1-textfield</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">password=2-password</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">textarea=3-textarea</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">select1=4-select (multiple=false, size=1)</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">select2=5-select (multiple=false, size=3)</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">select3=6-select (multiple=true, size=3)</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">radio=7-radio</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">checkbox=8-checkbox</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">checkboxlist=9-checkboxlist</span></span>
+<span class="odt-code-line"><span style="color:#000000">Confirmation.</span><span style="color:#2a00ff">hidden=10-hidden</span></span>
+</code></pre></div>
+
+<p><a id="refheading100591454977699"></a></p>
+<h2 id="94-the-formjsp-view-input-section">9.4. The [Form.jsp] view – input section</h2>
+<p>It looks like this:</p>
+<p><img src="images/10000000000002450000026D0C92262D.png" style="width:8.64cm;height:9.234cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002450000026D0C92262D.png" /></p>
+<p>It is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.title&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:</span><span style="color:#008080">head/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body </span><span style="color:#000000">background=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;/resources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.message&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.langues&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h3</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">id=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">en</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:url</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a </span><span style="color:#000000">href=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.english&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/s:a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">id=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">fr</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:url</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a </span><span style="color:#000000">href=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.francais&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/s:a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;textfield&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot; </span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:password </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;password&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.password&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textarea </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;textarea&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textarea&quot; </span><span style="color:#000000">cols=</span><span style="font-style:italic;color:#2a00ff">&quot;40&quot; </span><span style="color:#000000">rows=</span><span style="font-style:italic;color:#2a00ff">&quot;5&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;select1&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;select1Values&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select1&quot; </span><span style="color:#000000">headerValue=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="font-style:italic;color:#2a00ff">-- select 1 --&gt;&quot; </span><span style="color:#000000">headerKey=</span><span style="font-style:italic;color:#2a00ff">&quot;-1&quot; </span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;select2&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;select2Values&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select2&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;select3&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;select3Values&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select3&quot; </span><span style="color:#000000">multiple=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:radio </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;radio&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;radioValues&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.radio&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkbox </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;checkbox&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkbox&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkboxlist </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlist&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlistValues&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:hidden </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;hidden&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.hidden&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.submitText&quot; </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;submitText&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:form</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;hr/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000"> </span><span style="color:#008080">...</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>The form begins on line 26 and ends on line 38. On line 26, the <i>`action`</i> attribute is missing. This attribute specifies the action to which the form data will be posted. If the <i>`action`</i> attribute is missing, the data will be posted to the action that caused the view to be displayed, in this case the `[Form]` action.
+  </li>
+  <li>Line 27: an input field. The <i>key</i> attribute specifies its label. The <i>name</i> attribute is the name of the parameter that will be posted. The string posted for this field will be in the form:
+  </li>
+</ul>
+
+<p><strong>textfield=text_entered</strong></p>
+<p>The parameter name corresponds to a field in the [Form] action. The value of the <em>text_saisi</em> input field will be injected into the <em>textfield</em> field of the [Form] action. Conversely, if the [Form.jsp] view is displayed following the [Form] action, the value of the input field will be that of the <em>textfield</em> field in the [Form] action. This field is therefore used for both reading and writing. The [Form] class must have the <em>getTextField</em> and <em>setTextField</em> methods for this purpose.</p>
+<p>This reasoning applies to all subsequent input tags. We will not repeat it.</p>
+<ul>
+  <li>Line 28: password entry. The string posted to the [Form] action will be in the form
+  </li>
+</ul>
+
+<p><strong>password=entered_password</strong></p>
+<p>A <em>password</em> field with its get/set methods must exist in the [Form] action.</p>
+<ul>
+  <li>Line 29: Entering multi-line text in a 5-row, 40-column area. The string posted to the [Form] action will be in the form
+  </li>
+</ul>
+
+<p><strong>textarea=input</strong></p>
+<p>A <em>textarea</em> field with its get/set methods must exist in the [Form] action.</p>
+<ul>
+  <li>line 30: a single-select dropdown list (<i>size=1</i>). Only one value from the list can be selected. The string posted to the [Form] action will be in the form:
+  </li>
+</ul>
+
+<p><strong>select1=selected_value</strong></p>
+<p>A <em>select1</em> field with its get/set methods must exist in the [Form] action.</p>
+<p>The <em>key</em> attribute is the label of the list. The <em>list</em> attribute defines the list of values to be placed in the combo box. Here, the <em>getSelect1Values</em> method of the [Form] action will be called to populate the combo box. This method can return a collection, a dictionary, or an array. Here, it will return an array of strings [<em>string1</em>, <em>string2</em>, ...] which will generate the following HTML code:</p>
+<p>&lt;option value=&quot;<em>string1</em>&quot;&gt;<em>string1</em>&lt;/option&gt;</p>
+<p>&lt;option value=&quot;<em>string2</em>&quot;&gt;<em>string2</em>&lt;/option&gt;</p>
+<p>...</p>
+<p>The text between the <em>&lt;option&gt;...&lt;/option&gt;</em> tags will be displayed in the combo box. The <em>value</em> attribute specifies the value to be posted if the option is selected by the user. Here, the <em>value</em> attribute and the text displayed in the combo box are identical. Most often, this is not the case. If the second option is selected, the following string will be posted to the [Form] action:</p>
+<p><strong>select1=string2</strong></p>
+<p>The <em>[Form].select1</em> field will then receive the value <em>string2</em>. Conversely, if at the time the form is displayed, this field is set to <em>string3</em>, then visually, the third element</p>
+<p>&lt;option value=&quot;<em>string3</em>&quot;&gt;<em>string3</em>&lt;/option&gt;</p>
+<p>will appear selected in the combo box.</p>
+<p>The <em>headerValue</em> attribute sets the text to be displayed as the first option in the combo box, and <em>headerKey sets</em> the value to be submitted if this option is selected by the user.</p>
+<ul>
+  <li>Line 31: again, a list of size 3 (<i>size=3</i>): unlike the previous list where only one item is visible, here 3 items from the list will be visible. The selection mode remains the same. Only one item can be selected.
+  </li>
+  <li>Line 32: another list, but this time with multiple selection (<i>multiple=true</i>). In this case, the value posted to the [Form] action will be in the form:
+  </li>
+</ul>
+
+<p><strong>select3=string2&amp;select3=string5</strong></p>
+<p>if the options <em>string2</em> and <em>string5</em> have been selected. When multiple values are posted for the same parameter—in this case, <em>select3</em>—the action must have a field with the parameter’s name and be of type <em>array</em>. So, for example, here the [Form] action could have a field like:</p>
+<p><strong>String[] select3</strong>;</p>
+<p>and the corresponding get/set methods. The <em>select3</em> array will then receive the array of character strings [<em>string2</em>, <em>string5</em>]. Conversely, when the [Form.jsp] view is displayed, the values of the <em>[Form].select3</em> field determine which options in the <em>select3</em> list will appear selected. This is always a read/write operation.</p>
+<ul>
+  <li>Line 33: a group of radio buttons. The group label is provided by the <i>key</i> attribute. The labels of the individual buttons are provided by the <i>list</i> attribute. The value of this attribute is the name of a method in the [Form] action that must return a collection, a dictionary, or an array. Here, the <i>[Form].getRadioValues </i>method will return an array of strings [<i>string1</i>, <i>string2</i>, ...] that will generate the following HTML tags:
+  </li>
+</ul>
+
+<p>&lt;input type=&quot;radio&quot; name=&quot;radio&quot; ... value=&quot;<em>string1</em>&quot;/&gt;<em>string1</em></p>
+<p>&lt;input type=&quot;radio&quot; name=&quot;radio&quot; ... value=&quot;<em>string2</em>&quot;/&gt;<em>string2</em></p>
+<p>...</p>
+<p>If the radio button <em>string2</em> is selected, the posted value will be</p>
+<p><strong>radio=string2</strong></p>
+<p>and this value will be inserted into the <em>[Form].radio</em> field.</p>
+<ul>
+  <li>Line 34: a checkbox. If checked, the following parameter string will be posted to the [Form] action
+  </li>
+</ul>
+
+<p><strong>checkbox=true</strong></p>
+<p>If it is not checked, no parameter string is posted. Struts 2 has an internal mechanism that makes everything happen as if the string</p>
+<p><strong>checkbox=false</strong></p>
+<p>had been posted.</p>
+<ul>
+  <li>Line 35: a list of checkboxes. Multiple checkboxes can be selected. The group label is provided by the <i>key</i> attribute. The labels of the individual checkboxes are provided by the <i>list</i> attribute. The value of this attribute is the name of a method in the [Form] action that must return a collection, a dictionary, or an array. Here, the <i>[Form].getCheckboxlistValues </i>method will return an array of strings [<i>string1</i>, <i>string2</i>, ...] that will generate the following HTML tags:
+  </li>
+</ul>
+
+<p>&lt;input type=&quot;checkbox&quot; name=&quot;checkboxlist&quot; ... value=&quot;<em>string1</em>&quot;/&gt;<em>string1</em></p>
+<p>&lt;input type=&quot;checkbox&quot; name=&quot;checkboxlist&quot; ... value=&quot;<em>string2</em>&quot;/&gt;<em>string2</em></p>
+<p>...</p>
+<p>If the user selects the checkboxes labeled <em>string2</em> and <em>string5</em>, the following string will be posted to the [Form] action:</p>
+<p><strong>checkboxlist=string2&amp;checkboxlist=string5</strong></p>
+<p>The array [<em>string2</em>, <em>string5</em>] will be assigned to the <em>[Form].checkboxlist</em> field, which must therefore be of the string array type, as with multiple-selection lists. Conversely, when the [Form.jsp] view is displayed, the values of the <em>[Form].checkboxlist</em> field determine which checkboxes will be checked.</p>
+<ul>
+  <li>Line 36: a hidden field. A hidden field is a field that is submitted without being entered by the user. Its value is set by the programmer. Here, the hidden field will take its value from the <i>[Form].hidden </i>field. This same value will be submitted in the form:
+  </li>
+</ul>
+
+<p><strong>hidden=something</strong></p>
+<p>and reassigned to the <em>[Form].hidden</em> field.</p>
+<ul>
+  <li>Line 37: a <i>submit</i> button. Clicking this button will post all the form values to the [Form] action. The string of posted parameters will look like this:
+  </li>
+</ul>
+
+<p><strong>textfield=text&amp;password=&amp;textarea=line1%0D%0Aline2%0D%0A&amp;select1=zero&amp;select2=three&amp;select3=zero&amp;select3=two&amp;__multiselect_select3=&amp;radio=blue&amp;checkbox=true&amp;__checkbox_checkbox=true&amp;checkboxlist=v%C3%A9lo&amp;checkboxlist=bus&amp;__multiselect_checkboxlist=&amp;hidden=initial&amp;submitText=Validate</strong></p>
+<p><a id="refheading100611454977699"></a></p>
+<h2 id="95-the-form-action-input-section">9.5. The [Form] action – input section</h2>
+<p>Its code is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold">package </span><span style="color:#000000">example;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">import </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">public class </span><span style="color:#000000">Form </span><span style="font-weight:bold;color:#000000">extends </span><span style="color:#000000">ActionSupport {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// constructor without parameters</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">Form() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// form fields</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String textfield = </span><span style="color:#800000">&quot;text&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String password = </span><span style="color:#800000">&quot;secret&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String textarea = </span><span style="color:#800000">&quot;line1\nline2\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String select1 = </span><span style="color:#800000">&quot;zero&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] select1Values = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;two&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String select2 = </span><span style="color:#800000">&quot;three&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] select2Values = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;two&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;three&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;four&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] select3 = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;two&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] select3Values = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;two&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;three&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;four&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String radio = </span><span style="color:#800000">&quot;blue&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] radioValues = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;blue&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;white&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;red&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">Boolean checkbox = </span><span style="font-weight:bold;color:#000000">false</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] checkboxlist = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;bike&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;bus&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] checkboxlistValues = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;car&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;tram&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;bike&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;bus&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;subway&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String hidden = </span><span style="color:#800000">&quot;initial&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String submitText;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// values selected in the select3 field</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String getSelect3SelectedValues() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">getValue(select3);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// Values selected in the checkboxlist field</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String getCheckboxListSelectedValues() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">getValue(checkboxlist);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// utility method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String getValue(String[] values) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">String result = </span><span style="color:#800000">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(String value : values) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">result += </span><span style="color:#800000">&quot; &quot; </span><span style="color:#000000">+ value;</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">result;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">// Field getters and setters</span><span style="color:#008080"></span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008080">....</span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<ul>
+  <li>line 1: the field associated with the form&#x27;s <i>textfield</i> tag. Used to initialize this input field as well as to retrieve its value.  Receives the value entered in this field at the time of the POST request.
+  </li>
+  <li>line 2: the field associated with the form&#x27;s <i>password</i> tag.  Receives the value entered in this field during the POST request.
+  </li>
+  <li>line 13: associated with the form&#x27;s <i>textarea</i> tag.  Receives the text entered in this field during the POST request.
+  </li>
+  <li>Line 14: Associated with the form’s <i>`select1` </i>tag, a single-select list. Its initial value selects an item from the dropdown. The item with a <i>`value`</i> attribute matching this value will be selected. Upon POST, receives the <i>`value`</i> attribute of the option selected in the dropdown.
+  </li>
+  <li>Line 15: The character strings that will populate the <i>select1</i> dropdown.
+  </li>
+  <li>Lines 16 and 17: Same as <i>select1</i>
+  </li>
+  <li>Line 18: associated with the form’s <i>select1</i> tag, a multi-select list. The initial values in the array select the corresponding elements in the list. The elements whose <i>value</i> attribute matches one of these values will be selected. Upon POST, it receives the <i>value</i> attributes of the various options selected in the dropdown.
+  </li>
+  <li>Line 19: the character strings that will populate the <i>select3</i> list
+  </li>
+  <li>Line 20: Associated with the form’s <i>radio</i> tag. Its value is used to select one of the radio buttons—the one whose <i>value</i> attribute matches this value. Receives the value of the selected radio button during the POST request.
+  </li>
+  <li>Line 21: The various labels and values of the radio buttons.
+  </li>
+  <li>Line 22: Associated with the form’s <i>checkbox</i> tag. Its initial value is used to check or uncheck the box. Upon POST, it receives the value <i>true </i>if the box was checked, <i>false </i>otherwise.
+  </li>
+  <li>Line 23: Associated with the form’s <i>checkboxlist</i> tag. The initial values in the array select the corresponding checkboxes. The checkboxes whose <i>value</i> attribute matches one of these initial values will be checked. Upon POST, receives the <i>value</i> attributes of the various checked checkboxes.
+  </li>
+  <li>Line 24: The strings that will populate the labels of the <i>checkboxlist</i> checkboxes.
+  </li>
+  <li>line 25: associated with <i>the hidden field</i>. Its initial value sets the value of the hidden field. Upon POST, it will receive this same value because the user cannot modify it.
+  </li>
+  <li>Line 26: Associated with the <i>submit</i> tag. During the POST request, it receives the button’s label. This field is optional.
+  </li>
+  <li>The methods in lines 29, 34, and 39 will be discussed further below.
+  </li>
+</ul>
+
+<p><a id="refheading100631454977699"></a></p>
+<h2 id="96-the-formjsp-view-confirmation-section">9.6. The [Form.jsp] view – Confirmation section</h2>
+<p>The [Form.jsp] view has a &quot;Confirmation of entries&quot; section that has not yet been covered:</p>
+<p><img src="images/10000000000001470000019182C7CE73.png" style="width:6.061cm;height:7.43cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001470000019182C7CE73.png" /></p>
+<p>Its code is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">...</span><span style="color:#008080"></span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;hr/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.message&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table </span><span style="color:#000000">border=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">th</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.field&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/th</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">th</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.value&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/th</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;textfield&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.password&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;password&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textarea&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;textarea&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select1&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;select1&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select2&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;select2&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select3&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;select3SelectedValues&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.radio&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;radio&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkbox&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;checkbox&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlistSelectedValues&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.hidden&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;hidden&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>Line 13: displays the value of the <i>[Form].textfield </i>field
+  </li>
+  <li>line 17: displays the value of the <i>[Form].password </i>field
+  </li>
+  <li>line 21: displays the value of the <i>[Form].textarea </i>field
+  </li>
+  <li>line 25: displays the value of the <i>[Form].select1 </i>field
+  </li>
+  <li>line 29: displays the value of the <i>[Form].select2 </i>field
+  </li>
+  <li>Line 33: Displays the values of the <i>[Form].select3 </i>array. To do this, it uses the <i>[Form].getSelect3SelectedValues </i>method.
+  </li>
+  <li>line 37: displays the value of the <i>[Form].radio </i>field
+  </li>
+  <li>line 41: displays the value of the <i>[Form].checkbox </i>field
+  </li>
+  <li>Line 45: Displays the values of the <i>[Form].checkboxlist </i>array. To do this, it uses the <i>[Form].getCheckboxlistSelectedValues </i>method.
+  </li>
+  <li>Line 49: Displays the value of the <i>[Form].hidden </i>field
+  </li>
+</ul>
+
+<p><a id="refheading100651454977699"></a></p>
+<h2 id="97-the-form-action-confirmation-section">9.7. The [Form] action – confirmation section</h2>
+<p>The  <em>getSelect3SelectedValues</em> and  <em>getCheckboxlistSelectedValues</em> methods  mentioned above are defined in the [Form] class:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// selected values in the select3 field</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String getSelect3SelectedValues() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">getValue(select3);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// values selected in the checkboxlist field</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String getCheckboxListSelectedValues() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">getValue(checkboxlist);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// utility method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String getValue(String[] values) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">String result = </span><span style="color:#800000">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(String value : values) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">result += </span><span style="color:#800000">&quot; &quot; </span><span style="color:#000000">+ value;</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">result;</span></span>
+<span class="odt-code-line"><span style="color:#000000">}</span><span style="color:#000000"></span></span>
+</code></pre></div>
+
+<p>They simply concatenate the elements of the arrays they need to display.</p>
+<p><a id="refheading100671454977699"></a></p>
+<h2 id="98-tests">9.8. Tests</h2>
+<p>When the NetBeans project is run, the following initial page is displayed:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052800000345FF63CF2A.png" style="display:inline-block; margin:4px;width:17.463cm;height:11.074cm;" class="odt-zoomable" data-zoom-src="images/100000000000052800000345FF63CF2A.png" /></td></tr></table>
+
+<p>The values displayed in [1] and [2] come from the initial values of the fields in the [Form] action. Let’s look at a few examples:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String textarea = </span><span style="color:#800000">&quot;line1\nline2\n&quot;</span><span style="color:#000000">;</span></span>
+</code></pre></div>
+
+<p>The value of the <em>textarea</em> field explains the displays [1A] and [2A].</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] select3 = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;two&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String[] select3Values = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;two&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;three&quot;</span><span style="color:#000000">, </span><span style="color:#800000">&quot;four&quot;</span><span style="color:#000000">};</span></span>
+</code></pre></div>
+
+<p>The value of the <em>select3Values</em> field explains the content of the list in [1B]. The value of the <em>select3</em> field explains the selected items in [1B] and displayed in [2B].</p>
+<p>If we enter other values in the form and submit it, the entered values will be posted to the corresponding fields of the [Form] action. Then, the [Form.jsp] view will be re-displayed. We are therefore in the same situation as before, except that the initial values have been replaced by the posted values. Here is an example:</p>
+<p><img src="images/100000000000024F0000025497436675.png" style="width:10.13cm;height:10.25cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024F0000025497436675.png" /></p>
+<p><img src="images/100000000000017D00000165E6DCFA9C.png" style="width:7.061cm;height:6.609cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017D00000165E6DCFA9C.png" /></p>
+<p><a id="refheading91628522158564"></a></p>
+<h2 id="99-the-form1-action-and-the-form1jsp-view">9.9. The [Form1] action and the [Form1.jsp] view</h2>
+<p>The configuration file [example.xml] configures the following [Form1] action:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml </span><span style="color:#000000">version=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot; </span><span style="color:#000000">encoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot; </span><span style="color:#008080">?&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#008080">struts </span><span style="color:#808080">PUBLIC</span></span>
+<span class="odt-code-line">        <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line">        <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;example&quot; </span><span style="color:#000000">namespace=</span><span style="font-style:italic;color:#2a00ff">&quot;/example&quot; </span><span style="color:#000000">extends=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/Form.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form1&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Form1&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/Form1.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form2&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Form2&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/Form2.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/package</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/struts</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>Lines 11–13: The call to the [Form1] action generates the [Form1.jsp] view.</p>
+<p>The [Form1] action is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">example;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Form1 </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">ActionSupport{</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// constructor without parameters</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Form1() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// form fields</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Data data = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">Data();</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">/**</span></span>
+<span class="odt-code-line"><span style="color:#3f5fbf">   * </span><span style="font-weight:bold;color:#7f9fbf">@return </span><span style="color:#3f5fbf">the data</span></span>
+<span class="odt-code-line">   */</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Data getData() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">data;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">/**</span></span>
+<span class="odt-code-line"><span style="color:#3f5fbf">   * </span><span style="font-weight:bold;color:#7f9fbf">@param </span><span style="color:#3f5fbf">data the data to set</span></span>
+<span class="odt-code-line">   */</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setData(Data data) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.data = data;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>The [Form1] action is identical to the [Form] action, except that its model part has been moved to a separate class, the [Data] class, line 11. The [Data] class is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">example;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Data {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// constructor without parameters</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Data() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#000000"></span></span>
+<span class="odt-code-line"><span style="color:#3f7f5f">// form fields</span><span style="color:#3f7f5f"></span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String textfield = </span><span style="color:#2a00ff">&quot;text&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String password = </span><span style="color:#2a00ff">&quot;secret&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String textarea = </span><span style="color:#2a00ff">&quot;line1\nline2\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String select1 = </span><span style="color:#2a00ff">&quot;zero&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String[] select1Values = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">String[]{</span><span style="color:#2a00ff">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;two&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String select2 = </span><span style="color:#2a00ff">&quot;three&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String[] select2Values = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">String[]{</span><span style="color:#2a00ff">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;two&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;three&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;four&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String[] select3 = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">String[]{</span><span style="color:#2a00ff">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;two&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String[] select3Values = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">String[]{</span><span style="color:#2a00ff">&quot;zero&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;one&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;two&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;three&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;four&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String radio=</span><span style="color:#2a00ff">&quot;blue&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String[] radioValues = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">String[]{</span><span style="color:#2a00ff">&quot;blue&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;white&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;red&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Boolean checkbox = </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String[] checkboxlist = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">String[]{</span><span style="color:#2a00ff">&quot;bike&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;bus&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String[] checkboxlistValues = </span><span style="font-weight:bold;color:#7f0055">new </span><span style="color:#000000">String[]{</span><span style="color:#2a00ff">&quot;car&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;tram&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;bike&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;bus&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;subway&quot;</span><span style="color:#000000">};</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String hidden = </span><span style="color:#2a00ff">&quot;initial&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String submitText;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// Values selected in the select3 field</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String getSelect3SelectedValues() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">getValue(select3);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// values selected in the checkboxlist field</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String getCheckboxListSelectedValues() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">getValue(checkboxlist);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// utility method</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String getValue(String[] values) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    String result = </span><span style="color:#2a00ff">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">for </span><span style="color:#000000">(String value : values) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">      result += </span><span style="color:#2a00ff">&quot; &quot; </span><span style="color:#000000">+ value;</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">result;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">// getters and setters</span></span>
+<span class="odt-code-line"><span style="color:#3f5fbf">....</span><span style="color:#3f5fbf"></span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>We find the fields previously declared in the [Form] action.</p>
+<p>Quite logically, the [Form1.jsp] view is similar to the [Form.jsp] view:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.title&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:</span><span style="color:#008080">head/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body </span><span style="color:#000000">background=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;/resources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.message&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.langues&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h3</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">id=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">en</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:url</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a </span><span style="color:#000000">href=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.english&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/s:a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">id=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">fr</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:url</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a </span><span style="color:#000000">href=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.francais&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/s:a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.textfield&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot; </span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:password </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.password&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.password&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textarea </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.textarea&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textarea&quot; </span><span style="color:#000000">cols=</span><span style="font-style:italic;color:#2a00ff">&quot;40&quot; </span><span style="color:#000000">rows=</span><span style="font-style:italic;color:#2a00ff">&quot;5&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select1&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select1Values&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select1&quot; </span><span style="color:#000000">headerValue=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="font-style:italic;color:#2a00ff">-- select 1 --&gt;&quot; </span><span style="color:#000000">headerKey=</span><span style="font-style:italic;color:#2a00ff">&quot;-1&quot; </span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select2&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select2Values&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select2&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select3&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select3Values&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select3&quot; </span><span style="color:#000000">multiple=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:radio </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.radio&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;data.radioValues&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.radio&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkbox </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.checkbox&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkbox&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkboxlist </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.checkboxlist&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;data.checkboxlistValues&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:hidden </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.hidden&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.hidden&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.submitText&quot; </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.submitText&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:form</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;hr/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.message&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table </span><span style="color:#000000">border=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">th</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.field&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/th</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">th</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.value&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/th</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.textfield&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.password&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.password&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textarea&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.textarea&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select1&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select1&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select2&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select2&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select3&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.select3SelectedValues&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.radio&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.radio&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkbox&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.checkbox&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.checkboxlistSelectedValues&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.hidden&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;data.hidden&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>The difference between the [Form] and [Form1] views can be illustrated by line 27 shown below:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.textfield&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot; </span><span style="color:#008080">/&gt;</span></span>
+</code></pre></div>
+
+<p>The input field is bound for both reading and writing to the <em>data.textfield</em> field of the [Form1] action. Recall that after execution, the properties of the [Form1] action are accessible to the view. Thus, the preceding <em>name</em> attribute will be evaluated as <em>[Form1].getData().getTextField()</em>. Therefore, the two preceding <em>get</em> methods must exist.</p>
+<p><a id="refheading91630522158564"></a></p>
+<h2 id="910-the-form2-action-and-the-form2jsp-view">9.10. The [Form2] action and the [Form2.jsp] view</h2>
+<p>The configuration file [example.xml] configures the following [Form2] action:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml </span><span style="color:#000000">version=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot; </span><span style="color:#000000">encoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot; </span><span style="color:#008080">?&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#008080">struts </span><span style="color:#808080">PUBLIC</span></span>
+<span class="odt-code-line">        <span style="color:#008080">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line">        <span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;example&quot; </span><span style="color:#000000">namespace=</span><span style="font-style:italic;color:#2a00ff">&quot;/example&quot; </span><span style="color:#000000">extends=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/Form.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form1&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Form1&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/Form1.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form2&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;example.Form2&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/example/Form2.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/package</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/struts</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>Lines 14–16: The call to the [Form2] action generates the [Form2.jsp] view.</p>
+<p>The [Form2] action is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">example;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">com.opensymphony.xwork2.ModelDriven;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Form2 </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">ActionSupport </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">ModelDriven {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// constructor without parameters</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Form2() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// action model</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Object getModel() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return new </span><span style="color:#000000">Data();</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<ul>
+  <li>Line 6: The [Form2] action implements the [<b>ModelDriven</b>] interface. There is only one method to implement: the <b>getModel</b> method on line 12. This method returns an instance of the [Data] class discussed earlier.
+  </li>
+</ul>
+
+<p>The fact that the [Form2] action implements the [<strong>ModelDriven</strong>] interface has the following consequence: the view displayed following the [Form2] action has direct access to the properties of the [Form2] action’s model, which is returned by the <strong>getModel</strong>() method. Thus, the [Form2.jsp] view reverts to what it was with the initial [Form] action:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.title&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:</span><span style="color:#008080">head/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body </span><span style="color:#000000">background=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;/resources/standard.jpg&quot;</span><span style="color:#008080">/&gt;</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.message&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.langues&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h3</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">id=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">en</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:url</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a </span><span style="color:#000000">href=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.english&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/s:a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">id=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">fr</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:param</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:url</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a </span><span style="color:#000000">href=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.francais&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/s:a</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/li</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/ul</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;form&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;textfield&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot; </span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:password </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;password&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.password&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textarea </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;textarea&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textarea&quot; </span><span style="color:#000000">cols=</span><span style="font-style:italic;color:#2a00ff">&quot;40&quot; </span><span style="color:#000000">rows=</span><span style="font-style:italic;color:#2a00ff">&quot;5&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;select1&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;select1Values&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select1&quot; </span><span style="color:#000000">headerValue=</span><span style="font-style:italic;color:#2a00ff">&quot;</span><span style="color:#008080">&lt;</span><span style="font-style:italic;color:#2a00ff">-- select 1 --&gt;&quot; </span><span style="color:#000000">headerKey=</span><span style="font-style:italic;color:#2a00ff">&quot;-1&quot; </span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;select2&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;select2Values&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select2&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;select3&quot; </span><span style="color:#000000">size=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;select3Values&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select3&quot; </span><span style="color:#000000">multiple=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:radio </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;radio&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;radioValues&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.radio&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkbox </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;checkbox&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkbox&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkboxlist </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlist&quot; </span><span style="color:#000000">list=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlistValues&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:hidden </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;hidden&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.hidden&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.submitText&quot; </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;submitText&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:form</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;hr/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.message&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h2</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table </span><span style="color:#000000">border=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">th</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.field&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/th</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">th</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmation.value&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/th</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;textfield&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.password&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;password&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textarea&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;textarea&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select1&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;select1&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select2&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;select2&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select3&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;select3SelectedValues&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.radio&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;radio&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkbox&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;checkbox&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlistSelectedValues&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.hidden&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;hidden&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+</code></pre></div>
+
+<p>So line 27, which was previously:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;data.textfield&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot; </span><span style="color:#008080">/&gt;</span></span>
+</code></pre></div>
+
+<p>becomes:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;textfield&quot; </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot; </span><span style="color:#008080">/&gt;</span></span>
+</code></pre></div>
+
+<p><span style="color: #000000">The advantage of placing the model outside the view is that this architecture more clearly delineates the functionalities of each element of the MVC architecture. The M model is clearly identified by a class. Furthermore, the model may exist prior to the actions. Thus, if a web application manages a database of people, it is likely that the </span><em><span style="color: #000000">Person</span></em><span style="color: #000000"> class exists. If an action provides an input form to create a new person, the model for this action is obvious: it is the </span><em><span style="color: #000000">Person</span></em><span style="color: #000000"> class.</span></p>
+<p><span style="color: #000000">We saw how simple it was to switch from the </span>[Form] <span style="color: #000000">action </span>to the [Form2] action:</p>
+<ul>
+  <li>the model <b>M </b>of the view <b>V </b>has been encapsulated in a separate class
+  </li>
+  <li>the action that generates the view using this model implements the <b>ModelDriven</b> interface with the <b>getModel</b> method, which returns an instance of the model <b>M</b>. The action can then be viewed as an extension of the Struts 2 controller <b>C</b>, the <b>FilterDispatcher</b> class.
+  </li>
+</ul>
+
+<p>The reader can apply this approach to any action described below.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

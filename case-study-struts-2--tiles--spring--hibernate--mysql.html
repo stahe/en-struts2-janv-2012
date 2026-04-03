@@ -1,0 +1,1680 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to Struts 2 Through Examples">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/en-struts2-janv-2012/case-study-struts-2--tiles--spring--hibernate--mysql.html">
+      
+      
+        <link rel="prev" href="example-15---struts-2--spring-integration.html">
+      
+      
+        <link rel="next" href="case-study---version-1.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>18. Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL - An Introduction to Struts 2 Through Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to Struts 2 Through Examples";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#18-case-study-struts-2-tiles-spring-hibernate-mysql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to Struts 2 Through Examples" class="md-header__button md-logo" aria-label="An Introduction to Struts 2 Through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to Struts 2 Through Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              18. Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/en-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to Struts 2 Through Examples" class="md-nav__button md-logo" aria-label="An Introduction to Struts 2 Through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to Struts 2 Through Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/en-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a-first-example.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. A First Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-02---parameter-injection-into-the-action.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Example 02 – Parameter Injection into the Action
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-03---navigation-keys.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Example 03 – Navigation Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-04---internationalization.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Example 04 – Internationalization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-05---the-input-form.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Example 05 – The Input Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Example 05B – Navigating a Data Entry Form
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-06---the-session.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Example 06 – The Session
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-07---form-tags.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Example 07 – Form Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-08---tags-associated-with-lists.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Example 08 - Tags Associated with Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-09---conversion-and-validation-of-integers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Example 09 - Conversion and validation of integers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-09b---model-validation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Example 09B – Model Validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-10---conversion-and-validation-of-real-numbers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Example 10 – Conversion and validation of real numbers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-11---date-conversion-and-validation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Example 11 – Date Conversion and Validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-12---various-conversions-and-validations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Example 12 – Various Conversions and Validations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-13---the-context-of-an-action.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Example 13 - The context of an action
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="example-15---struts-2--spring-integration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Example 15 – Struts 2 / Spring Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="case-study-struts-2--tiles--spring--hibernate--mysql.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#181-the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1. The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#182-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2. The Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#183-jpa-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.3. JPA Entities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#184-based-method-for-calculating-a-child-care-providers-salary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.4. -based method for calculating a child care provider&#x27;s salary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#185-the-business-layer-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.5. The [business] layer interface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#186-the-spring-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.6. The Spring configuration file
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="case-study---version-1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Case Study – Version 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="case-study---version-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Case Study – Version 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. Conclusion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheading91770522158564"></a></p>
+<h1 id="18-case-study-struts-2-tiles-spring-hibernate-mysql">18. Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL</h1>
+<p>We will conclude our introduction to Struts with a case study. To be realistic, the example we will examine will be significantly more complex than those covered previously. For beginners, it is likely best to solidify your understanding of the basics of Struts 2 through personal projects before tackling this case study.</p>
+<p>The application will use a layered architecture:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E40000010E4B3B4132.png" style="display:inline-block; margin:4px;width:16.563cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E40000010E4B3B4132.png" /></td></tr></table>
+
+<p>The [business], [DAO], and [JPA/Hibernate] layers will be provided to us in the form of a JAR archive, whose features we will detail. Spring will handle the integration of these layers. The [web] layer will be implemented using Struts 2.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000466000001B4AE6F0937.png" style="display:inline-block; margin:4px;width:14.896cm;height:5.768cm;" class="odt-zoomable" data-zoom-src="images/1000000000000466000001B4AE6F0937.png" /></td></tr></table>
+
+<p><a id="refheading91772522158564"></a></p>
+<h2 id="181-the-problem">18.1. The Problem</h2>
+<p>We propose to write a web application to generate pay stubs for child care providers employed by a municipality’s “Early Childhood Center.”</p>
+<p><img src="images/100000000000031A00000345E4F75BE3.png" style="width:14.711cm;height:15.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
+<p>This case study is presented in the document:</p>
+<p><strong>Introduction to Java EE 5</strong> available at the URL [http://tahe.developpez.com/java/javaee]</p>
+<p>In this document, the case study is implemented using the following multi-tier architecture:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FB00000109CB2D2940.png" style="display:inline-block; margin:4px;width:16.868cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FB00000109CB2D2940.png" /></td></tr></table>
+
+<p>The [web] layer is implemented using the JSF (Java Server Faces) framework. We will adopt this same architecture by implementing the [web] layer with Struts 2. To demonstrate the benefits of layered architectures, we will use the JAR archive containing the [business, DAO, JPA] layers from the JSF version and connect it to a [web / Struts 2] layer:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D50000011A2CDC3808.png" style="display:inline-block; margin:4px;width:16.365cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D50000011A2CDC3808.png" /></td></tr></table>
+
+<p>We will present the following components of the [business, DAO, JPA] layers:</p>
+<ul>
+  <li>The [web] layer interfaces with the [business] layer. We will present this interface.
+  </li>
+  <li>The [JPA] layer accesses a database. We will present it.
+  </li>
+  <li>The [JPA] layer transforms rows from the database tables into JPA entities that are used by all layers of the application. We will present them.
+  </li>
+  <li>The [business, DAO, JPA] layers are instantiated by Spring. We will present the configuration file that performs this instantiation and integration.
+  </li>
+</ul>
+
+<p><a id="refheading87351112820228"></a></p>
+<h2 id="182-the-database">18.2. The Database</h2>
+<p>We will use the following MySQL database [dbpam_hibernate]:</p>
+<p><img src="images/10000000000001130000016A3B1E492F.png" style="width:3.639cm;height:4.789cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001130000016A3B1E492F.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>In [1], the database has three tables:
+  </li>
+  <li>[employees]: a table that records the employees of a daycare center
+  </li>
+  <li>[contributions]: a table that stores social security contribution rates
+  </li>
+  <li>[indemnites]: a table that stores information used to calculate employees&#x27; pay
+  </li>
+</ul>
+
+<p><strong>[employees] table</strong></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C20000015AB83A53B5.png" style="display:inline-block; margin:4px;width:16.113cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C20000015AB83A53B5.png" /></td></tr></table>
+
+<ul>
+  <li>In [2], the employees table, and in [3], the meaning of its fields
+  </li>
+</ul>
+
+<p>The table&#x27;s contents could be as follows:</p>
+<p><img src="images/10000000000002D500000045B8BBDC06.png" style="width:13.212cm;height:1.256cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D500000045B8BBDC06.png" /></p>
+<p><strong>Table [contributions]</strong></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053700000171BCB3C6F5.png" style="display:inline-block; margin:4px;width:17.662cm;height:4.882cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000171BCB3C6F5.png" /></td></tr></table>
+
+<ul>
+  <li>In [4], the contributions table, and in [5], the meaning of its fields
+  </li>
+</ul>
+
+<p>The table contents could be as follows:</p>
+<p><img src="images/10000000000001CF000000305ED6EA6C.png" style="width:8.571cm;height:0.891cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CF000000305ED6EA6C.png" /></p>
+<p><strong>Table [indemnites]</strong></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000001129FCCE31E.png" style="display:inline-block; margin:4px;width:17.635cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001129FCCE31E.png" /></td></tr></table>
+
+<ul>
+  <li>in [6], the allowances table, and in [7], the meaning of its fields
+  </li>
+</ul>
+
+<p>The table contents could be as follows:</p>
+<p><img src="images/10000000000002C300000042137D36D7.png" style="width:13.09cm;height:1.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002C300000042137D36D7.png" /></p>
+<p>Exporting the database structure to an SQL file yields the following result:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">#</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">#</span><span class="w"> </span><span class="k">Structure</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">cotisations</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">#</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">cotisations</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="w"> </span><span class="nb">bigint</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="n">auto_increment</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="o">`</span><span class="n">SECU</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="o">`</span><span class="n">RETRAITE</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="o">`</span><span class="n">CSGD</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="o">`</span><span class="n">CSGRDS</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="o">`</span><span class="k">VERSION</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w">  </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">4</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="o">#</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="o">#</span><span class="w"> </span><span class="k">Structure</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">indemnites</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="o">#</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">indemnites</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="w"> </span><span class="nb">bigint</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="n">auto_increment</span><span class="p">,</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">  </span><span class="o">`</span><span class="n">DAILY_MAINTENANCE</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">  </span><span class="o">`</span><span class="n">MEAL_DAY</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="o">`</span><span class="k">INDEX</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">  </span><span class="o">`</span><span class="n">CP_ALLOWANCE</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="o">`</span><span class="n">HOURLY_RATE</span><span class="o">`</span><span class="w"> </span><span class="n">double</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span><span class="o">`</span><span class="k">VERSION</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">),</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">  </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="k">INDEX</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="k">INDEX</span><span class="o">`</span><span class="p">)</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">9</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="o">#</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="o">#</span><span class="w"> </span><span class="k">Structure</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">employees</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="p">:</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="o">#</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">employees</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">  </span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="w"> </span><span class="nb">bigint</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="n">auto_increment</span><span class="p">,</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">  </span><span class="o">`</span><span class="n">FIRST_NAME</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">  </span><span class="o">`</span><span class="n">LAST_NAME</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">  </span><span class="o">`</span><span class="n">ADDRESS</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">  </span><span class="o">`</span><span class="n">ZIP</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">  </span><span class="o">`</span><span class="n">CITY</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">  </span><span class="o">`</span><span class="n">LAST_NAME</span><span class="o">`</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">  </span><span class="o">`</span><span class="k">VERSION</span><span class="o">`</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">  </span><span class="o">`</span><span class="n">INDEMNITY_ID</span><span class="o">`</span><span class="w"> </span><span class="nb">bigint</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">  </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w">  </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">),</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">  </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="n">SS</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">SS</span><span class="o">`</span><span class="p">),</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">  </span><span class="k">KEY</span><span class="w"> </span><span class="o">`</span><span class="n">FK_EMPLOYEES_INDEMNITY_ID</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">INDEMNITY_ID</span><span class="o">`</span><span class="p">),</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">`</span><span class="n">FK_EMPLOYEES_INDEMNITY_ID</span><span class="o">`</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">INDEMNITY_ID</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">indemnities</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">)</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">7</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p><a id="refheading91774522158564"></a></p>
+<h2 id="183-jpa-entities">18.3. JPA Entities</h2>
+<p>In the following architecture</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F50000011163BB4F74.png" style="display:inline-block; margin:4px;width:16.789cm;height:3.612cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000011163BB4F74.png" /></td></tr></table>
+
+<p>The [Jpa] layer acts as a bridge between the objects handled by the [dao] layer and the rows in the database tables handled by the Jdbc driver. The rows read from the database tables are transformed into objects called Jpa entities. Conversely, during writing, JPA entities are converted into table rows. These entities are handled by all layers, particularly the web layer. We therefore need to understand them:</p>
+<p>The [Employee] entity represents a row in the [Employees] table</p>
+<p>IDprimary key of type autoincrementVERSIONrecord version numberFIRST_NAMEemployee&#x27;s first nameLAST NAMEher last nameADDRESSher addressZIPhis/her zip codeCITYhis/her cityINDEMNITY_IDforeign key on INDEMNITIES(ID)</p>
+<p><img src="images/1000000000000163000000CBCEC3582C.png" style="width:6.57cm;height:3.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000163000000CBCEC3582C.png" /></p>
+<p>The [Employee] entity is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">jpa;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">...</span><span style="color:#000000"></span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">@Entity</span></span>
+<span class="odt-code-line"><span style="color:#000000">@Table(name=</span><span style="color:#2a00ff">&quot;EMPLOYEES&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Employee </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  @Id</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @GeneratedValue(strategy = GenerationType.AUTO)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Version</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;VERSION&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;SS&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">unique=true</span><span style="color:#000000">, length=15)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String SS;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;NAME&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, length=30)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String lastName;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;FIRST_NAME&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, length=20)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String firstName;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;ADDRESS&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, length=50)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String address;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;CITY&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, length=30)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String city;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;ZIP&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, length=5)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String zipCode;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @ManyToOne</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @JoinColumn(name=</span><span style="color:#2a00ff">&quot;INDEMNITY_ID&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Indemnite indemnity;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Employee() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Employee(String SS, String lastName, String firstName, String address, String city, String zipCode, Indemnity indemnity) {</span></span>
+<span class="odt-code-line">    setSS(SS);</span>
+<span class="odt-code-line">    setLastName(lastName);</span>
+<span class="odt-code-line">    setFirstName(firstName);</span>
+<span class="odt-code-line">    setAddress(address);</span>
+<span class="odt-code-line">    setCity(city);</span>
+<span class="odt-code-line">    setZipCode(zipCode);</span>
+<span class="odt-code-line">    setAllowance(allowance);</span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;jpa.Employee[id=&quot; </span><span style="color:#000000">+ getId()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;,version=&quot;</span><span style="color:#000000">+getVersion()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,SS=&quot;</span><span style="color:#000000">+getSS()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;,lastName=&quot;</span><span style="color:#000000">+getLastName()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;,firstName=&quot;</span><span style="color:#000000">+getFirstName()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;,address=&quot;</span><span style="color:#000000">+getAddress()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,city=&quot;</span><span style="color:#000000">+getCity()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,zipCode=&quot;</span><span style="color:#000000">+getZipCode()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,index=&quot;</span><span style="color:#000000">+getIndemnity().getIndex()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">// getters and setters</span></span>
+<span class="odt-code-line">   ...  </span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>We will ignore annotations @ intended for the [Jpa] layer. The various fields of the class reflect the various columns of the [EMPLOYEES] table. The indemnities field (line 29) reflects the fact that the [EMPLOYEES] table has a foreign key on the [INDEMNITIES] table. When we manipulate an employee, we also manipulate their indemnities.</p>
+<p>The [Indemnite] entity is the object representation of a row in the [INDEMNITES] table:</p>
+<p>IDauto-increment primary keyVERSIONrecord version numberBASE_HEUREcost in euros for one hour of on-call dutyDAILY_MAINTENANCEdaily allowance in eurosMEAL_DAYMeal allowance in euros per day of carePAID_LEAVE_ALLOWANCESPaid leave allowances. This is a percentage to be applied to the base salary.</p>
+<p><img src="images/100000000000019D0000009D663003AE.png" style="width:7.04cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019D0000009D663003AE.png" /></p>
+<p>The [Indemnite] entity is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">jpa;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">...</span><span style="color:#000000"></span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">@Entity</span></span>
+<span class="odt-code-line"><span style="color:#000000">@Table(name=</span><span style="color:#2a00ff">&quot;INDEMNITIES&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Indemnite </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  @Id</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @GeneratedValue(strategy = GenerationType.AUTO)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Version</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;VERSION&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;INDEX&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">unique=true</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">index;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;BASE_TIME&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">baseTime;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;DAILY_MAINTENANCE&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">dailyMaintenance;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;MEAL_DAY&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">dailyMeal;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;PAY_DIFFERENTIAL&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">sick_pay;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Indemnity() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Indemnity(</span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">index, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">baseHour, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">dailyMaintenance, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">dailyMeal, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">CPAllowances){</span></span>
+<span class="odt-code-line">    setIndex(index);</span>
+<span class="odt-code-line">    setBaseHour(baseHour);</span>
+<span class="odt-code-line">    setDailyMaintenance(dailyMaintenance);</span>
+<span class="odt-code-line">    setDailyMeal(dailyMeal);</span>
+<span class="odt-code-line">    setCPAllowances(CPAllowances);</span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#000000"></span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;jpa.Indemnity[id=&quot; </span><span style="color:#000000">+ getId()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;,version=&quot;</span><span style="color:#000000">+getVersion()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,index=&quot;</span><span style="color:#000000">+getIndex()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,baseHour=&quot;</span><span style="color:#000000">+getBaseHour()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,daily maintenance&quot;</span><span style="color:#000000">+getDailyMaintenance()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,day meal=&quot;</span><span style="color:#000000">+getDayMeal()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,CP allowances=&quot;</span><span style="color:#000000">+getCPAllowances()</span></span>
+<span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  // getters and setters</span><span style="color:#000000"></span></span>
+<span class="odt-code-line"><span style="color:#000000">....  </span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>The various fields of the class reflect the various columns of the [INDEMNITIES] table.</p>
+<p>The [Cotisation] entity is the object representation of a row in the [COTISATIONS] table:</p>
+<p>IDprimary key of type autoincrementVERSIONrecord version numberSECUsocial security contribution rate (percentage) socialPENSIONpension contribution rateCSGDcontribution rate for the general social Generalized DeductibleCSGRDScontribution rate for the and the contribution to the repayment social debt</p>
+<p><img src="images/100000000000017C000000916AACFD59.png" style="width:7.04cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000916AACFD59.png" /></p>
+<p>The [Contribution] entity is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">jpa;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">...</span><span style="color:#000000"></span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">@Entity</span></span>
+<span class="odt-code-line"><span style="color:#000000">@Table(name=</span><span style="color:#2a00ff">&quot;COTISATIONS&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">MembershipFee </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  @Id</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @GeneratedValue(strategy = GenerationType.AUTO)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Version</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;VERSION&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;CSGRDS&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">csgrds;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;CSGD&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">csgd;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;SECU&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">secu;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;PENSION&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">retirement;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Contribution() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Contribution(</span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">employerContribution, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">employeeContribution, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">socialSecurity, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">pension){</span></span>
+<span class="odt-code-line">    setEmployerContribution(employerContribution);</span>
+<span class="odt-code-line">    setCsgd(csgd);</span>
+<span class="odt-code-line">    setSocialSecurity(socialSecurity);</span>
+<span class="odt-code-line">    setRetraite(retraite);</span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;jpa.Contribution[id=&quot; </span><span style="color:#000000">+ getId() + </span><span style="color:#2a00ff">&quot;,version=&quot; </span><span style="color:#000000">+ getVersion() + </span><span style="color:#2a00ff">&quot;,csgrds=&quot; </span><span style="color:#000000">+ getCsgrds() + </span><span style="color:#2a00ff">&quot;&quot; </span><span style="color:#000000">+</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2a00ff">&quot;,csgd=&quot;</span><span style="color:#000000">+getCsgd()+</span><span style="color:#2a00ff">&quot;,secu=&quot;</span><span style="color:#000000">+getSecu()+</span><span style="color:#2a00ff">&quot;,pension=&quot;</span><span style="color:#000000">+getPension()+</span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// getters and setters</span></span>
+<span class="odt-code-line"><span style="color:#000000">  ...</span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>The different fields of the class reflect the different columns of the [INDEMNITES] table.</p>
+<p><a id="mode-calcul-salaire"></a>
+<a id="refheading87353112820228"></a></p>
+<h2 id="184-based-method-for-calculating-a-child-care-providers-salary">18.4. -based method for calculating a child care provider&#x27;s salary</h2>
+<p>The web application we are going to write will allow us to calculate an employee&#x27;s salary based on three pieces of information:</p>
+<ul>
+  <li>the employee&#x27;s index
+  </li>
+  <li>the number of days worked
+  </li>
+  <li>the number of hours worked
+  </li>
+</ul>
+
+<p>Here is a screenshot of a salary calculation:</p>
+<p><img src="images/100000000000031A00000345E4F75BE3.png" style="width:14.711cm;height:15.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
+<p>We will now present the method for calculating a child care provider’s monthly salary. This is not intended to be the method used in real life. As an example, we will use the salary of Ms. Marie Jouveinal, who worked 150 hours over 20 days during the pay period.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The following factors are taken into account:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">[<span style="background-color:#ffcc99">TOTALHOURS</span>]: total hours worked in the month</span>
+</code></pre></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">[<span style="background-color:#ffcc99">TOTALDAYS</span>]: total days worked in the month</span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[TOTALHOURS]=150
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[TOTALDAYS] = 20
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The base salary of the</div><div style="margin:0 0 0.5em 0">is given by the following formula</div><div style="margin:0 0 0.5em 0"> :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="background-color:#ffcc99">[BASESALARY]=([TOTALHOURS]*[HOURLYRATE])*(1+[CPALLOWANCE]/100)</span><span style="background-color:#ffcc99"></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[BASESALARY]=(150*[2.1])*(1+0.15)= 362.25
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">A certain amount of social security contributions</div><div style="margin:0 0 0.5em 0">must be deducted from this base salary</div><div style="margin:0 0 0.5em 0">:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">General social contribution and contribution to the repayment of the social debt: <span style="background-color:#ffcc99">[BASESALARY]*[CSGRDS/100]</span></span>
+</code></pre></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">Deductible general social contribution: <span style="background-color:#ffcc99">[BASESALARY]*[CSGD/100]</span></span>
+</code></pre></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">Social Security, Widow’s Benefits, Old Age: <span style="background-color:#ffcc99">[BASESALARY]*[SECU/100]</span></span>
+</code></pre></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">Supplementary Pension + AGPF + Unemployment Insurance: <span style="background-color:#ffcc99">[BASESALARY]*[PENSION/100]</span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>CSGRDS: 12.64
+</code></pre></div>
+</div>
+<div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CSGD: 22.28
+</code></pre></div>
+</div>
+<div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Social Security: 34.02
+</code></pre></div>
+</div>
+<div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Pension: 28.55
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Total Social Security Contributions:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="background-color:#ffcc99">[SOCIALCONTRIBUTIONS] = [BASESALARY] * (CSGRDS + CSGD + SECU + RETIREMENT) / 100</span><span style="background-color:#ffcc99"></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[SOCIALCONTRIBUTIONS]=97.48
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">In addition, the child care provider is entitled,</div><div style="margin:0 0 0.5em 0">for each day worked, to a</div><div style="margin:0 0 0.5em 0">as well as a meal allowance</div><div style="margin:0 0 0.5em 0">. As such, she receives the</div><div style="margin:0 0 0.5em 0"> :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="background-color:#ffcc99">[</span><span style="background-color:#ffcc99">Allowances</span><span style="background-color:#ffcc99">] = [TOTALDAYS] * (DAILYMAINTENANCE + DAILYMEAL)</span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[ALLOWANCES]=104
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">In the end, the net salary to be paid to the child care provider is as follows:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="background-color:#ffcc99">[BASESALARY] - [SOCIALSECURITYCONTRIBUTIONS] + [ALLOWANCES]</span><span style="background-color:#ffcc99"></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[NET SALARY]=368.77
+</code></pre></div>
+</div></td></tr></table>
+
+<p><a id="refheading91776522158564"></a></p>
+<h2 id="185-the-business-layer-interface">18.5. The [business] layer interface</h2>
+<p>Let&#x27;s take a look at the architecture of the application we&#x27;re building:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005060000011099A38967.png" style="display:inline-block; margin:4px;width:17.013cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000005060000011099A38967.png" /></td></tr></table>
+
+<p>The [web / Struts 2] layer communicates with the interface of the [business] layer. This is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">business;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.util.List;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">jpa.Employee;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public interface </span><span style="color:#000000">IBusiness {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// get the pay stub</span></span>
+<span class="odt-code-line"><span style="color:#000000">  PayStub calculatePayStub(String SS, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">hoursWorked, </span><span style="font-weight:bold;color:#7f0055">int </span><span style="color:#000000">daysWorked);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// list of employees</span></span>
+<span class="odt-code-line">  List&lt;Employee&gt; findAllEmployees();</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<ul>
+  <li>line 8: the method that will allow us to calculate an employee&#x27;s salary
+  </li>
+  <li>line 10: the method that will allow us to populate the employee dropdown
+  </li>
+</ul>
+
+<p>The <em>calculatePaystub</em> method returns an instance of the following [Paystub] class:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">business;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">jpa.Contribution;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">jpa.Employee;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Payroll </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// private fields</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Employee employee;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Contribution contribution;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">PayrollItems payrollItems;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// constructors</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Payroll() {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">Payroll(Employee employee, Contribution contribution,</span></span>
+<span class="odt-code-line">          SalaryElements salaryElements) {</span>
+<span class="odt-code-line">    setEmployee(employee);</span>
+<span class="odt-code-line">    setContribution(contribution);</span>
+<span class="odt-code-line">    setPayComponents(payComponents);</span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// toString</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;[&quot; </span><span style="color:#000000">+ employee + </span><span style="color:#2a00ff">&quot;,&quot; </span><span style="color:#000000">+ contribution + </span><span style="color:#2a00ff">&quot;,&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            + salaryElements + </span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// getters and setters</span></span>
+<span class="odt-code-line"><span style="color:#000000">  ...</span><span style="color:#000000"></span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>The pay slip contains the following information:</p>
+<ul>
+  <li>line 10: information about the employee whose salary is being calculated
+  </li>
+  <li>line 11: the various contribution rates
+  </li>
+  <li>line 12: salary components
+  </li>
+</ul>
+
+<p>The [ElementsSalaire] class is as follows:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">business;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">java.io.Serializable;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">SalaryComponents </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable{</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// private fields</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">baseSalary;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">socialSecurityContributions;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">maintenanceAllowance;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">mealAllowance;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private double </span><span style="color:#000000">netSalary;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// constructors</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">ElementsSalary() {</span></span>
+<span class="odt-code-line">    </span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">SalaryElements(</span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">baseSalary, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">socialContributions,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">maintenanceAllowance, </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">mealAllowance,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">double </span><span style="color:#000000">netSalary) {</span></span>
+<span class="odt-code-line">    setBaseSalary(baseSalary);</span>
+<span class="odt-code-line">    setSocialContributions(socialContributions);</span>
+<span class="odt-code-line">    setMaintenanceAllowances(maintenanceAllowances);</span>
+<span class="odt-code-line">    setMealAllowances(mealAllowances);</span>
+<span class="odt-code-line">    setNetSalary(netSalary);</span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// toString</span></span>
+<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;[base salary=&quot; </span><span style="color:#000000">+ baseSalary + </span><span style="color:#2a00ff">&quot;,social security contributions=&quot; </span><span style="color:#000000">+ socialSecurityContributions + </span><span style="color:#2a00ff">&quot;,living allowance=&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      + livingAllowance + </span><span style="color:#2a00ff">&quot;,mealAllowance=&quot; </span><span style="color:#000000">+ mealAllowance + </span><span style="color:#2a00ff">&quot;,netSalary=&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      + netSalary + </span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// getters and setters</span></span>
+<span class="odt-code-line"><span style="color:#000000">  ...</span><span style="color:#000000"></span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<ul>
+  <li>lines 8-12: salary components
+  </li>
+</ul>
+
+<p><a id="refheading91778522158564"></a></p>
+<h2 id="186-the-spring-configuration-file">18.6. The Spring configuration file</h2>
+<p>The integration of the [business, DAO, JPA] layers is handled by the following Spring configuration file:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="odt-code-line"><span style="color:#800080">&lt;beans xmlns=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/beans</span><span style="color:#800080">&quot; </span><span style="color:#808000">xmlns:</span><span style="color:#800080">xsi=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span></span>
+<span class="odt-code-line"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xmlns:</span><span style="color:#800080">tx=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/tx</span><span style="color:#800080">&quot;</span></span>
+<span class="odt-code-line"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xsi:</span><span style="color:#800080">schemaLocation=&quot;</span><span style="color:#0000ff">http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">application layers </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#000000"> </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">business layer </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean id=&quot;</span><span style="color:#0000ff">business</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">business.Business</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">employeeDao</span><span style="color:#800080">&quot; ref=&quot;</span><span style="color:#0000ff">employeeDao</span><span style="color:#800080">&quot;/&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">contributionDao</span><span style="color:#800080">&quot; ref=&quot;</span><span style="color:#0000ff">contributionDao</span><span style="color:#800080">&quot;/&gt;  </span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">dao </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean id=&quot;</span><span style="color:#0000ff">employeeDao</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">dao.EmployeeDao</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean id=&quot;</span><span style="color:#0000ff">indemnityDao</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">dao.IndemnityDao</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean id=&quot;</span><span style="color:#0000ff">contributionDao</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">dao.ContributionDao</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">JPA configuration </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean id=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot; ref=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">jpaVendorAdapter</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;bean class=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">databasePlatform</span><span style="color:#800080">&quot; value=&quot;</span><span style="color:#0000ff">org.hibernate.dialect.MySQL5InnoDBDialect</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;/bean&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/property&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">loadTimeWeaver</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;bean class=&quot;</span><span style="color:#0000ff">org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/property&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">the DBCP data source </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean id=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">org.apache.commons.dbcp.BasicDataSource</span><span style="color:#800080">&quot; destroy-method=&quot;</span><span style="color:#0000ff">close</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">driverClassName</span><span style="color:#800080">&quot; value=&quot;</span><span style="color:#0000ff">com.mysql.jdbc.Driver</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">url</span><span style="color:#800080">&quot; value=&quot;</span><span style="color:#0000ff">jdbc:mysql://localhost:3306/dbpam_hibernate</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">username</span><span style="color:#800080">&quot; value=&quot;</span><span style="color:#0000ff">root</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">password</span><span style="color:#800080">&quot; value=&quot;&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">the transaction manager </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;tx:annotation-driven transaction-manager=&quot;</span><span style="color:#0000ff">txManager</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean id=&quot;</span><span style="color:#0000ff">txManager</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.JpaTransactionManager</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;property name=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot; ref=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">exception translation </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean class=&quot;</span><span style="color:#0000ff">org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">persistence </span><span style="color:#800080">--&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean class=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor</span><span style="color:#800080">&quot; /&gt;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line">&lt;/beans&gt;</span>
+</code></pre></div>
+
+<p>We will not attempt to explain this configuration. It is necessary for the instantiation and integration of the [business, DAO, JPA] layers. Our web application, which will rely on these layers, must therefore adopt this configuration. Note that lines 32– –37 configure the JDBC properties of the database. Readers who wish to change the database must modify these lines.</p>
+<p>For more information on this configuration, refer to the document <strong>Introduction to Java EE 5</strong> available at the URL [http://tahe.developpez.com/java/javaee].</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
