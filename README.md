@@ -1,133 +1,125 @@
-# Introduction au framework Struts 2 par l’exemple (2012)
+# Introduction to the Struts 2 Framework Through Examples (2012)
 
-🔗 **Cours en ligne :**
-[https://stahe.github.io/struts2-janv-2012/](https://stahe.github.io/struts2-janv-2012/)
-
----
-
-## Présentation
-
-Ce document propose une **introduction au framework Struts 2** à travers une approche progressive basée sur des exemples.
-
-Struts 2 est un framework web Java qui fournit :
-
-* un ensemble de bibliothèques distribuées sous forme de fichiers **JAR**
-* un cadre de développement structurant la manière de concevoir une application web
-
-L’objectif est de comprendre les notions fondamentales de Struts 2 par la pratique.
+🔗 **Online Course:**
+[https://stahe.github.io/en-struts2-janv-2012/](https://stahe.github.io/en-struts2-janv-2012/)
 
 ---
 
-## Pré-requis
+## Overview
 
-Pour suivre les exemples, il est nécessaire de disposer :
+This document provides an **introduction to the Struts 2 framework** through a step-by-step approach based on examples.
 
-* de connaissances de base en **Java**
-* de connaissances de base en **développement web**, notamment en **HTML**
+Struts 2 is a Java web framework that provides:
 
-Des ressources complémentaires sont disponibles sur :
+* a set of libraries distributed as **JAR** files
+* a development framework that structures the way a web application is designed
+
+The goal is to understand the fundamental concepts of Struts 2 through hands-on practice.
+
+---
+
+## Prerequisites
+
+To follow the examples, you need:
+
+* basic knowledge of **Java**
+* basic knowledge of **web development**, particularly **HTML**
+
+Additional resources are available at:
 
 * [http://developpez.com](http://developpez.com)
 * [http://tahe.developpez.com](http://tahe.developpez.com)
 
 ---
 
-## Code source des exemples
+## Further Reading
 
-Les exemples présentés dans le document sont disponibles à l’adresse suivante :
+To learn more:
 
-[http://tahe.developpez.com/java/struts2](http://tahe.developpez.com/java/struts2)
-
----
-
-## Références pour approfondir
-
-Pour aller plus loin :
-
-* **[ref1]** Documentation officielle de Struts 2 (site officiel du projet)
+* **[ref1]** Official Struts 2 Documentation (official project website)
 * **[ref2]** *Struts 2 in Action*
   Donald Brown – Chad Michael Davis – Scott Stanlick
-  Éditions Manning
+  Manning Publications
 
-Le document fait ponctuellement référence à *Struts 2 in Action* pour approfondir certains aspects techniques.
-
----
-
-## Objectif pédagogique
-
-Le document a été rédigé de manière à pouvoir être lu sans ordinateur.
-De nombreuses captures d’écran sont incluses afin de faciliter la compréhension.
+The document occasionally references *Struts 2 in Action* to explore certain technical aspects in greater depth.
 
 ---
 
-## Positionnement de Struts 2 dans une application web
+## Educational Objective
 
-Struts 2 intervient **uniquement dans la couche web** d’une architecture multi-couches typique.
+This document has been written so that it can be read without a computer.
+Numerous screenshots are included to aid understanding.
 
-### Architecture générale
+---
 
-Une application web classique peut être structurée comme suit :
+## Struts 2’s Role in a Web Application
 
-### 1️⃣ Couche Web
+Struts 2 operates **exclusively within the web layer** of a typical multi-layer architecture.
 
-* Interface avec l’utilisateur (navigateur)
-* Gestion des requêtes HTTP
-* Génération des réponses
-* **Struts 2 se situe exclusivement dans cette couche**
+### General Architecture
 
-### 2️⃣ Couche Métier
+A typical web application can be structured as follows:
 
-* Implémente les règles de gestion
-* Exemple : calcul d’un salaire, génération d’une facture
-* Utilise :
+### 1️⃣ Web Layer
 
-  * les données issues de la couche web
-  * les données provenant de la base via la couche DAO
+* User interface (browser)
+* Handling HTTP requests
+* Generating responses
+* **Struts 2 resides exclusively in this layer**
 
-### 3️⃣ Couche DAO / JPA / JDBC
+### 2️⃣ Business Layer
 
-* Gestion de l’accès aux données
-* DAO : Data Access Objects
-* JPA : Java Persistence API
-* JDBC : accès bas niveau à la base de données
-* JPA joue le rôle d’ORM (Object Relational Mapper)
+* Implements business rules
+* Example: calculating a salary, generating an invoice
+* Uses:
 
-### 4️⃣ Intégration des couches
+  * data from the web layer
+  * data from the database via the DAO layer
 
-Peut être assurée par :
+### 3️⃣ DAO / JPA / JDBC Layer
+
+* Data access management
+* DAO: Data Access Objects
+* JPA: Java Persistence API
+* JDBC: low-level database access
+* JPA acts as an ORM (Object Relational Mapper)
+
+### 4️⃣ Layer Integration
+
+Can be provided by:
 
 * **Spring**
-* **Ejb3 (Enterprise Java Bean)**
+* **EJB3 (Enterprise Java Bean)**
 
 ---
 
-## Organisation des exemples
+## Organization of Examples
 
-La majorité des exemples du document utilisent **uniquement la couche Web** afin de se concentrer sur Struts 2.
+Most of the examples in this document use **only the Web layer** to focus on Struts 2.
 
-En fin de document, une **application web multi-couches complète** est construite :
+At the end of the document, a **complete multi-layer web application** is built:
 
-* Couche Web
-* Couche Métier
-* Couche DAO
-* Couche JPA / Hibernate
-* Accès base via JDBC
+* Web layer
+* Business layer
+* DAO layer
+* JPA / Hibernate layer
+* Database access via JDBC
 
-Les couches métier et persistance sont fournies sous forme d’archive JAR afin que le lecteur se concentre principalement sur la couche Web.
-
----
-
-## Public visé
-
-* Développeurs Java souhaitant découvrir Struts 2
-* Étudiants en développement web Java
-* Toute personne désirant comprendre l’intégration de Struts 2 dans une architecture multi-couches
+The business and persistence layers are provided as JAR archives so that the reader can focus primarily on the Web layer.
 
 ---
 
-## Auteur
+## Target Audience
 
-Cours initialement publié sur developpez.com
-Version 2012
+* Java developers wishing to learn Struts 2
+* Students of Java web development
+* Anyone wishing to understand the integration of Struts 2 into a multi-layer architecture
+
+---
+
+## Author
+
+Serge Tahé: Course originally published on developpez.com
+2012 version
 
 ---
