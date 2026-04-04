@@ -1495,7 +1495,7 @@
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// getters and setters</span></span>
-<span class="odt-code-line"><span style="color:#000000">  ...</span></span>
+<span class="odt-code-line">  ...</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1840,8 +1840,8 @@
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
-<p><a id="vue-initiale"></a>
-<a id="refheading91800522158564"></a></p>
+<p><a id="refheading91800522158564"></a>
+<a id="vue-initiale"></a></p>
 <h2 id="197-the-initial-view">19.7. The Initial View</h2>
 <p>To explore the application, we will examine it based on the user’s various actions. For each action, we will look at the <em>Struts</em> action that executes it and the <em>Tiles</em> view that is returned in response.</p>
 <p>In [struts.xml] we have the following actions:</p>
@@ -1893,12 +1893,12 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// menu</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Menu menu;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">prepare() </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">Exception {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">...</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String input() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">  ....</span><span style="color:#000000"></span></span>
 <span class="odt-code-line">  }</span>
@@ -1909,12 +1909,12 @@
 <span class="odt-code-line">    }</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">validate() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">...</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setSession(Map&lt;String, Object&gt; map) {</span></span>
 <span class="odt-code-line">    session = map;</span>
 <span class="odt-code-line">  }</span>
@@ -1952,7 +1952,7 @@
 <p>In [1], the links in the displayed menu are controlled by the <em>menu</em> field of the [Form] action.</p>
 <p>The <em>prepare</em> method is executed before the <em>input</em> method. It is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">prepare() </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">Exception {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// configuration error?</span></span>
 <span class="odt-code-line">    Exception initException = config.getInitException();</span>
@@ -2017,7 +2017,7 @@
 
 <p>Once the <em>prepare</em> method has been executed, the <em>input</em> method will be executed next. It is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String input() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(errors == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#3f7f5f">// menu</span></span>
@@ -2074,7 +2074,7 @@
 <p>The menu links are displayed in [Entete.jsp], a JSP fragment present in all <em>Tiles</em> views. Each action will have a <em>menu</em> field to control the display of the menu in [Entete.jsp].</p>
 <p>Let’s return to the <em>input</em> method:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String input() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(errors == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#3f7f5f">// menu</span></span>
@@ -2403,12 +2403,12 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// menu</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Menu menu;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">prepare() </span><span style="font-weight:bold;color:#7f0055">throws </span><span style="color:#000000">Exception {</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">...</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String input() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">  ...</span><span style="color:#000000"></span></span>
 <span class="odt-code-line">  }</span>
@@ -2418,7 +2418,7 @@
 <span class="odt-code-line"><span style="color:#000000">  ...</span><span style="color:#000000"></span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">validate() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Any errors?</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(!getFieldErrors().isEmpty()) {</span></span>
@@ -2625,12 +2625,12 @@
 <span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
 <span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;hr/&gt;</span></span>
+<span class="odt-code-line">&lt;hr/&gt;</span>
 <span class="odt-code-line">&lt;!-- Employee information --&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">span </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;titreInfos&quot;</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:text</span>  <span style="color:#7f007f"> </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Simulation.Infos.employe&quot;</span><span style="color:#008080">/&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/span</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- line 1 --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2680,12 +2680,12 @@
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line">&lt;!-- Contribution Information --&gt;</span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">span </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;titleInfo&quot;</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Simulation.ContributionInfo&quot;</span><span style="color:#008080">/&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/span</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- line 1 --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2726,11 +2726,11 @@
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/td</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line">&lt;!-- Compensation Information --&gt;</span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">span </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;titreInfos&quot;</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.CompensationInfo&quot;</span><span style="color:#008080">/&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/span</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- line 1 --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2773,11 +2773,11 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line">&lt;!-- Salary information --&gt;</span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">span </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;titleInfo&quot;</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;Simulation.SalaryInfo&quot;</span><span style="color:#008080">/&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/span</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f5fbf">&lt;!-- line 1 --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2820,7 +2820,7 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line">&lt;!-- Net Pay--&gt;</span>
-<span class="odt-code-line"><span style="color:#008080">&lt;br/&gt;</span></span>
+<span class="odt-code-line">&lt;br/&gt;</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">table</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;label&quot;</span><span style="color:#008080">&gt;</span></span>
@@ -2936,7 +2936,7 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// menu</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Menu menu;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setSession(Map&lt;String, Object&gt; session) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.session = session;</span></span>
 <span class="odt-code-line">  }</span>
@@ -3253,7 +3253,7 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// menu</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Menu menu;</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setSession(Map&lt;String, Object&gt; session) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.session = session;</span></span>
 <span class="odt-code-line">  }</span>
@@ -3580,14 +3580,14 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// session</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Map&lt;String, Object&gt; session;</span></span>
 <span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String execute() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Abandon the current session</span></span>
 <span class="odt-code-line">    session.clear();</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">SUCCESS;</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">setSession(Map&lt;String, Object&gt; session) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.session = session;</span></span>
 <span class="odt-code-line">  }</span>

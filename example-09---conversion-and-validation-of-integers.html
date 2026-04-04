@@ -1360,7 +1360,7 @@
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;cancel&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  @SkipValidation</span></span>
+<span class="odt-code-line">  @SkipValidation</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String clearModel() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Clear the model</span></span>
 <span class="odt-code-line">    ((FormIntModel) getModel()).clearModel();</span>
@@ -1376,7 +1376,7 @@
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// validation</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">validate() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Is the int6 input valid?</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(getFieldErrors().get(</span><span style="color:#2a00ff">&quot;int6&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span>
@@ -1628,7 +1628,7 @@
 
 <p><span style="color: #000000">The [FormInt.clearModel] method is as follows:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">  @SkipValidation</span></span>
+<span class="odt-code-line">  @SkipValidation</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String clearModel() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// reset the model</span></span>
 <span class="odt-code-line">    ((FormIntModel) getModel()).clearModel();</span>
@@ -1975,7 +1975,7 @@
 <p>The previous validation does not check that the <em>int6</em> parameter is an integer in the range [2,20]. This check is performed in the [FormInt].<em>validate</em> method, which is executed after the [FormInt-validation.xml] file has been processed. This method is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// validation</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public void </span><span style="color:#000000">validate() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// Is the int6 input valid?</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if </span><span style="color:#000000">(getFieldErrors().get(</span><span style="color:#2a00ff">&quot;int6&quot;</span><span style="color:#000000">) == </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span>

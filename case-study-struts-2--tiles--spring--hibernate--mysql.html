@@ -1187,14 +1187,14 @@
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">...</span><span style="color:#000000"></span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">@Entity</span></span>
+<span class="odt-code-line">@Entity</span>
 <span class="odt-code-line"><span style="color:#000000">@Table(name=</span><span style="color:#2a00ff">&quot;EMPLOYEES&quot;</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Employee </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
 <span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  @Id</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @GeneratedValue(strategy = GenerationType.AUTO)</span></span>
+<span class="odt-code-line">  @Id</span>
+<span class="odt-code-line">  @GeneratedValue(strategy = GenerationType.AUTO)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Version</span></span>
+<span class="odt-code-line">  @Version</span>
 <span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;VERSION&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;SS&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">unique=true</span><span style="color:#000000">, length=15)</span></span>
@@ -1209,7 +1209,7 @@
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String city;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;ZIP&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, length=5)</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">String zipCode;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @ManyToOne</span></span>
+<span class="odt-code-line">  @ManyToOne</span>
 <span class="odt-code-line"><span style="color:#000000">  @JoinColumn(name=</span><span style="color:#2a00ff">&quot;INDEMNITY_ID&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Indemnite indemnity;</span></span>
 <span class="odt-code-line">  </span>
@@ -1227,7 +1227,7 @@
 <span class="odt-code-line">    setAllowance(allowance);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;jpa.Employee[id=&quot; </span><span style="color:#000000">+ getId()</span></span>
 <span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;,version=&quot;</span><span style="color:#000000">+getVersion()</span></span>
@@ -1256,14 +1256,14 @@
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">...</span><span style="color:#000000"></span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">@Entity</span></span>
+<span class="odt-code-line">@Entity</span>
 <span class="odt-code-line"><span style="color:#000000">@Table(name=</span><span style="color:#2a00ff">&quot;INDEMNITIES&quot;</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">Indemnite </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
 <span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  @Id</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @GeneratedValue(strategy = GenerationType.AUTO)</span></span>
+<span class="odt-code-line">  @Id</span>
+<span class="odt-code-line">  @GeneratedValue(strategy = GenerationType.AUTO)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Version</span></span>
+<span class="odt-code-line">  @Version</span>
 <span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;VERSION&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;INDEX&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">unique=true</span><span style="color:#000000">)</span></span>
@@ -1288,7 +1288,7 @@
 <span class="odt-code-line">    setCPAllowances(CPAllowances);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#000000"></span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;jpa.Indemnity[id=&quot; </span><span style="color:#000000">+ getId()</span></span>
 <span class="odt-code-line"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;,version=&quot;</span><span style="color:#000000">+getVersion()</span></span>
@@ -1301,7 +1301,7 @@
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">  </span>
 <span class="odt-code-line"><span style="color:#000000">  // getters and setters</span><span style="color:#000000"></span></span>
-<span class="odt-code-line"><span style="color:#000000">....  </span></span>
+<span class="odt-code-line">....  </span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1315,14 +1315,14 @@
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">...</span><span style="color:#000000"></span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">@Entity</span></span>
+<span class="odt-code-line">@Entity</span>
 <span class="odt-code-line"><span style="color:#000000">@Table(name=</span><span style="color:#2a00ff">&quot;COTISATIONS&quot;</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">MembershipFee </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#000000">Serializable {</span></span>
 <span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  @Id</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @GeneratedValue(strategy = GenerationType.AUTO)</span></span>
+<span class="odt-code-line">  @Id</span>
+<span class="odt-code-line">  @GeneratedValue(strategy = GenerationType.AUTO)</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private </span><span style="color:#000000">Long id;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Version</span></span>
+<span class="odt-code-line">  @Version</span>
 <span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;VERSION&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private int </span><span style="color:#000000">version;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  @Column(name=</span><span style="color:#2a00ff">&quot;CSGRDS&quot;</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#7f0055">nullable=false</span><span style="color:#000000">)</span></span>
@@ -1344,14 +1344,14 @@
 <span class="odt-code-line">    setRetraite(retraite);</span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;jpa.Contribution[id=&quot; </span><span style="color:#000000">+ getId() + </span><span style="color:#2a00ff">&quot;,version=&quot; </span><span style="color:#000000">+ getVersion() + </span><span style="color:#2a00ff">&quot;,csgrds=&quot; </span><span style="color:#000000">+ getCsgrds() + </span><span style="color:#2a00ff">&quot;&quot; </span><span style="color:#000000">+</span></span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2a00ff">&quot;,csgd=&quot;</span><span style="color:#000000">+getCsgd()+</span><span style="color:#2a00ff">&quot;,secu=&quot;</span><span style="color:#000000">+getSecu()+</span><span style="color:#2a00ff">&quot;,pension=&quot;</span><span style="color:#000000">+getPension()+</span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">  </span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// getters and setters</span></span>
-<span class="odt-code-line"><span style="color:#000000">  ...</span></span>
+<span class="odt-code-line">  ...</span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1483,7 +1483,7 @@
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// toString</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;[&quot; </span><span style="color:#000000">+ employee + </span><span style="color:#2a00ff">&quot;,&quot; </span><span style="color:#000000">+ contribution + </span><span style="color:#2a00ff">&quot;,&quot;</span></span>
 <span class="odt-code-line"><span style="color:#000000">            + salaryElements + </span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span>
@@ -1535,7 +1535,7 @@
 <span class="odt-code-line">  }</span>
 <span class="odt-code-line">  </span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// toString</span></span>
-<span class="odt-code-line"><span style="color:#000000">  @Override</span></span>
+<span class="odt-code-line">  @Override</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String toString() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#2a00ff">&quot;[base salary=&quot; </span><span style="color:#000000">+ baseSalary + </span><span style="color:#2a00ff">&quot;,social security contributions=&quot; </span><span style="color:#000000">+ socialSecurityContributions + </span><span style="color:#2a00ff">&quot;,living allowance=&quot;</span></span>
 <span class="odt-code-line"><span style="color:#000000">      + livingAllowance + </span><span style="color:#2a00ff">&quot;,mealAllowance=&quot; </span><span style="color:#000000">+ mealAllowance + </span><span style="color:#2a00ff">&quot;,netSalary=&quot;</span></span>
