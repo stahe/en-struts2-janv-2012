@@ -987,8 +987,8 @@
 <p>This example revisits the internationalization covered in the first example.</p>
 <p><a id="refheading100091454977699"></a></p>
 <h2 id="51-the-netbeans-project">5.1. The NetBeans project</h2>
-<p><img src="images/10000000000000EA0000011845084917.png" style="width:4.33cm;height:5.189cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EA0000011845084917.png" /></p>
-<p><img src="images/1000000000000186000000B9DB5D31CF.png" style="width:7.22cm;height:3.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000186000000B9DB5D31CF.png" /></p>
+<p><img src="images/10000000000000EA0000011845084917.png" width="164" height="196" style="width:4.33cm;height:5.189cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EA0000011845084917.png" /></p>
+<p><img src="images/1000000000000186000000B9DB5D31CF.png" width="273" height="130" style="width:7.22cm;height:3.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000186000000B9DB5D31CF.png" /></p>
 <p>It includes:</p>
 <ul>
   <li>a view [Page1.jsp]
@@ -1003,31 +1003,31 @@
 <h2 id="52-project-configuration">5.2. Project Configuration</h2>
 <p>The [struts.xml] file is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
-<span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
-<span class="odt-code-line">&lt;!DOCTYPE struts PUBLIC</span>
-<span class="odt-code-line">        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span>
-<span class="odt-code-line">        &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">&lt;struts&gt;</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">internationalization </span><span style="color:#800080">--&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;constant name=&quot;</span><span style="color:#0000ff">struts.custom.i18n.resources</span><span style="color:#800080">&quot; value=&quot;</span><span style="color:#0000ff">messages</span><span style="color:#800080">&quot; /&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">default package </span><span style="color:#800080">--&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;package name=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot; namespace=&quot;</span><span style="color:#0000ff">/</span><span style="color:#800080">&quot; extends=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;default-action-ref name=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot; /&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result type=&quot;</span><span style="color:#0000ff">redirectAction</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#800080">&lt;param name=&quot;</span><span style="color:#0000ff">actionName</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">Action1</span><span style="color:#800080">&lt;/param&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#800080">&lt;param name=&quot;</span><span style="color:#0000ff">namespace</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/actions</span><span style="color:#800080">&lt;/param&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">actions package </span><span style="color:#800080">--&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;package name=&quot;</span><span style="color:#0000ff">actions</span><span style="color:#800080">&quot; namespace=&quot;</span><span style="color:#0000ff">/actions</span><span style="color:#800080">&quot; extends=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Action1</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/views/Page1.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span>
-<span class="odt-code-line">&lt;/struts&gt;</span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;struts&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- internationalization --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;constant</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts.custom.i18n.resources</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">messages</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- default package --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;default-action-ref</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">type</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">redirectAction</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;param</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actionName</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">Action1</span><span style="color:#800080">&lt;/param&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;param</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">namespace</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/actions</span><span style="color:#800080">&lt;/param&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- equity package --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Action1</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Page1.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
 </code></pre></div>
 
 <ul>
@@ -1041,16 +1041,16 @@
 <h2 id="53-the-message-files">5.3. The message files</h2>
 <p><u><strong>messages.properties</strong></u></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">page.</span><span style="text-decoration:underline;color:#2a00ff">text=Here</span><span style="color:#2a00ff">, we put </span><span style="text-decoration:underline;color:#2a00ff">some </span><span style="color:#2a00ff">French </span><span style="text-decoration:underline;color:#2a00ff">text</span><span style="color:#2a00ff">...</span></span>
-<span class="odt-code-line"><span style="color:#000000">page.</span><span style="color:#2a00ff">title1=French</span></span>
-<span class="odt-code-line"><span style="color:#000000">page.</span><span style="color:#2a00ff">title2=French</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.texte=</span><span style="text-decoration:underline;color:#2a00ff">Ici</span><span style="color:#2a00ff">,</span><span style="color:#000000"> </span><span style="color:#2a00ff">on</span><span style="color:#000000"> </span><span style="color:#2a00ff">met</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">un</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">texte</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">fran</span><span style="color:#2a00ff">\u00e7ais...</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.titre1=</span><span style="text-decoration:underline;color:#2a00ff">Fran</span><span style="color:#2a00ff">\u00e7ais</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.titre2=</span><span style="text-decoration:underline;color:#2a00ff">Fran</span><span style="color:#2a00ff">\u00e7ais</span></span></span>
 </code></pre></div>
 
 <p><u><strong>messages_en.properties</strong></u></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">page.</span><span style="color:#2a00ff">text=Here, we put some </span><span style="text-decoration:underline;color:#2a00ff">English </span><span style="color:#2a00ff">text...</span></span>
-<span class="odt-code-line"><span style="color:#000000">page.</span><span style="color:#2a00ff">title1=English</span></span>
-<span class="odt-code-line"><span style="color:#000000">page.</span><span style="color:#2a00ff">title2=English</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.texte=</span><span style="color:#2a00ff">Here,</span><span style="color:#000000"> </span><span style="color:#2a00ff">we</span><span style="color:#000000"> </span><span style="color:#2a00ff">put</span><span style="color:#000000"> </span><span style="color:#2a00ff">some</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">english</span><span style="color:#000000"> </span><span style="color:#2a00ff">text...</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.titre1=</span><span style="color:#2a00ff">English</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.titre2=</span><span style="color:#2a00ff">English</span></span></span>
 </code></pre></div>
 
 <p>They define three keys<em>: page.text</em>, <em>page.title1</em>, and <em>page.title2</em>. The [<strong>messages_en</strong>.properties] file will be used if the page language is English (<strong>en</strong>). The [messages.properties] file will be used for all other languages. This is the default message file. The language used is either:</p>
@@ -1065,19 +1065,19 @@
 <h2 id="54-the-page1jsp-view">5.4. The [Page1.jsp] view</h2>
 <p>The view is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="color:#bf5f3f">&lt;</span><span style="color:#3f7f7f">%@page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
-<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#008080">html&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">meta </span><span style="color:#000000">http-equiv=</span><span style="font-style:italic;color:#2a00ff">&quot;Content-Type&quot; </span><span style="color:#000000">content=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;page.title1&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;page.title2&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h1</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;page.text&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">meta</span> <span style="color:#7f007f">http-equiv</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Content-Type&quot;</span> <span style="color:#7f007f">content</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;page.titre1&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;page.titre2&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;page.texte&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -1092,7 +1092,7 @@
 <p><a id="refheading100171454977699"></a></p>
 <h2 id="55-testing">5.5. Testing</h2>
 <p>Let&#x27;s run the project:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052B00000140CE7B3713.png" style="display:inline-block; margin:4px;width:17.503cm;height:4.233cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B00000140CE7B3713.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052B00000140CE7B3713.png" width="662" height="160" style="display:inline-block; margin:4px;width:17.503cm;height:4.233cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B00000140CE7B3713.png" /></td></tr></table>
 
 <ul>
   <li>In [1], the page was displayed in French. The [messages.properties] file was used because the browser had French set as its preferred language.
@@ -1101,11 +1101,11 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051A000001B3528BAD60.png" style="display:inline-block; margin:4px;width:17.277cm;height:5.756cm;" class="odt-zoomable" data-zoom-src="images/100000000000051A000001B3528BAD60.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051A000001B3528BAD60.png" width="653" height="218" style="display:inline-block; margin:4px;width:17.277cm;height:5.756cm;" class="odt-zoomable" data-zoom-src="images/100000000000051A000001B3528BAD60.png" /></td></tr></table>
 
 <p>In [4], a page in German (de) is requested. Since there is no [messages_de.properties] file, the default file [messages.properties] is used [5].</p>
 <p>In [6], English is set as the browser&#x27;s preferred language.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026200000120488B7024.png" style="display:inline-block; margin:4px;width:8.07cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/100000000000026200000120488B7024.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026200000120488B7024.png" width="305" height="144" style="display:inline-block; margin:4px;width:8.07cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/100000000000026200000120488B7024.png" /></td></tr></table>
 
 <p>In [7], the [Action1] action is requested without language parameters. The request comes from a browser whose preferred language is English (en). Therefore, the [messages_en.properties] file is used [8].</p>
 <p>From now on, all projects will have a single [messages.properties] file that will be used for all languages. This will require us to write views that use the keys from this file. Internationalizing into English will simply involve creating the [messages_en.properties] file for English messages. No other changes are needed.</p>
@@ -1144,8 +1144,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the

@@ -996,11 +996,11 @@
 <p><a id="refheading91614522158564"></a></p>
 <h1 id="7-example-05b-navigating-a-data-entry-form">7. Example 05B – Navigating a Data Entry Form</h1>
 <p>We are examining a form with several buttons to submit the entered data to an action.</p>
-<p><img src="images/100000000000017C000000F0553673BC.png" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
+<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
 <p><a id="refheading91616522158564"></a></p>
 <h2 id="71-the-netbeans-project">7.1. The NetBeans project</h2>
 <p>The NetBeans project is as follows:</p>
-<p><img src="images/10000000000000E000000137EE5DE662.png" style="width:4.15cm;height:5.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000137EE5DE662.png" /></p>
+<p><img src="images/10000000000000E000000137EE5DE662.png" width="157" height="218" style="width:4.15cm;height:5.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000137EE5DE662.png" /></p>
 <p>The project components are as follows:</p>
 <ul>
   <li>[DoSomething.jsp]: the application’s single view, which displays the three navigation buttons and a link.
@@ -1017,21 +1017,21 @@
 <h2 id="72-configuration">7.2. Configuration</h2>
 <p>The following [struts.xml] file configures the application:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#008080">struts </span><span style="color:#808080">PUBLIC</span></span>
-<span class="odt-code-line">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span>
-<span class="odt-code-line"><span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000"> </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">constant </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;struts.custom.i18n.resources&quot; </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;messages&quot; </span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000"> </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;actions&quot; </span><span style="color:#000000">namespace=</span><span style="font-style:italic;color:#2a00ff">&quot;/actions&quot; </span><span style="color:#000000">extends=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomething&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;actions.DoSomething&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/views/DoSomething.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;  </span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomethingElse&quot; </span><span style="color:#000000">class=</span><span style="font-style:italic;color:#2a00ff">&quot;actions.DoSomethingElse&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/views/DoSomething.jsp</span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/result</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/action</span><span style="color:#008080">&gt;  </span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/package</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/struts</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#3f7f5f">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000"> </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">constant</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts.custom.i18n.resources&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;messages&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000"> </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">package</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;actions&quot;</span> <span style="color:#7f007f">namespace</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/actions&quot;</span> <span style="color:#7f007f">extends</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;struts-default&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomething&quot;</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;actions.DoSomething&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/vues/DoSomething.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span><span style="color:#000000">  </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">action</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomethingElse&quot;</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;actions.DoSomethingElse&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">result</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;success&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">/vues/DoSomething.jsp</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">result</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">action</span><span style="color:#008080">&gt;</span><span style="color:#000000">  </span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">package</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -1045,39 +1045,39 @@
 <h2 id="73-the-message-file">7.3. The message file</h2>
 <p>The message file [messages.properties] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#000000">form.</span><span style="color:#2a00ff">title1=Actions and Methods</span></span>
-<span class="odt-code-line"><span style="color:#000000">form.</span><span style="color:#2a00ff">title2=Actions and Methods</span></span>
-<span class="odt-code-line"><span style="color:#000000">form.</span><span style="color:#2a00ff">execute=DoSomething.execute</span></span>
-<span class="odt-code-line"><span style="color:#000000">form.</span><span style="color:#2a00ff">action1=DoSomething.action1</span></span>
-<span class="odt-code-line"><span style="color:#000000">form.</span><span style="color:#2a00ff">action2=DoSomethingElse.action2</span></span>
-<span class="odt-code-line"><span style="color:#000000">form.</span><span style="color:#2a00ff">action3=DoSomething.action3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.titre1=</span><span style="color:#2a00ff">Actions</span><span style="color:#000000"> </span><span style="color:#2a00ff">et</span><span style="color:#000000"> </span><span style="color:#2a00ff">M\u00e9thodes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.titre2=</span><span style="color:#2a00ff">Actions</span><span style="color:#000000"> </span><span style="color:#2a00ff">et</span><span style="color:#000000"> </span><span style="color:#2a00ff">M\u00e9thodes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.execute=</span><span style="color:#2a00ff">DoSomething.execute</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.action1=</span><span style="color:#2a00ff">DoSomething.action1</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.action2=</span><span style="color:#2a00ff">DoSomethingElse.action2</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.action3=</span><span style="color:#2a00ff">DoSomething.action3</span></span></span>
 </code></pre></div>
 
 <p><a id="refheading91622522158564"></a></p>
 <h2 id="74-the-dosomethingjsp-view">7.4. The [DoSomething.jsp] view</h2>
 <p>The [DoSomething.jsp] view is as follows:</p>
-<p><img src="images/100000000000017C000000F0553673BC.png" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
+<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
 <p>Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="color:#bf5f3f">&lt;</span><span style="color:#3f7f7f">%@page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
-<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#008080">html&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">meta </span><span style="color:#000000">http-equiv=</span><span style="font-style:italic;color:#2a00ff">&quot;Content-Type&quot; </span><span style="color:#000000">content=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;form.title1&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;form.title2&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h1</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomething&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;form.execute&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;form.action1&quot; </span><span style="color:#000000">method=</span><span style="font-style:italic;color:#2a00ff">&quot;action1&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;form.action2&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomethingElse&quot; </span><span style="color:#000000">method=</span><span style="font-style:italic;color:#2a00ff">&quot;action2&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:form</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url </span><span style="color:#000000">id=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomething&quot; </span><span style="color:#000000">method=</span><span style="font-style:italic;color:#2a00ff">&quot;action3&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a </span><span style="color:#000000">href=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire.action3&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/s:a</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">meta</span> <span style="color:#7f007f">http-equiv</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Content-Type&quot;</span> <span style="color:#7f007f">content</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire.titre1&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire.titre2&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomething&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire.execute&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire.action1&quot;</span> <span style="color:#7f007f">method</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;action1&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire.action2&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomethingElse&quot;</span> <span style="color:#7f007f">method</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;action2&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:form</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;DoSomething&quot;</span> <span style="color:#7f007f">method</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;action3&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a</span> <span style="color:#7f007f">href</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;formulaire.action3&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">s:a</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -1118,13 +1118,13 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=UTF-8&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Actions and Methods<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Actions et Méthodes<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Actions and Methods<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="p">&lt;</span><span class="nt">form</span> <span class="err">...</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/example-05B/actions/DoSomething.action&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Actions et Méthodes<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="p">&lt;</span><span class="nt">form</span> <span class="err">...</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/exemple-05B/actions/DoSomething.action&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>...
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>       <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="err">...</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;form.execute&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;DoSomething.execute&quot;</span><span class="p">/&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>       <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="err">...</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;formulaire.execute&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;DoSomething.execute&quot;</span><span class="p">/&gt;</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a>...
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a>       <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="err">...</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;method:action1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;DoSomething.action1&quot;</span><span class="p">/&gt;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a>...
@@ -1154,33 +1154,34 @@
 <p><a id="refheading91624522158564"></a></p>
 <h2 id="75-actions">7.5. Actions</h2>
 <p>The [DoSomething] action is as follows:</p>
+<p><span style="color: #3f7f5f"> </span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">actions;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">DoSomething </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">ActionSupport {</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">DoSomething() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">  @Override</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String execute() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.execute&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">SUCCESS;</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String action1() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.action1&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">SUCCESS;</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String action3() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.action3&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">SUCCESS;</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> actions;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ActionSupport;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> DoSomething </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> ActionSupport {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> DoSomething() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String execute() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.execute&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String action1() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.action1&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String action3() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomething.action3&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
@@ -1193,27 +1194,27 @@
 <p>The various console outputs allow you to see which methods are executed during a request.</p>
 <p>The [DoSomethingElse] action is similar:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package </span><span style="color:#000000">actions;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public class </span><span style="color:#000000">DoSomethingElse </span><span style="font-weight:bold;color:#7f0055">extends </span><span style="color:#000000">ActionSupport {</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">DoSomethingElse() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line">  @Override</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String execute() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse.execute&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">SUCCESS;</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public </span><span style="color:#000000">String action2() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse.action2&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return </span><span style="color:#000000">SUCCESS;</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> actions;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.opensymphony.xwork2.ActionSupport;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> DoSomethingElse </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> ActionSupport {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> DoSomethingElse() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String execute() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse.execute&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String action2() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    System.out.println(</span><span style="color:#2a00ff">&quot;DoSomethingElse.action2&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><a id="refheading91626522158564"></a></p>
@@ -1264,8 +1265,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the

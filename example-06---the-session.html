@@ -998,12 +998,12 @@
 <p><a id="refheading100391454977699"></a></p>
 <h2 id="81-the-concept-of-a-session">8.1. The concept of a session</h2>
 <p>When a client browser connects to a web application for the first time, it receives a session token, a unique string of characters that it sends back with every new request it makes to the web application. This allows the web application to recognize the client browser. The web application can then associate data with this session token. This data belongs to a single client browser. Thus, as the client browser makes requests, a memory is built up.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004770000010FF6B0E2AA.png" style="display:inline-block; margin:4px;width:15.122cm;height:3.586cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004770000010FF6B0E2AA.png" width="572" height="136" style="display:inline-block; margin:4px;width:15.122cm;height:3.586cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
 
 <p>As shown above, each user (browser) has its own memory, known as its session. This memory is shared by all requests from the same user. There is also a higher-level memory called application memory. This memory is shared by all requests from all users. It is generally read-only.</p>
 <p><a id="refheading100411454977699"></a></p>
 <h2 id="82-the-netbeans-project">8.2. The NetBeans Project</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000490000001F532AB0F8B.png" style="display:inline-block; margin:4px;width:15.452cm;height:6.629cm;" class="odt-zoomable" data-zoom-src="images/1000000000000490000001F532AB0F8B.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000490000001F532AB0F8B.png" width="584" height="251" style="display:inline-block; margin:4px;width:15.452cm;height:6.629cm;" class="odt-zoomable" data-zoom-src="images/1000000000000490000001F532AB0F8B.png" /></td></tr></table>
 
 <p>The [example-06] project is created by copying the [example-05] project. We will change a few elements to</p>
 <ul>
@@ -1017,37 +1017,37 @@
 <h2 id="83-configuration">8.3. Configuration</h2>
 <p>The [struts.xml] file changes as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
-<span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
-<span class="odt-code-line">&lt;!DOCTYPE struts PUBLIC</span>
-<span class="odt-code-line">        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span>
-<span class="odt-code-line">        &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">&lt;struts&gt;</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">internationalization </span><span style="color:#800080">--&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;constant name=&quot;</span><span style="color:#0000ff">struts.custom.i18n.resources</span><span style="color:#800080">&quot; value=&quot;</span><span style="color:#0000ff">messages</span><span style="color:#800080">&quot; /&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">default package </span><span style="color:#800080">--&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;package name=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot; namespace=&quot;</span><span style="color:#0000ff">/</span><span style="color:#800080">&quot; extends=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;default-action-ref name=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot; /&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result type=&quot;</span><span style="color:#0000ff">redirectAction</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#800080">&lt;param name=&quot;</span><span style="color:#0000ff">actionName</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">Enter</span><span style="color:#800080">&lt;/param&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#800080">&lt;param name=&quot;</span><span style="color:#0000ff">namespace</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/actions</span><span style="color:#800080">&lt;/param&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;!-- </span><span style="font-style:italic;color:#008000">actions package </span><span style="color:#800080">--&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;package name=&quot;</span><span style="color:#0000ff">actions</span><span style="color:#800080">&quot; namespace=&quot;</span><span style="color:#0000ff">/actions</span><span style="color:#800080">&quot; extends=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Enter</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/views/Entry.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Confirm</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">actions.Confirm</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/views/Confirmation.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Delete</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">actions.Delete</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/views/Entry.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span>
-<span class="odt-code-line">&lt;/struts&gt;</span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;struts&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- internationalization --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;constant</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts.custom.i18n.resources</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">messages</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- default package --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;default-action-ref</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">index</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">type</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">redirectAction</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;param</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actionName</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">Saisir</span><span style="color:#800080">&lt;/param&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;param</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">namespace</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/actions</span><span style="color:#800080">&lt;/param&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- equity package --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Saisir</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Confirmer</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions.Confirmer</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Confirmation.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Effacer</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions.Effacer</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
 </code></pre></div>
 
 <p>Lines 27–29 define a new action [Delete] associated with a class [Delete]. The response to this action is the view [Input.jsp].</p>
@@ -1055,43 +1055,43 @@
 <h2 id="84-the-confirm-action">8.4. The [Confirm] action</h2>
 <p>It evolves as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">package </span><span style="color:#000000">actions;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">import </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">import </span><span style="color:#000000">java.util.Map;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">import </span><span style="color:#000000">org.apache.struts2.interceptor.SessionAware;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">public class </span><span style="color:#000000">Confirm </span><span style="font-weight:bold;color:#000000">extends </span><span style="color:#000000">ActionSupport </span><span style="font-weight:bold;color:#000000">implements </span><span style="color:#000000">SessionAware{</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// model</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">String name;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// session</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">Map&lt;String, Object&gt; session;</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// getters and setters</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String getName() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">name;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public void </span><span style="color:#000000">setName(String name) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.name = name;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public void </span><span style="color:#000000">setSession(Map&lt;String, Object&gt; session) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.session = session;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String execute(){</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// Add the name to the session</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">session.put(</span><span style="color:#800000">&quot;name&quot;</span><span style="color:#000000">, name);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// navigation</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">SUCCESS;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">java.util.Map;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">org.apache.struts2.interceptor.SessionAware;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Confirmer</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">ActionSupport</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">implements</span><span style="color:#008080"> </span><span style="color:#000000">SessionAware{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// model</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">session;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">getNom()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setNom(String</span><span style="color:#008080"> </span><span style="color:#000000">nom)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.nom</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">nom;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setSession(Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">session)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.session=session;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">execute(){</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// put the name in the session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">session.put(</span><span style="color:#800000">&quot;nom&quot;</span><span style="color:#000000">,nom);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// navigation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
@@ -1105,23 +1105,23 @@
 <h2 id="85-the-confirmationjsp-and-saisiejsp-views">8.5. The [Confirmation.jsp] and [Saisie.jsp] views</h2>
 <p>The [Confirmation.jsp] view remains unchanged. The [Saisie.jsp] view changes as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
-<span class="odt-code-line"><span style="color:#bf5f3f">&lt;</span><span style="color:#3f7f7f">%@page </span><span style="color:#000000">contentType=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot; </span><span style="color:#000000">pageEncoding=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span>
-<span class="odt-code-line"><span style="color:#bf5f3f">&lt;%@ </span><span style="color:#3f7f7f">taglib </span><span style="color:#000000">prefix=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot; </span><span style="color:#000000">uri=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot; </span><span style="color:#bf5f3f">%&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE </span><span style="color:#008080">html&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">meta </span><span style="color:#000000">http-equiv=</span><span style="font-style:italic;color:#2a00ff">&quot;Content-Type&quot; </span><span style="color:#000000">content=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.titre1&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/title</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/head</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.titre2&quot;</span><span style="color:#008080">/&gt;&lt;</span><span style="color:#3f7f7f">/h1</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form action=&quot;Confirm&quot;</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.libelle&quot; </span><span style="color:#000000">name=</span><span style="font-style:italic;color:#2a00ff">&quot;name&quot; </span><span style="color:#000000">value=</span><span style="font-style:italic;color:#2a00ff">&quot;%{#attr[&#x27;name&#x27;]}&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.valider&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirm&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.effacer&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Delete&quot;</span><span style="color:#008080">/&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/s:form</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/body</span><span style="color:#008080">&gt;</span></span>
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">/html</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">meta</span> <span style="color:#7f007f">http-equiv</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Content-Type&quot;</span> <span style="color:#7f007f">content</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.titre1&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.titre2&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form action=&quot;Confirmer&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.libelle&quot;</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;nom&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;%{#attr[&#x27;nom&#x27;]}&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.valider&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Confirmer&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.effacer&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Effacer&quot;</span><span style="color:#008080">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:form</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -1129,7 +1129,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BC0000019860FC6267.png" style="display:inline-block; margin:4px;width:16.034cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC0000019860FC6267.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BC0000019860FC6267.png" width="606" height="204" style="display:inline-block; margin:4px;width:16.034cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC0000019860FC6267.png" /></td></tr></table>
 
 <p>In [1], the entered name was <em>ST</em>. We know that the [Confirm] action placed this name in the session. The link [2] takes us to the URL [3]. The [Saisie.jsp] view is displayed. For the input field, the attribute <em>%{#attr[&#x27;name&#x27;]}</em> retrieves the name from the session.</p>
 <ul>
@@ -1137,46 +1137,47 @@
   </li>
 </ul>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Delete</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">actions.Delete</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Effacer</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions.Effacer</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
 <p><a id="refheading100491454977699"></a></p>
 <h2 id="86-the-delete-action">8.6. The [Delete] action</h2>
 <p>The code for the [Delete] action is as follows:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">package </span><span style="color:#000000">actions;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">import </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">import </span><span style="color:#000000">java.util.Map;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">import </span><span style="color:#000000">org.apache.struts2.interceptor.SessionAware;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">public class </span><span style="color:#000000">Delete </span><span style="font-weight:bold;color:#000000">extends </span><span style="color:#000000">ActionSupport </span><span style="font-weight:bold;color:#000000">implements </span><span style="color:#000000">SessionAware{</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#008000">// session</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#000000">Map&lt;String, Object&gt; session;</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public </span><span style="color:#000000">String execute(){</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// retrieve the name from the session</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">String name = (String) session.get(</span><span style="color:#800000">&quot;name&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// remove it from the session if necessary</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(name !</span><span style="font-weight:bold;color:#000000">= null</span><span style="color:#000000">){</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">session.remove(</span><span style="color:#800000">&quot;name&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#008000">// navigation</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">SUCCESS;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public void </span><span style="color:#000000">setSession(Map&lt;String, Object&gt; map) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.session = map;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line">}</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">java.util.Map;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">org.apache.struts2.interceptor.SessionAware;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Effacer</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">ActionSupport</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">implements</span><span style="color:#008080"> </span><span style="color:#000000">SessionAware{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">session;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">execute(){</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// retrieve the name from the session</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">nom=(String)session.get(</span><span style="color:#800000">&quot;nom&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// remove it from the session if necessary</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#000000">(nom!=</span><span style="font-weight:bold;color:#000000">null</span><span style="color:#000000">){</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#000000">session.remove(</span><span style="color:#800000">&quot;nom&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// navigation</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">@Override</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setSession(Map&lt;String,</span><span style="color:#008080"> </span><span style="color:#000000">Object&gt;</span><span style="color:#008080"> </span><span style="color:#000000">map)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.session=map;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
+<p><span style="color: #000000"> </span></p>
 <ul>
   <li>Line 7: The [Delete] class implements the [SessionAware] interface, just as the [Confirm] action did.
   </li>
@@ -1185,25 +1186,25 @@
 </ul>
 
 <p>Let’s see how this works:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000019296DA5187.png" style="display:inline-block; margin:4px;width:17.171cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000019296DA5187.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000019296DA5187.png" width="649" height="201" style="display:inline-block; margin:4px;width:17.171cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000019296DA5187.png" /></td></tr></table>
 
 <p>In [1], we want to clear the input field. We click the [Clear] button.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit </span><span style="color:#000000">key=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.effacer&quot; </span><span style="color:#000000">action=</span><span style="font-style:italic;color:#2a00ff">&quot;Effacer&quot;</span><span style="color:#008080">/&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.effacer&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Effacer&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
 <p>The [Clear] action will be executed. In [2], we notice that the URL called was that of the [Confirm] action. This comes from the <em>&lt;s:form&gt;</em> tag in the form:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form action=&quot;Confirm&quot;</span><span style="color:#008080">&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form action=&quot;Confirmer&quot;</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
 <p>which causes the form to be submitted to the [Confirm] action. When the [Clear] button is clicked, the parameter</p>
 <p><strong>action:Delete=Delete</strong></p>
 <p>was posted to the URL [/actions/Confirm.action]. Struts uses this parameter to process the data posted by the [Delete] action. This action removes the session name. The [Input.jsp] page is the response to the [Delete] action:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
-<span class="odt-code-line"><span style="color:#800080">&lt;action name=&quot;</span><span style="color:#0000ff">Delete</span><span style="color:#800080">&quot; class=&quot;</span><span style="color:#0000ff">actions.Delete</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;result name=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/views/Entry.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span>
-<span class="odt-code-line"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Effacer</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions.Effacer</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
 <p>This one, which displays the session name, then displays an empty string [3].</p>
@@ -1255,8 +1256,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
