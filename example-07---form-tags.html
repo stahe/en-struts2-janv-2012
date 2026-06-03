@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -579,10 +581,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#91-the-netbeans-project" class="md-nav__link">
+  <a href="#91-the-netbeans" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.1. The NetBeans project
+        9.1. The Netbeans
       
     </span>
   </a>
@@ -593,7 +595,7 @@
   <a href="#92-struts-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.2. Struts Configuration
+        9.2. Struts configuration
       
     </span>
   </a>
@@ -612,10 +614,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#94-the-formjsp-view-input-section" class="md-nav__link">
+  <a href="#94-view-formjsp-data-entry-section" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.4. The [Form.jsp] view – input section
+        9.4. View [Form.jsp] – data entry section
       
     </span>
   </a>
@@ -623,10 +625,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#95-the-form-action-input-section" class="md-nav__link">
+  <a href="#95-action-form-data-entry-section" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.5. The [Form] action – input section
+        9.5. Action [Form] – data entry section
       
     </span>
   </a>
@@ -656,10 +658,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#98-tests" class="md-nav__link">
+  <a href="#98-the-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.8. Tests
+        9.8. The tests
       
     </span>
   </a>
@@ -667,10 +669,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#99-the-form1-action-and-the-form1jsp-view" class="md-nav__link">
+  <a href="#99-action-form1-and-view-form1jsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.9. The [Form1] action and the [Form1.jsp] view
+        9.9. Action [Form1] and view [Form1.jsp]
       
     </span>
   </a>
@@ -678,10 +680,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#910-the-form2-action-and-the-form2jsp-view" class="md-nav__link">
+  <a href="#910-the-action-form2-and-the-view-form2jsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.10. The [Form2] action and the [Form2.jsp] view
+        9.10. The action [Form2] and the view [Form2.jsp]
       
     </span>
   </a>
@@ -953,7 +955,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -980,7 +982,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -1037,28 +1039,28 @@
 
 
 
-<p><a id="refheading100511454977699"></a></p>
-<h1 id="9-example-07-form-tags">9. Example 07 – Form Tags</h1>
+<p><span id="refheading100511454977699" name="refheading100511454977699" class="odt-bookmark-anchor"></span></p>
+<h1 id="9-example-07-form-tags">9. <span style="color: #365f91">Example 07 – Form Tags</span></h1>
 <p>We will build and use the following form:</p>
-<p><img src="images/10000000000002450000026D0C92262D.png" width="327" height="349" style="width:8.64cm;height:9.234cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002450000026D0C92262D.png" /></p>
-<p><img src="images/100000000000015600000163ABE2A084.png" width="239" height="248" style="width:6.331cm;height:6.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000015600000163ABE2A084.png" /></p>
-<p>We will extend the concept of parameter injection seen for a text input field to other HTML elements in a form.</p>
-<p><a id="refheading100531454977699"></a></p>
-<h2 id="91-the-netbeans-project">9.1. The NetBeans project</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031F000001CBEAC2C9EE.png" width="400" height="230" style="display:inline-block; margin:4px;width:10.571cm;height:6.073cm;" class="odt-zoomable" data-zoom-src="images/100000000000031F000001CBEAC2C9EE.png" /></td></tr></table>
+<p><img src="images/10000000000002450000026D0C92262D.png" width="327" height="349" style="width:8.64cm;height:9.236cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002450000026D0C92262D.png" /></p>
+<p><img src="images/100000000000015600000163ABE2A084.png" width="239" height="248" style="width:6.331cm;height:6.572cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000015600000163ABE2A084.png" /></p>
+<p>We will extend the concept of parameter injection seen for a text input field to other Html elements in a form.</p>
+<p><span id="refheading100531454977699" name="refheading100531454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="91-the-netbeans">9.1. <span style="color: #4f81bd">The Netbeans</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000031F000001CBEAC2C9EE.png" width="400" height="230" style="display:inline-block; margin:4px;width:10.571cm;height:6.073cm;" class="odt-zoomable" data-zoom-src="images/100000000000031F000001CBEAC2C9EE.png" /></td></tr></table>
 
 <ul>
-  <li>in [1], the project views [<i><b>Formx</b></i>.jsp]
+  <li>in [1], the views of the project [Formx.jsp]
   </li>
-  <li>in [2], the Struts configuration file and internationalized messages
+  <li>to [2], the Struts configuration file and the internationalized messages
   </li>
-  <li>in [3], the actions [<i><b>Formx</b></i>.java], and another Struts configuration file.
+  <li>to [3], the actions from [Formx.java], and another Struts configuration file.
   </li>
 </ul>
 
-<p><a id="refheading100551454977699"></a></p>
-<h2 id="92-struts-configuration">9.2. Struts Configuration</h2>
-<p>The [struts.xml] file is as follows:</p>
+<p><span id="refheading100551454977699" name="refheading100551454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="92-struts-configuration">9.2. <span style="color: #4f81bd">Struts configuration</span></h2>
+<p>The file [struts.xml] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
@@ -1082,11 +1084,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
 </code></pre></div>
 
-<p><span style="color: #800080"> </span></p>
 <ul>
-  <li>Line 9: Includes another configuration file [example.xml]. This file configures the actions.
+  <li>Line 9: Includes another configuration file, [example.xml]. This file configures the actions.
   </li>
-  <li>Lines 11–19: the <i>default</i> package. Defines a redirect address for the URL /. It will be redirected to the URL <i>/example/Form.action</i>.
+  <li>Lines 11–19: the <i>default</i> package. Defines a redirect address for Url/. It will be redirected to Url<i>/example/Form.action</i>.
   </li>
 </ul>
 
@@ -1113,19 +1114,19 @@
 </code></pre></div>
 
 <ul>
-  <li>Lines 7–17: define the actions <i>/example/Form</i>, <i>/example/Form1</i>, <i>/example/Form2, </i>where <i>/example </i>is the namespace (line 7) and <i>Formx are </i>the actions.
+  <li>lines 7–17: define the actions <i>/example/Form</i>, <i>/example/Form1</i>, <i>/example/Form2, </i>where <i>/example </i>is the namespace (line 7) and <i>Formx are </i>the actions.
   </li>
-  <li>lines 8-10: executing the <i>Form</i> action will display the <i>/example/Form.jsp </i>view.
+  <li>lines 8-10: executing the <i>Form</i> action will display the view <i>/example/Form.jsp</i>.
   </li>
-  <li>lines 11-13: executing the <i>Form1</i> action will display the <i>/example/Form1.jsp </i>view.
+  <li>lines 11-13: executing the <i>Form1</i> action will display the <i>/example/Form1.jsp</i> view.
   </li>
-  <li>Lines 14–16: Executing the <i>Form2</i> action will display the <i>/example/Form2.jsp </i>view.
+  <li>Lines 14–16: Executing the <i>Form2</i> action will display the <i>/example/Form2.jsp</i> view.
   </li>
 </ul>
 
-<p><a id="refheading100571454977699"></a></p>
-<h2 id="93-message-files">9.3. Message files</h2>
-<p>We will not dwell on the internationalization of the project. We have already covered this in Example 01. We provide the contents of the [messages.properties] file so that the reader can understand the views that follow.</p>
+<p><span id="refheading100571454977699" name="refheading100571454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="93-message-files">9.3. <span style="color: #4f81bd">Message files</span></h2>
+<p>We will not dwell on the internationalization of the project. We have already covered this in Example 01. We provide the contents of the file [messages.properties] so that the reader can understand the views that follow.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Form.francais=</span><span style="color:#2a00ff">Fran\u00E7ais</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Form.anglais=</span><span style="color:#2a00ff">Anglais</span></span></span>
@@ -1160,10 +1161,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Confirmation.hidden=</span><span style="color:#2a00ff">10-hidden</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading100591454977699"></a></p>
-<h2 id="94-the-formjsp-view-input-section">9.4. The [Form.jsp] view – input section</h2>
+<p><span id="refheading100591454977699" name="refheading100591454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="94-view-formjsp-data-entry-section">9.4. <span style="color: #4f81bd">View [Form.jsp] – data entry section</span></h2>
 <p>It looks like this:</p>
-<p><img src="images/10000000000002450000026D0C92262D.png" width="327" height="349" style="width:8.64cm;height:9.234cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002450000026D0C92262D.png" /></p>
+<p><img src="images/10000000000002450000026D0C92262D.png" width="327" height="349" style="width:8.64cm;height:9.236cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002450000026D0C92262D.png" /></p>
 <p>It is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1211,70 +1212,70 @@
 </code></pre></div>
 
 <ul>
-  <li>The form begins on line 26 and ends on line 38. On line 26, the <i>`action`</i> attribute is missing. This attribute specifies the action to which the form data will be posted. If the <i>`action`</i> attribute is missing, the data will be posted to the action that caused the view to be displayed, in this case the `[Form]` action.
+  <li>The form begins on line 26 and ends on line 38. On line 26, the <i>action</i> attribute is missing. This attribute specifies which action the form data will be posted to. In the absence of the <i>action</i> attribute, the data will be posted to the action that caused the view to be displayed, in this case the action [Form].
   </li>
-  <li>Line 27: an input field. The <i>key</i> attribute specifies its label. The <i>name</i> attribute is the name of the parameter that will be posted. The string posted for this field will be in the form:
+  <li>Line 27: an input field. The <i>key</i> attribute specifies its label. The attribute <i>name </i>is the name of the parameter that will be posted. The string posted for this field will be in the form:
   </li>
 </ul>
 
-<p><strong>textfield=text_entered</strong></p>
-<p>The parameter name corresponds to a field in the [Form] action. The value of the <em>text_saisi</em> input field will be injected into the <em>textfield</em> field of the [Form] action. Conversely, if the [Form.jsp] view is displayed following the [Form] action, the value of the input field will be that of the <em>textfield</em> field in the [Form] action. This field is therefore used for both reading and writing. The [Form] class must have the <em>getTextField</em> and <em>setTextField</em> methods for this purpose.</p>
-<p>This reasoning applies to all subsequent input tags. We will not repeat it.</p>
+<p><strong>textfield=entered_text</strong></p>
+<p>The parameter name corresponds to a field in the [Form] action. The value of the <em>texte_saisi</em> input field will be injected here into the <em>textfield</em> field of the [Form] action. Conversely, if the view [Form.jsp] is displayed following action [Form], the value of the input field will be that of the <em>textfield</em> field in action [Form]. This field is therefore used for both reading and writing. The class [Form] must have the methods <em>getTextField</em> and <em>setTextField</em> for this purpose.</p>
+<p>This applies to all the input tags that follow. We won&#x27;t repeat it.</p>
 <ul>
-  <li>Line 28: password entry. The string posted to the [Form] action will be in the form
+  <li>Line 28: password entry. The string posted to action [Form] will be in the form
   </li>
 </ul>
 
 <p><strong>password=entered_password</strong></p>
-<p>A <em>password</em> field with its get/set methods must exist in the [Form] action.</p>
+<p>A <em>password</em> field with its get / set must exist in the [Form] action.</p>
 <ul>
   <li>Line 29: Entering multi-line text in a 5-row, 40-column area. The string posted to the [Form] action will be in the form
   </li>
 </ul>
 
 <p><strong>textarea=input</strong></p>
-<p>A <em>textarea</em> field with its get/set methods must exist in the [Form] action.</p>
+<p>A <em>textarea</em> field with its get / set must exist in the [Form] action.</p>
 <ul>
-  <li>line 30: a single-select dropdown list (<i>size=1</i>). Only one value from the list can be selected. The string posted to the [Form] action will be in the form:
+  <li>Line 30: a single-select dropdown list (<i>size=1</i>). Only one value from the list can be selected. The string posted to the [Form] action will be in the form:
   </li>
 </ul>
 
 <p><strong>select1=selected_value</strong></p>
-<p>A <em>select1</em> field with its get/set methods must exist in the [Form] action.</p>
-<p>The <em>key</em> attribute is the label of the list. The <em>list</em> attribute defines the list of values to be placed in the combo box. Here, the <em>getSelect1Values</em> method of the [Form] action will be called to populate the combo box. This method can return a collection, a dictionary, or an array. Here, it will return an array of strings [<em>string1</em>, <em>string2</em>, ...] which will generate the following HTML code:</p>
+<p>A <em>select1</em> field with its get / set must exist in the [Form] action.</p>
+<p>The <em>key</em> attribute is the label of the list. The <em>list</em> attribute defines the list of values to be placed in the combo box. Here, the <em>getSelect1Values</em> method of the [Form] action will be called to populate the combo box. This method can return a collection, a dictionary, or an array. Here, it will return an array of strings [chaine1, chaine2, ...], which will generate the following code Html:</p>
 <p>&lt;option value=&quot;<em>string1</em>&quot;&gt;<em>string1</em>&lt;/option&gt;</p>
 <p>&lt;option value=&quot;<em>string2</em>&quot;&gt;<em>string2</em>&lt;/option&gt;</p>
 <p>...</p>
 <p>The text between the <em>&lt;option&gt;...&lt;/option&gt;</em> tags will be displayed in the combo box. The <em>value</em> attribute specifies the value to be posted if the option is selected by the user. Here, the <em>value</em> attribute and the text displayed in the combo box are identical. Most often, this is not the case. If the second option is selected, the following string will be posted to the [Form] action:</p>
 <p><strong>select1=string2</strong></p>
-<p>The <em>[Form].select1</em> field will then receive the value <em>string2</em>. Conversely, if at the time the form is displayed, this field is set to <em>string3</em>, then visually, the third element</p>
+<p>The field <em>[Form].select1</em> will then receive the value <em>string2</em>. Conversely, if at the time the form is displayed, this field is set to <em>string3</em>, then visually, the third element</p>
 <p>&lt;option value=&quot;<em>string3</em>&quot;&gt;<em>string3</em>&lt;/option&gt;</p>
 <p>will appear selected in the combo box.</p>
 <p>The <em>headerValue</em> attribute sets the text to be displayed as the first option in the combo box, and <em>headerKey sets</em> the value to be submitted if this option is selected by the user.</p>
 <ul>
-  <li>Line 31: again, a list of size 3 (<i>size=3</i>): unlike the previous list where only one item is visible, here 3 items from the list will be visible. The selection mode remains the same. Only one item can be selected.
+  <li>Line 31: Here again is a list of size 3 (<i>size=3</i>): unlike the previous list where only one item is visible, here 3 items from the list will be visible. The selection mode remains the same. Only one item can be selected.
   </li>
-  <li>Line 32: another list, but this time with multiple selection (<i>multiple=true</i>). In this case, the value posted to the [Form] action will be in the form:
+  <li>line 32: another list, but with multiple selection (<i>multiple=true</i>). In this case, the value posted to the [Form] action will be in the form:
   </li>
 </ul>
 
 <p><strong>select3=string2&amp;select3=string5</strong></p>
-<p>if the options <em>string2</em> and <em>string5</em> have been selected. When multiple values are posted for the same parameter—in this case, <em>select3</em>—the action must have a field with the parameter’s name and be of type <em>array</em>. So, for example, here the [Form] action could have a field like:</p>
-<p><strong>String[] select3</strong>;</p>
-<p>and the corresponding get/set methods. The <em>select3</em> array will then receive the array of character strings [<em>string2</em>, <em>string5</em>]. Conversely, when the [Form.jsp] view is displayed, the values of the <em>[Form].select3</em> field determine which options in the <em>select3</em> list will appear selected. This is always a read/write operation.</p>
+<p>if the options <em>string2</em> and <em>string5</em> have been selected. When multiple values are posted for the same parameter—in this case, <em>select3</em>—the action must have a field with the parameter’s name and be of the <em>array</em> type. So, for example, here the action [Form] could have a field like this:</p>
+<p><strong>String[] select3</strong> ;</p>
+<p>and the corresponding get / set methods. The <em>select3</em> array will then receive the [chaine2,chaine5] array of character strings. Conversely, when the [Form.jsp] view is displayed, the values of the <em>[Form].select3</em> field determine which options in the <em>select3</em> list will appear selected. This is still a read/write operation.</p>
 <ul>
-  <li>Line 33: a group of radio buttons. The group label is provided by the <i>key</i> attribute. The labels of the individual buttons are provided by the <i>list</i> attribute. The value of this attribute is the name of a method in the [Form] action that must return a collection, a dictionary, or an array. Here, the <i>[Form].getRadioValues </i>method will return an array of strings [<i>string1</i>, <i>string2</i>, ...] that will generate the following HTML tags:
+  <li>Line 33: a group of radio buttons. The group label is provided by the <i>key</i> attribute. The labels of the individual buttons are provided by the <i>list</i> attribute. The value of this attribute is the name of a method of the [Form] action that must return a collection, a dictionary, or an array. Here, the method <i>[Form].getRadioValues </i>will return an array of strings [chaine1,chaine2,...] that will generate the following tags Html:
   </li>
 </ul>
 
 <p>&lt;input type=&quot;radio&quot; name=&quot;radio&quot; ... value=&quot;<em>string1</em>&quot;/&gt;<em>string1</em></p>
-<p>&lt;input type=&quot;radio&quot; name=&quot;radio&quot; ... value=&quot;<em>string2</em>&quot;/&gt;<em>string2</em></p>
+<p>&lt;input type=&quot;radio&quot; name=&quot;radio&quot; ... value=&quot;<em>channel2</em>&quot;/&gt;<em>channel2</em></p>
 <p>...</p>
-<p>If the radio button <em>string2</em> is selected, the posted value will be</p>
-<p><strong>radio=string2</strong></p>
-<p>and this value will be inserted into the <em>[Form].radio</em> field.</p>
+<p>If the radio button <em>for channel2</em> is selected, the posted value will be</p>
+<p><strong>radio=channel2</strong></p>
+<p>and this value will be injected into the <em>[Form].radio</em> field.</p>
 <ul>
-  <li>Line 34: a checkbox. If checked, the following parameter string will be posted to the [Form] action
+  <li>line 34: a checkbox. If it is checked, the following parameter string will be posted to the [Form] action
   </li>
 </ul>
 
@@ -1283,7 +1284,7 @@
 <p><strong>checkbox=false</strong></p>
 <p>had been posted.</p>
 <ul>
-  <li>Line 35: a list of checkboxes. Multiple checkboxes can be selected. The group label is provided by the <i>key</i> attribute. The labels of the individual checkboxes are provided by the <i>list</i> attribute. The value of this attribute is the name of a method in the [Form] action that must return a collection, a dictionary, or an array. Here, the <i>[Form].getCheckboxlistValues </i>method will return an array of strings [<i>string1</i>, <i>string2</i>, ...] that will generate the following HTML tags:
+  <li>Line 35: a list of checkboxes. Multiple checkboxes can be selected. The group label is provided by the <i>key</i> attribute. The labels of the individual checkboxes are provided by the <i>list</i> attribute. The value of this attribute is the name of a method of the [Form] action that must return a collection, a dictionary, or an array. Here, the method <i>[Form].getCheckboxlistValues </i>will return an array of strings [chaine1,chaine2,...], which will generate the following tags Html:
   </li>
 </ul>
 
@@ -1292,22 +1293,22 @@
 <p>...</p>
 <p>If the user selects the checkboxes labeled <em>string2</em> and <em>string5</em>, the following string will be posted to the [Form] action:</p>
 <p><strong>checkboxlist=string2&amp;checkboxlist=string5</strong></p>
-<p>The array [<em>string2</em>, <em>string5</em>] will be assigned to the <em>[Form].checkboxlist</em> field, which must therefore be of the string array type, as with multiple-selection lists. Conversely, when the [Form.jsp] view is displayed, the values of the <em>[Form].checkboxlist</em> field determine which checkboxes will be checked.</p>
+<p>The array [chaine2, chaine5] will be assigned to the field <em>[Form].checkboxlist,</em> which must therefore be of the string array type, as with multiple-selection lists. Conversely, when the [Form.jsp] view is displayed, the values of the <em>[Form].checkboxlist</em> field determine which checkboxes will be checked.</p>
 <ul>
-  <li>Line 36: a hidden field. A hidden field is a field that is submitted without being entered by the user. Its value is set by the programmer. Here, the hidden field will take its value from the <i>[Form].hidden </i>field. This same value will be submitted in the form:
+  <li>Line 36: a hidden field. A hidden field is a field that is submitted without being entered by the user. Its value is set by the programmer. Here, the hidden field will take its value from the field <i>[Form].hidden</i>. This same value will be submitted in the form:
   </li>
 </ul>
 
 <p><strong>hidden=something</strong></p>
-<p>and reassigned to the <em>[Form].hidden</em> field.</p>
+<p>and reassigned to the field <em>[Form].hidden</em>.</p>
 <ul>
-  <li>Line 37: a <i>submit</i> button. Clicking this button will post all the form values to the [Form] action. The string of posted parameters will look like this:
+  <li>Line 37: a button of type <i>submit</i>. Clicking this button will post all the form values to the action [Form]. The string of posted parameters will look like this:
   </li>
 </ul>
 
-<p><strong>textfield=text&amp;password=&amp;textarea=line1%0D%0Aline2%0D%0A&amp;select1=zero&amp;select2=three&amp;select3=zero&amp;select3=two&amp;__multiselect_select3=&amp;radio=blue&amp;checkbox=true&amp;__checkbox_checkbox=true&amp;checkboxlist=v%C3%A9lo&amp;checkboxlist=bus&amp;__multiselect_checkboxlist=&amp;hidden=initial&amp;submitText=Validate</strong></p>
-<p><a id="refheading100611454977699"></a></p>
-<h2 id="95-the-form-action-input-section">9.5. The [Form] action – input section</h2>
+<p><strong>textfield=text&amp;password=&amp;textarea=line1%0D%0Aline2%0D%0A&amp;select1=zero&amp;select2=three&amp;select3=zero&amp;select3=two&amp;__multiselect_select3=&amp;radio=blue&amp;checkbox=true&amp;__checkbox_checkbox=true&amp;checkboxlist=bike&amp;checkboxlist=bus&amp;__multiselect_checkboxlist=&amp;hidden=initial&amp;submitText=Submit</strong></p>
+<p><span id="refheading100611454977699" name="refheading100611454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="95-action-form-data-entry-section">9.5. <span style="color: #4f81bd">Action [Form] – data entry section</span></h2>
 <p>Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">package</span><span style="color:#008080"> </span><span style="color:#000000">example;</span></span></span>
@@ -1361,46 +1362,45 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li>line 1: the field associated with the form&#x27;s <i>textfield</i> tag. Used to initialize this input field as well as to retrieve its value.  Receives the value entered in this field at the time of the POST request.
+  <li>line 1: the field associated with the form&#x27;s <i>textfield</i> tag. Used to initialize this input field as well as to retrieve its value.  Receives the value entered in this field at the time of POST.
   </li>
-  <li>line 2: the field associated with the form&#x27;s <i>password</i> tag.  Receives the value entered in this field during the POST request.
+  <li>line 2: the field associated with the form&#x27;s <i>password</i> tag.  Receives the value entered in this field at the time of POST.
   </li>
-  <li>line 13: associated with the form&#x27;s <i>textarea</i> tag.  Receives the text entered in this field during the POST request.
+  <li>Line 13: Associated with the form’s <i>textarea</i> tag.  Receives the text entered in this field at the time of POST.
   </li>
-  <li>Line 14: Associated with the form’s <i>`select1` </i>tag, a single-select list. Its initial value selects an item from the dropdown. The item with a <i>`value`</i> attribute matching this value will be selected. Upon POST, receives the <i>`value`</i> attribute of the option selected in the dropdown.
+  <li>Line 14: Associated with the form’s <i>`select1` </i>tag, a single-select list. Its initial value selects an item from the dropdown. The item with the <i>`value`</i> attribute equal to this value will be selected. At the time of POST, receives the <i>value</i> attribute of the option selected in the combo box.
   </li>
-  <li>Line 15: The character strings that will populate the <i>select1</i> dropdown.
+  <li>Line 15: the character strings that will populate the <i>select1</i> combo box.
   </li>
   <li>Lines 16 and 17: Same as <i>select1</i>
   </li>
-  <li>Line 18: associated with the form’s <i>select1</i> tag, a multi-select list. The initial values in the array select the corresponding elements in the list. The elements whose <i>value</i> attribute matches one of these values will be selected. Upon POST, it receives the <i>value</i> attributes of the various options selected in the dropdown.
+  <li>Line 18: associated with the form’s <i>select1</i> tag, a multiple-choice list. The initial values in the array select the corresponding elements from the list. The elements whose <i>value</i> attribute matches one of these values will be selected. When POST runs, it receives the <i>value</i> attributes of the various options selected in the combo box.
   </li>
-  <li>Line 19: the character strings that will populate the <i>select3</i> list
+  <li>line 19:  the character strings that will populate the <i>select3</i> list
   </li>
-  <li>Line 20: Associated with the form’s <i>radio</i> tag. Its value is used to select one of the radio buttons—the one whose <i>value</i> attribute matches this value. Receives the value of the selected radio button during the POST request.
+  <li>Line 20: associated with the form’s <i>radio</i> tag. Its value is used to select one of the radio buttons—the one whose <i>value</i> attribute matches this value.  Receives the value of the selected radio button during the POST process.
   </li>
   <li>Line 21: The various labels and values of the radio buttons.
   </li>
-  <li>Line 22: Associated with the form’s <i>checkbox</i> tag. Its initial value is used to check or uncheck the box. Upon POST, it receives the value <i>true </i>if the box was checked, <i>false </i>otherwise.
+  <li>Line 22: Associated with the form’s <i>checkbox</i> tag. Its initial value is used to check or uncheck the checkbox. Receives the value <i>true</i> at the time of POST if the checkbox has been checked, <i>false </i>otherwise.
   </li>
-  <li>Line 23: Associated with the form’s <i>checkboxlist</i> tag. The initial values in the array select the corresponding checkboxes. The checkboxes whose <i>value</i> attribute matches one of these initial values will be checked. Upon POST, receives the <i>value</i> attributes of the various checked checkboxes.
+  <li>line 23: associated with the form’s <i>checkboxlist</i> tag. The initial values in the array select the corresponding checkboxes. The checkboxes whose <i>value</i> attribute matches one of these initial values will be checked. Upon POST, it receives the <i>value</i> attributes of the various checked checkboxes.
   </li>
-  <li>Line 24: The strings that will populate the labels of the <i>checkboxlist</i> checkboxes.
+  <li>Line 24: The character strings that will populate the labels of the <i>checkboxlist</i> boxes.
   </li>
-  <li>line 25: associated with <i>the hidden field</i>. Its initial value sets the value of the hidden field. Upon POST, it will receive this same value because the user cannot modify it.
+  <li>Line 25: Associated with <i>the hidden</i> field. Its initial value will set the value of the hidden field. During the POST process, it will receive this same value because the user cannot modify it.
   </li>
-  <li>Line 26: Associated with the <i>submit</i> tag. During the POST request, it receives the button’s label. This field is optional.
+  <li>Line 26: associated with the <i>submit</i> tag. During the POST process, it receives the button label. This field is optional.
   </li>
-  <li>The methods in lines 29, 34, and 39 will be discussed further below.
+  <li>The methods in lines 29, 34, and 39 will be discussed in more detail later.
   </li>
 </ul>
 
-<p><a id="refheading100631454977699"></a></p>
-<h2 id="96-the-formjsp-view-confirmation-section">9.6. The [Form.jsp] view – Confirmation section</h2>
-<p>The [Form.jsp] view has a &quot;Confirmation of entries&quot; section that has not yet been covered:</p>
-<p><img src="images/10000000000001470000019182C7CE73.png" width="229" height="281" style="width:6.061cm;height:7.43cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001470000019182C7CE73.png" /></p>
+<p><span id="refheading100631454977699" name="refheading100631454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="96-the-formjsp-view-confirmation-section">9.6. <span style="color: #4f81bd"><strong>The [Form.jsp] view – Confirmation section</strong></span></h2>
+<p>The view [Form.jsp] has a &quot;Confirmation of Entries&quot; section that has not yet been viewed:</p>
+<p><img src="images/10000000000001470000019182C7CE73.png" width="229" height="281" style="width:6.061cm;height:7.433cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001470000019182C7CE73.png" /></p>
 <p>Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1459,7 +1459,7 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 13: displays the value of the <i>[Form].textfield </i>field
+  <li>line 13: displays the value of the <i>[Form].textfield </i>field
   </li>
   <li>line 17: displays the value of the <i>[Form].password </i>field
   </li>
@@ -1469,33 +1469,33 @@
   </li>
   <li>line 29: displays the value of the <i>[Form].select2 </i>field
   </li>
-  <li>Line 33: Displays the values of the <i>[Form].select3 </i>array. To do this, it uses the <i>[Form].getSelect3SelectedValues </i>method.
+  <li>Line 33: Displays the values from table <i>[Form].select3</i>. To do this, it uses the method <i>[Form].getSelect3SelectedValues</i>.
   </li>
-  <li>line 37: displays the value of the <i>[Form].radio </i>field
+  <li>Line 37: Displays the value of the <i>[Form].radio </i>field
   </li>
-  <li>line 41: displays the value of the <i>[Form].checkbox </i>field
+  <li>Line 41: Displays the value of the field <i>[Form].checkbox</i>
   </li>
-  <li>Line 45: Displays the values of the <i>[Form].checkboxlist </i>array. To do this, it uses the <i>[Form].getCheckboxlistSelectedValues </i>method.
+  <li>line 45: displays the values of the <i>[Form].checkboxlist </i>array. To do this, it uses the <i>[Form].getCheckboxlistSelectedValues </i>method.
   </li>
   <li>Line 49: Displays the value of the <i>[Form].hidden </i>field
   </li>
 </ul>
 
-<p><a id="refheading100651454977699"></a></p>
-<h2 id="97-the-form-action-confirmation-section">9.7. The [Form] action – confirmation section</h2>
-<p>The  <em>getSelect3SelectedValues</em> and  <em>getCheckboxlistSelectedValues</em> methods  mentioned above are defined in the [Form] class:</p>
+<p><span id="refheading100651454977699" name="refheading100651454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="97-the-form-action-confirmation-section">9.7. <span style="color: #4f81bd">The [Form] action – confirmation section</span></h2>
+<p>The methods <em>getSelect3SelectedValues</em> and <em>getCheckboxlistSelectedValues</em> mentioned above are defined in the class [Form]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// valeurs sélectionnées dans champ select3</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// values selected in select3 field</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">getSelect3SelectedValues()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">getValue(select3);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// valeurs sélectionnées dans champ checkboxlist</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// values selected in checkboxlist field</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">getCheckboxlistSelectedValues()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">getValue(checkboxlist);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// méthode utilitaire</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// utilitarian method</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">getValue(String[]</span><span style="color:#008080"> </span><span style="color:#000000">values)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">result</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#800000">&quot;&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(String</span><span style="color:#008080"> </span><span style="color:#000000">value</span><span style="color:#008080"> </span><span style="color:#000000">:</span><span style="color:#008080"> </span><span style="color:#000000">values)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
@@ -1505,14 +1505,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="color:#000000"></span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <p>They simply concatenate the elements of the arrays they need to display.</p>
-<p><a id="refheading100671454977699"></a></p>
-<h2 id="98-tests">9.8. Tests</h2>
-<p>When the NetBeans project is run, the following initial page is displayed:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052800000345FF63CF2A.png" width="660" height="419" style="display:inline-block; margin:4px;width:17.463cm;height:11.074cm;" class="odt-zoomable" data-zoom-src="images/100000000000052800000345FF63CF2A.png" /></td></tr></table>
+<p><span id="refheading100671454977699" name="refheading100671454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="98-the-tests">9.8. <span style="color: #4f81bd">The tests</span></h2>
+<p>When running project Netbeans, the following initial page is displayed:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000052800000345FF63CF2A.png" width="660" height="419" style="display:inline-block; margin:4px;width:17.463cm;height:11.074cm;" class="odt-zoomable" data-zoom-src="images/100000000000052800000345FF63CF2A.png" /></td></tr></table>
 
-<p>The values displayed in [1] and [2] come from the initial values of the fields in the [Form] action. Let’s look at a few examples:</p>
+<p>The values displayed in [1] and [2] come from the initial values of the fields in action [Form]. Let’s look at a few examples:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">textarea</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#800000">&quot;ligne1\nligne2\n&quot;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
@@ -1523,13 +1522,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">String[]</span><span style="color:#008080"> </span><span style="color:#000000">select3Values</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">String[]{</span><span style="color:#800000">&quot;zéro&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#800000">&quot;un&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#800000">&quot;deux&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#800000">&quot;trois&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#800000">&quot;quatre&quot;</span><span style="color:#000000">};</span></span></span>
 </code></pre></div>
 
-<p>The value of the <em>select3Values</em> field explains the content of the list in [1B]. The value of the <em>select3</em> field explains the selected items in [1B] and displayed in [2B].</p>
-<p>If we enter other values in the form and submit it, the entered values will be posted to the corresponding fields of the [Form] action. Then, the [Form.jsp] view will be re-displayed. We are therefore in the same situation as before, except that the initial values have been replaced by the posted values. Here is an example:</p>
-<p><img src="images/100000000000024F0000025497436675.png" width="383" height="387" style="width:10.13cm;height:10.25cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024F0000025497436675.png" /></p>
-<p><img src="images/100000000000017D00000165E6DCFA9C.png" width="267" height="250" style="width:7.061cm;height:6.609cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017D00000165E6DCFA9C.png" /></p>
-<p><a id="refheading91628522158564"></a></p>
-<h2 id="99-the-form1-action-and-the-form1jsp-view">9.9. The [Form1] action and the [Form1.jsp] view</h2>
-<p>The configuration file [example.xml] configures the following [Form1] action:</p>
+<p>The value of the <em>select3Values</em> field determines the contents of the list in [1B]. The value of the <em>select3</em> field determines the selected items in [1B] and those displayed in [2B].</p>
+<p>If we enter other values in the form and submit it, the entered values will be posted to the corresponding fields in the [Form] action. Then, the [Form.jsp] view will be redisplayed. We are therefore in the same situation as before, except that the initial values have been replaced by the posted values. Here is an example:</p>
+<p><img src="images/100000000000024F0000025497436675.png" width="383" height="386" style="width:10.13cm;height:10.216cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000024F0000025497436675.png" /></p>
+<p><img src="images/100000000000017D00000165E6DCFA9C.png" width="267" height="250" style="width:7.061cm;height:6.616cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017D00000165E6DCFA9C.png" /></p>
+<p><span id="refheading91628522158564" name="refheading91628522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="99-action-form1-and-view-form1jsp">9.9. <span style="color: #4f81bd">Action [Form1] and view [Form1.jsp]</span></h2>
+<p>The configuration file [example.xml] configures the following action [Form1]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
@@ -1552,7 +1551,7 @@
 </code></pre></div>
 
 <p>Lines 11–13: The call to the [Form1] action generates the [Form1.jsp] view.</p>
-<p>The [Form1] action is as follows:</p>
+<p>The action [Form1] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1728,15 +1727,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>The difference between the [Form] and [Form1] views can be illustrated by line 27 shown below:</p>
+<p>The difference between views [Form] and [Form1] can be illustrated by line 27 shown below:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;data.textfield&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>The input field is bound for both reading and writing to the <em>data.textfield</em> field of the [Form1] action. Recall that after execution, the properties of the [Form1] action are accessible to the view. Thus, the preceding <em>name</em> attribute will be evaluated as <em>[Form1].getData().getTextField()</em>. Therefore, the two preceding <em>get</em> methods must exist.</p>
-<p><a id="refheading91630522158564"></a></p>
-<h2 id="910-the-form2-action-and-the-form2jsp-view">9.10. The [Form2] action and the [Form2.jsp] view</h2>
-<p>The configuration file [example.xml] configures the following [Form2] action:</p>
+<p>The input field is linked for reading and writing to the <em>data.textfield</em> field of the [Form1] action. Note that after execution, the properties of the [Form1] action are accessible to the view. Thus, the preceding <em>name</em> attribute will be evaluated as <em>[Form1].getData().getTextField()</em>. Therefore, the two preceding <em>get</em> methods must exist.</p>
+<p><span id="refheading91630522158564" name="refheading91630522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="910-the-action-form2-and-the-view-form2jsp">9.10. <span style="color: #4f81bd">The action [Form2] and the view [Form2.jsp]</span></h2>
+<p>The configuration file [example.xml] configures the following action [Form2]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
@@ -1759,7 +1758,7 @@
 </code></pre></div>
 
 <p>Lines 14–16: The call to the [Form2] action generates the [Form2.jsp] view.</p>
-<p>The [Form2] action is as follows:</p>
+<p>The action [Form2] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1779,11 +1778,11 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 6: The [Form2] action implements the [<b>ModelDriven</b>] interface. There is only one method to implement: the <b>getModel</b> method on line 12. This method returns an instance of the [Data] class discussed earlier.
+  <li>Line 6: The [Form2] action implements the [ModelDriven] interface. There is only one method to implement: the <b>getModel</b> method on line 12. This method returns an instance of the [Data] class discussed earlier.
   </li>
 </ul>
 
-<p>The fact that the [Form2] action implements the [<strong>ModelDriven</strong>] interface has the following consequence: the view displayed following the [Form2] action has direct access to the properties of the [Form2] action’s model, which is returned by the <strong>getModel</strong>() method. Thus, the [Form2.jsp] view reverts to what it was with the initial [Form] action:</p>
+<p>The fact that the action [Form2] implements the interface [ModelDriven] has the following consequence: the view displayed following the [Form2] action has direct access to the properties of the [Form2] action model, which is rendered by the <strong>getModel</strong>() method. Therefore, the view [Form2.jsp] reverts to what it was with the initial action [Form]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1885,14 +1884,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:textfield</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;textfield&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.textfield&quot;</span> <span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">The advantage of placing the model outside the view is that this architecture more clearly delineates the functionalities of each element of the MVC architecture. The M model is clearly identified by a class. Furthermore, the model may exist prior to the actions. Thus, if a web application manages a database of people, it is likely that the </span><em><span style="color: #000000">Person</span></em><span style="color: #000000"> class exists. If an action provides an input form to create a new person, the model for this action is obvious: it is the </span><em><span style="color: #000000">Person</span></em><span style="color: #000000"> class.</span></p>
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">We saw how simple it was to switch from the </span>[Form] <span style="color: #000000">action </span>to the [Form2] action:</p>
+<p><span style="color: #000000">The advantage of placing the model outside the view is that this architecture more clearly delineates the functionalities of each element in the MVC architecture. The M model is clearly identified by a class. Furthermore, the model may pre-exist the actions. Thus, if a web application manages a database of people, it is likely that the </span><em><span style="color: #000000">Person</span></em><span style="color: #000000"> class exists. If an action provides an input form to create a new person, the model for that action is obvious: it is the </span><em><span style="color: #000000">Person</span></em><span style="color: #000000"> class.</span></p>
+<p><span style="color: #000000">We have seen how simple it was to switch from action </span>[Form] to action [Form2]:</p>
 <ul>
   <li>the model <b>M </b>of the view <b>V </b>has been encapsulated in a separate class
   </li>
-  <li>the action that generates the view using this model implements the <b>ModelDriven</b> interface with the <b>getModel</b> method, which returns an instance of the model <b>M</b>. The action can then be viewed as an extension of the Struts 2 controller <b>C</b>, the <b>FilterDispatcher</b> class.
+  <li>the action that generates the view using this model implements the <b>ModelDriven</b> interface with the <b>getModel</b> method, which returns an instance of the <b>M</b> model. The action can then be viewed as an extension of the Struts 2 <b>C</b> controller, the <b>FilterDispatcher</b> class.
   </li>
 </ul>
 

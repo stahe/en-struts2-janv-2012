@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -609,7 +611,7 @@
   <a href="#101-the-netbeans-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.1. The NetBeans project
+        10.1. The Netbeans project
       
     </span>
   </a>
@@ -628,10 +630,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#103-the-formjsp-view" class="md-nav__link">
+  <a href="#103-the-view-formjsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.3. The [Form.jsp] view
+        10.3. The view [Form.jsp]
       
     </span>
   </a>
@@ -898,7 +900,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -925,7 +927,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -982,18 +984,18 @@
 
 
 
-<p><a id="refheading91632522158564"></a></p>
-<h1 id="10-example-08-tags-associated-with-lists">10. Example 08 - Tags Associated with Lists</h1>
+<p><span id="refheading91632522158564" name="refheading91632522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="10-example-08-tags-associated-with-lists">10. <span style="color: #365f91">Example 08 - Tags Associated with Lists</span></h1>
 <p>The following example focuses on tags that display lists. We have already encountered them in the previous example: the drop-down list, checkboxes, and radio buttons. The test form will be as follows:</p>
-<p><img src="images/10000000000002AA0000027E41691120.png" width="375" height="349" style="width:9.92cm;height:9.234cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002AA0000027E41691120.png" /></p>
+<p><img src="images/10000000000002AA0000027E41691120.png" width="375" height="351" style="width:9.92cm;height:9.28cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002AA0000027E41691120.png" /></p>
 <p><img src="images/10000000000001560000017F999B9A21.png" width="239" height="268" style="width:6.331cm;height:7.091cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001560000017F999B9A21.png" /></p>
-<p><a id="refheading91634522158564"></a></p>
-<h2 id="101-the-netbeans-project">10.1. The NetBeans project</h2>
-<p>The NetBeans project is as follows:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000193000002333ADF6161.png" width="202" height="282" style="display:inline-block; margin:4px;width:5.332cm;height:7.449cm;" class="odt-zoomable" data-zoom-src="images/1000000000000193000002333ADF6161.png" /></td></tr></table>
+<p><span id="refheading91634522158564" name="refheading91634522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="101-the-netbeans-project">10.1. <span style="color: #4f81bd">The Netbeans project</span></h2>
+<p>The project Netbeans is as follows:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000193000002333ADF6161.png" width="202" height="282" style="display:inline-block; margin:4px;width:5.332cm;height:7.449cm;" class="odt-zoomable" data-zoom-src="images/1000000000000193000002333ADF6161.png" /></td></tr></table>
 
 <ul>
-  <li>[1] the action and [2] the associated view.
+  <li>in [1] the action and in [2] the associated view.
   </li>
 </ul>
 
@@ -1013,9 +1015,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">struts</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Lines 8–9 show that a call to the URL [/example/Form.action] generates the view [/example/Form.jsp]. The [Form] action will therefore be responsible for constructing the model for the [Form.jsp] view.</p>
-<p><a id="refheading91636522158564"></a></p>
-<h2 id="102-the-internationalized-messages-file">10.2. The internationalized messages file</h2>
+<p>Lines 8–9 show that a call to Url generates the view [/example/Form.jsp]. The [Form] action will therefore be responsible for building the model for the [Form.jsp] view.</p>
+<p><span id="refheading91636522158564" name="refheading91636522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="102-the-internationalized-messages-file">10.2. <span style="color: #4f81bd">The internationalized messages file</span></h2>
 <p>The [messages.properties] file for internationalized messages is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Form.francais=</span><span style="color:#2a00ff">Fran\u00E7ais</span></span></span>
@@ -1051,9 +1053,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Confirmation.radio3=</span><span style="color:#2a00ff">11-radio3</span></span></span>
 </code></pre></div>
 
-<p>The [Form.jsp] view uses these messages.</p>
-<p><a id="refheading91638522158564"></a></p>
-<h2 id="103-the-formjsp-view">10.3. The [Form.jsp] view</h2>
+<p>The view [Form.jsp] uses these messages.</p>
+<p><span id="refheading91638522158564" name="refheading91638522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="103-the-view-formjsp">10.3. <span style="color: #4f81bd">The view [Form.jsp]</span></h2>
 <p>The [Form.jsp] view is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1161,23 +1163,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;select1&quot;</span> <span style="color:#7f007f">list</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;{&#x27;vert&#x27;,&#x27;jaune&#x27;,&#x27;rouge&#x27;}&quot;</span> <span style="color:#7f007f">size</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select1&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>This tag will generate the following HTML code:</p>
+<p>This tag will generate the following Html code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;select1&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Form_select1&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;vert&quot;</span><span class="p">&gt;</span>vert<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;jaune&quot;</span> <span class="na">selected</span><span class="o">=</span><span class="s">&quot;selected&quot;</span><span class="p">&gt;</span>jaune<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;rouge&quot;</span><span class="p">&gt;</span>rouge<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&lt;</span><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;select1&quot;</span><span class="w"> </span><span class="k">size</span><span class="o">=</span><span class="ss">&quot;1&quot;</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="ss">&quot;Form_select1&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;vert&quot;</span><span class="o">&gt;</span><span class="n">vert</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;jaune&quot;</span><span class="w"> </span><span class="n">selected</span><span class="o">=</span><span class="ss">&quot;selected&quot;</span><span class="o">&gt;</span><span class="n">jaune</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;rouge&quot;</span><span class="o">&gt;</span><span class="n">rouge</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="o">&lt;/</span><span class="k">select</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>The value of the <em>list</em> attribute is an array of strings used to generate the values and labels of the options. The associated model is the <em>select1</em> field of the following [Form] action:</p>
+<p>The value of the <em>list</em> attribute is an array of strings used to generate the values and labels for the options. The associated model is the <em>select1</em> field of the following [Form] action:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String select1 = </span><span style="color:#2a00ff">&quot;jaune&quot;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>This field is associated with read and write access to the tag named <em>select1</em>. On <strong>write</strong>, the value of the selected option will be injected into the <em>select1</em> field. On <strong>read</strong>, the value of the <em>select1</em> field is used to determine the selected option. Here, the value <em>&quot;yellow&quot;</em> in the <em>select1</em> field is used to select the option in the <em>select1</em> tag that has the value &quot;yellow.&quot; This is why, on line 3, the option is selected.</p>
+<p>This field is associated with read and write access to the tag named <em>select1</em>. On <strong>write</strong>, the value of the selected option will be injected into the <em>select1</em> field. On <strong>read</strong>, the value of the <em>select1</em> field is used to determine the selected option. Here, the value &quot;<em>yellow&quot;</em> in the <em>select1</em> field is used to select the option from the <em>select1</em> tag that has the value &quot;yellow.&quot; This is why, on line 3, the option is selected.</p>
 <ul>
   <li>line 28
   </li>
@@ -1192,7 +1194,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String[] select2 = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> String[]{</span><span style="color:#2a00ff">&quot;vert&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;rouge&quot;</span><span style="color:#000000">};</span></span></span>
 </code></pre></div>
 
-<p>It is indeed an array. Its initial value is used to select the options whose values are present in the array.</p>
+<p>This is indeed an array. Its initial value is used to select the options whose values are present in the array.</p>
 <ul>
   <li>line 29
   </li>
@@ -1202,27 +1204,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;select3&quot;</span> <span style="color:#7f007f">list</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span>#{&#x27;01&#x27;:&#x27;vert(01)&#x27;,&#x27;02&#x27;:&#x27;jaune(02)&#x27;,&#x27;03&#x27;:&#x27;rouge(03)&#x27;,&#x27;04&#x27;:&#x27;blanc(04)&#x27;,&#x27;05&#x27;:&#x27;noir(05)&#x27;}<span style="font-style:italic;color:#2a00ff">&quot;</span> <span style="color:#7f007f">size</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select3&quot;</span> <span style="color:#7f007f">multiple</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>Here, the value of the <em>list</em> attribute is a dictionary whose keys serve as values for the options and whose associated values serve as labels for the options. The generated HTML code is as follows:</p>
+<p>Here, the value of the <em>list</em> attribute is a dictionary whose keys serve as values for the options and whose associated values serve as labels for the options. The generated Html code is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;select3&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;3&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Form_select3&quot;</span> <span class="na">multiple</span><span class="o">=</span><span class="s">&quot;multiple&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;01&quot;</span> <span class="na">selected</span><span class="o">=</span><span class="s">&quot;selected&quot;</span><span class="p">&gt;</span>vert(01)<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;02&quot;</span><span class="p">&gt;</span>jaune(02)<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;03&quot;</span> <span class="na">selected</span><span class="o">=</span><span class="s">&quot;selected&quot;</span><span class="p">&gt;</span>rouge(03)<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;04&quot;</span><span class="p">&gt;</span>blanc(04)<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;05&quot;</span><span class="p">&gt;</span>noir(05)<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&lt;</span><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;select3&quot;</span><span class="w"> </span><span class="k">size</span><span class="o">=</span><span class="ss">&quot;3&quot;</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="ss">&quot;Form_select3&quot;</span><span class="w"> </span><span class="n">multiple</span><span class="o">=</span><span class="ss">&quot;multiple&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;01&quot;</span><span class="w"> </span><span class="n">selected</span><span class="o">=</span><span class="ss">&quot;selected&quot;</span><span class="o">&gt;</span><span class="n">vert</span><span class="p">(</span><span class="mi">01</span><span class="p">)</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;02&quot;</span><span class="o">&gt;</span><span class="n">jaune</span><span class="p">(</span><span class="mi">02</span><span class="p">)</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;03&quot;</span><span class="w"> </span><span class="n">selected</span><span class="o">=</span><span class="ss">&quot;selected&quot;</span><span class="o">&gt;</span><span class="n">rouge</span><span class="p">(</span><span class="mi">03</span><span class="p">)</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;04&quot;</span><span class="o">&gt;</span><span class="n">blanc</span><span class="p">(</span><span class="mi">04</span><span class="p">)</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="k">option</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="ss">&quot;05&quot;</span><span class="o">&gt;</span><span class="n">noir</span><span class="p">(</span><span class="mi">05</span><span class="p">)</span><span class="o">&lt;/</span><span class="k">option</span><span class="o">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="o">&lt;/</span><span class="k">select</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>The associated field in the action is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String[] select3 = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> String[]{</span><span style="color:#2a00ff">&quot;01&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;03&quot;</span><span style="color:#000000">};</span></span></span>
 </code></pre></div>
 
-<p>We again have an array of values because the associated tag is a multiple-choice field. The initial values of the array explain why the options on lines 2 and 4 are initially selected.</p>
+<p>We again have an array of values because the associated tag is a multiple-choice element. The initial values of the array explain why the options on lines 2 and 4 are initially selected.</p>
 <ul>
   <li>line 30
   </li>
@@ -1232,38 +1234,32 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;select4&quot;</span> <span style="color:#7f007f">list</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;dico&quot;</span> <span style="color:#7f007f">size</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select4&quot;</span> <span style="color:#7f007f">multiple</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>Here, the list options will be provided by the view model, which in this case is part of the [Form] action:</p>
+<p>Here, the list options will be provided by the view model, which is part of the [Form] action:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> HashMap&lt;String, String&gt; dico = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> HashMap&lt;String, String&gt;();</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">The keys of the </span><em><span style="color: #000000">dico</span></em><span style="color: #000000"> dictionary will be the values of the options. The values of the </span><em><span style="color: #000000">dico</span></em><span style="color: #000000"> dictionary will be the labels of the options. The </span><em><span style="color: #000000">select4</span></em><span style="color: #000000"> field of the action is as follows:</span></p>
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String[] select4 = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> String[]{</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;3&quot;</span><span style="color:#000000">};</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">This is an array of values that will receive the values posted by the </span><em><span style="color: #000000">select4</span></em><span style="color: #000000"> tag.</span></p>
-<p><span style="color: #000000"> </span></p>
 <ul>
   <li><span style="color: #000000">line 31</span>
   </li>
 </ul>
 
-<p><span style="color: #000000"> </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:select</span><span style="color:#000000"> </span><span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;select5&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">list</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;couleurs&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">listKey</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;id&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">listValue</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;nom&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">size</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;3&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select5&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">multiple</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p>The list of options is generated by the <em>colors</em> field defined by the <em>list</em> attribute. The <em>colors</em> field of the [Form] action is defined as follows:</p>
+<p>The list of options is generated by the <em>colors</em> field defined by the <em>list</em> attribute. The <em>colors</em> field of action [Form] is defined as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Couleur[] couleurs;</span></span></span>
 </code></pre></div>
 
-<p>The [Color] class is defined as follows:</p>
+<p>The [Couleur] class is defined as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1282,7 +1278,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>It has two fields named <em>id</em> and <em>name</em>. In the <em>select5</em> tag, we have <span style="color: #000000">listKey=</span><em><span style="color: #2a00ff">&quot;id&quot; </span></em><span style="color: #000000">and listValue=</span><em><span style="color: #2a00ff">&quot;name&quot;</span></em><em>.</em> This means that the <em>id</em> field will serve as the value for an option, and the <em>name</em> field will serve as the label. Remember that it is the values of the options that are posted. They will be posted to the following <em>select5</em> field:</p>
+<p>It has two fields named <em>id</em> and <em>name</em>. In the <em>select5</em> tag, we have <span style="color: #000000">listKey=</span><em><span style="color: #2a00ff">&quot;id&quot; </span></em><span style="color: #000000">listValue=</span><em><span style="color: #2a00ff">&quot;name&quot;</span></em><em>.</em> This means that the <em>id</em> field will serve as the value for a option, and the <em>name</em> field will serve as the label. Note that it is the values of the options that are posted. They will be posted to the following <em>select5</em> field:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String[] select5 = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> String[]{</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;3&quot;</span><span style="color:#000000">};</span></span></span>
 </code></pre></div>
@@ -1296,7 +1292,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkboxlist</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlist1&quot;</span> <span style="color:#7f007f">list</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span>#{&#x27;01&#x27;:&#x27;vert(01)&#x27;,&#x27;02&#x27;:&#x27;jaune(02)&#x27;,&#x27;03&#x27;:&#x27;rouge(03)&#x27;,&#x27;04&#x27;:&#x27;blanc(04)&#x27;,&#x27;05&#x27;:&#x27;noir(05)&#x27;}<span style="font-style:italic;color:#2a00ff">&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist1&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>This tag will generate the following HTML code:</p>
+<p>This tag will generate the following Html code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1317,7 +1313,7 @@
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;checkboxlist1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;05&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;checkboxlist1-5&quot;</span><span class="p">/&gt;</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;checkboxlist1-5&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;checkboxLabel&quot;</span><span class="p">&gt;</span>noir(05)<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>All checkboxes have the name <em>checkboxlist1</em>. Since each one can be checked, multiple <em>checkboxlist1</em> parameters may be submitted. Therefore, the <em>checkboxlist1</em> field in the model must be of type array. The <em>list</em> attribute on line 22 is a dictionary whose keys generate the <em>value</em> attributes of the checkboxes and whose values generate the labels for those same checkboxes. The <em>checkboxlist1</em> field in the [Form] action is as follows:</p>
+<p>All checkboxes have the name <em>checkboxlist1</em>. Since each one can be checked, multiple <em>checkboxlist1</em> parameters can be submitted. Therefore, the <em>checkboxlist1</em> field in the model must be of type array. The <em>list</em> attribute on line 22 is a dictionary whose keys generate the <em>value</em> attributes of the checkboxes and whose values generate the labels for those same checkboxes. The <em>checkboxlist1</em> field in the [Form] action is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String[] checkboxlist1 = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> String[]{</span><span style="color:#2a00ff">&quot;01&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;03&quot;</span><span style="color:#000000">};</span></span></span>
 </code></pre></div>
@@ -1331,7 +1327,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:checkboxlist</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;checkboxlist2&quot;</span> <span style="color:#7f007f">list</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;dico&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.checkboxlist2&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>This tag works like the <em>select4</em> tag discussed earlier. The associated field in the action is as follows:</p>
+<p>This tag functions like the <em>select4</em> tag discussed earlier. The associated field in the action is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>private<span style="color:#000000"> String[] checkboxlist2 = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> String[]{</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;3&quot;</span><span style="color:#000000">};</span></span></span>
 </code></pre></div>
@@ -1359,7 +1355,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:radio</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;radio1&quot;</span> <span style="color:#7f007f">list</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;</span>#{&#x27;01&#x27;:&#x27;vert(01)&#x27;,&#x27;02&#x27;:&#x27;jaune(02)&#x27;,&#x27;03&#x27;:&#x27;rouge(03)&#x27;,&#x27;04&#x27;:&#x27;blanc(04)&#x27;,&#x27;05&#x27;:&#x27;noir(05)&#x27;}<span style="font-style:italic;color:#2a00ff">&quot;</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.radio1&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>This tag works in the same way as the <em>select3</em> tag seen earlier. The generated HTML code is as follows:</p>
+<p>This tag works in principle like the <em>select3</em> tag seen previously. The generated Html code is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -1370,7 +1366,7 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Form_radio104&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;04&quot;</span><span class="p">/&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;Form_radio104&quot;</span><span class="p">&gt;</span>blanc(04)<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Form_radio105&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;05&quot;</span><span class="p">/&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;Form_radio105&quot;</span><span class="p">&gt;</span>noir(05)<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>All radio buttons have the same name<em>, radio1</em>. Only one radio button can be selected. Therefore, only one value is submitted: that of the selected radio button. The keys in the <em>list</em> dictionary are used to generate the <em>value</em> attributes of the radio buttons, while the values in the dictionary are used to generate the labels associated with these buttons. The associated <em>radio1</em> field in the action is as follows:</p>
+<p>All radio buttons have the same name<em>, radio1</em>. Only one radio button can be selected. Therefore, only one value is submitted: the value of the selected radio button. The keys in the <em>list</em> dictionary are used to generate the <em>value</em> attributes of the radio buttons, while the values in the dictionary are used to generate the labels associated with these buttons. The associated <em>radio1</em> field in the action is as follows:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String radio1=</span><span style="color:#2a00ff">&quot;01&quot;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
@@ -1403,7 +1399,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> String radio3=</span><span style="color:#2a00ff">&quot;1&quot;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>That covers the <em>data entry</em> portion of the form. There is also a <em>confirmation</em> section that is similar to the one in the previous example: it confirms the submitted values. We will only comment on the following lines:</p>
+<p>That covers the <em>data entry</em> portion of the form. There is also a <em>confirmation</em> section that is similar to the one in the previous example: it confirms the posted values. We will only comment on the following lines:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Form.select2&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span></span>
@@ -1413,19 +1409,19 @@
 
 <p>which visually corresponds to the following:</p>
 <p><img src="images/10000000000001330000001F762C2414.png" width="212" height="21" style="width:5.611cm;height:0.566cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001330000001F762C2414.png" /></p>
-<p>The text in the left cell comes from the [messages.properties] file:</p>
+<p>The text in the left cell comes from the file [messages.properties]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Form.select2=</span><span style="color:#2a00ff">2-select2</span><span style="color:#000000"> </span><span style="color:#2a00ff">(multiple=true,</span><span style="color:#000000"> </span><span style="color:#2a00ff">size=3)</span></span></span>
 </code></pre></div>
 
 <p>The text in the right-hand cell was generated by the <em>getSelect2SelectedValues</em> method of the [Form] action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#3f7f5f">// valeurs sélectionnées dans listes déroulantes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#3f7f5f">// values selected from drop-down lists</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String getSelect2SelectedValues() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> getArrayValue(select2);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// méthodes utilitaires</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// utility methods</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String getArrayValue(String[] values) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    String result = </span><span style="color:#2a00ff">&quot;&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (String value : values) {</span></span></span>
@@ -1435,10 +1431,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 </code></pre></div>
 
-<p>The <em>getSelect2SelectedValues</em> method returns the values from the <em>select2</em> dropdown as a string.</p>
-<p><a id="refheading91640522158564"></a></p>
-<h2 id="104-the-form-action">10.4. The [Form] action</h2>
-<p>When discussing the [Form.jsp] view, we presented the fields of the associated [Form] action. The code for the [Form] action is as follows:</p>
+<p>The <em>getSelect2SelectedValues</em> method returns the values of the <em>select2</em> array as a string.</p>
+<p><span id="refheading91640522158564" name="refheading91640522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="104-the-form-action">10.4. <span style="color: #4f81bd">The [Form] action</span></h2>
+<p>When commenting on the [Form.jsp] view, we presented the fields of the associated [Form] action. The code for the [Form] action is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1526,11 +1522,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
-<p><span style="color: #000000">There is no </span><em><span style="color: #000000">execute</span></em><span style="color: #000000"> method in this action. Therefore, the </span><em><span style="color: #000000">execute</span></em><span style="color: #000000"> method of the parent class </span><em><span style="color: #000000">ActionSupport </span></em><span style="color: #000000">is executed. This method does nothing and simply returns the </span><em><span style="color: #000000">SUCCESS</span></em><span style="color: #000000"> navigation key.</span></p>
-<p><a id="refheading91642522158564"></a></p>
-<h2 id="105-tests">10.5. Tests</h2>
-<p>Readers are invited to test the [example-08] application.</p>
+<p><span style="color: #000000">There is no </span><em><span style="color: #000000">execute</span></em><span style="color: #000000"> method in this action. Therefore, the </span><em><span style="color: #000000">execute</span></em><span style="color: #000000"> method of the parent class </span><em><span style="color: #000000">ActionSupport </span></em><span style="color: #000000">is executed. This method does nothing and simply returns the key of navigation as </span><em><span style="color: #000000">SUCCESS</span></em><span style="color: #000000">.</span></p>
+<p><span id="refheading91642522158564" name="refheading91642522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="105-tests">10.5. <span style="color: #4f81bd">Tests</span></h2>
+<p>The reader is invited to test the [exemple-08] application.</p>
 
 
 

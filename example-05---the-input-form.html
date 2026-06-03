@@ -18,7 +18,7 @@
         <link rel="prev" href="example-04---internationalization.html">
       
       
-        <link rel="next" href="example-05b---navigating-a-data-entry-form.html">
+        <link rel="next" href="example-05b---navigation-in-an-input-form.html">
       
       
         
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -501,7 +503,7 @@
   <a href="#61-the-netbeans-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. The NetBeans project
+        6.1. The Netbeans project
       
     </span>
   </a>
@@ -520,10 +522,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#63-the-confirm-action" class="md-nav__link">
+  <a href="#63-the-action-confirmer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3. The [Confirm] action
+        6.3. The action [Confirmer]
       
     </span>
   </a>
@@ -531,10 +533,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#64-the-messages-file" class="md-nav__link">
+  <a href="#64-the-message-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4. The messages file
+        6.4. The message file
       
     </span>
   </a>
@@ -554,10 +556,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#651-the-entryjsp-view" class="md-nav__link">
+  <a href="#651-the-view-saisiejsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.5.1. The [Entry.jsp] view
+        6.5.1. The view [Saisie.jsp]
       
     </span>
   </a>
@@ -581,10 +583,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#66-the-tests" class="md-nav__link">
+  <a href="#66-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.6. The tests
+        6.6. Tests
       
     </span>
   </a>
@@ -606,14 +608,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -937,7 +939,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -964,7 +966,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -1021,12 +1023,12 @@
 
 
 
-<p><a id="refheading100191454977699"></a></p>
-<h1 id="6-example-05-the-input-form">6. Example 05 – The Input Form</h1>
+<p><span id="refheading100191454977699" name="refheading100191454977699" class="odt-bookmark-anchor"></span></p>
+<h1 id="6-example-05-the-input-form">6. <span style="color: #365f91">Example 05 – The Input Form</span></h1>
 <p>We’ll introduce the concept of an input form using a simple example.</p>
-<p><a id="refheading100211454977699"></a></p>
-<h2 id="61-the-netbeans-project">6.1. The NetBeans project</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AE000001C8F758B619.png" width="599" height="228" style="display:inline-block; margin:4px;width:15.849cm;height:6.033cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AE000001C8F758B619.png" /></td></tr></table>
+<p><span id="refheading100211454977699" name="refheading100211454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="61-the-netbeans-project">6.1. <span style="color: #4f81bd">The Netbeans project</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004AE000001C8F758B619.png" width="599" height="228" style="display:inline-block; margin:4px;width:15.849cm;height:6.033cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AE000001C8F758B619.png" /></td></tr></table>
 
 <p>In [1], the project:</p>
 <ul>
@@ -1036,14 +1038,14 @@
   </li>
   <li>the message file [messages.properties]
   </li>
-  <li>the action [Confirm.java]
+  <li>the action [Confirmer.java]
   </li>
 </ul>
 
-<p>In [2], the entry page</p>
-<p><a id="refheading100231454977699"></a></p>
-<h2 id="62-configuration">6.2. Configuration</h2>
-<p>The [struts.xml] file is as follows:</p>
+<p>In [2], the input page</p>
+<p><span id="refheading100231454977699" name="refheading100231454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="62-configuration">6.2. <span style="color: #4f81bd">Configuration</span></h2>
+<p>The file [struts.xml] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
@@ -1076,16 +1078,16 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 20: the action package for the URL <i>/actions/Action</i>.
+  <li>Line 20: the action package for Url <i>/actions/Action</i>.
   </li>
-  <li>lines 21–23: define the [Enter] action. No class is associated with it. The response is always the view [/views/Enter.jsp]
+  <li>lines 21-23: define the action [Saisir]. No class is associated with it. The response is always the view [/vues/Saisie.jsp]
   </li>
-  <li>Lines 24–26: define the [Confirm] action. The [actions.Confirm] class is associated with it. The response is always the view [/views/Confirmation.jsp]
+  <li>Lines 24–26: define the [Confirmer] action. The [actions.Confirmer] class is associated with it. The response is always the [/vues/Confirmation.jsp] view
   </li>
 </ul>
 
-<p><a id="refheading100251454977699"></a></p>
-<h2 id="63-the-confirm-action">6.3. The [Confirm] action</h2>
+<p><span id="refheading100251454977699" name="refheading100251454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="63-the-action-confirmer">6.3. <span style="color: #4f81bd">The action [Confirmer]</span></h2>
 <p>Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
@@ -1110,10 +1112,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>The class has only one field, the one on line 8 with its get/set methods.</p>
-<p><a id="refheading100271454977699"></a></p>
-<h2 id="64-the-messages-file">6.4. The messages file</h2>
-<p>The contents of [messages.properties] are as follows:</p>
+<p>The class has only one field, the one on line 8 with its get / set.</p>
+<p><span id="refheading100271454977699" name="refheading100271454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="64-the-message-file">6.4. <span style="color: #4f81bd">The message file</span></h2>
+<p>The content of [messages.properties] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">saisie.texte=</span><span style="text-decoration:underline;color:#2a00ff">Formulaire</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">de</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">saisie</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">saisie.titre1=</span><span style="text-decoration:underline;color:#2a00ff">Saisie</span></span></span>
@@ -1126,13 +1128,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">confirm.retour=</span><span style="text-decoration:underline;color:#2a00ff">Retour</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">au</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">formulaire</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">de</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">saisie</span></span></span>
 </code></pre></div>
 
-<p>These message keys are used in both the [Entry.jsp] and [Confirmation.jsp] views.</p>
-<p><a id="refheading100291454977699"></a></p>
-<h2 id="65-the-views">6.5. The views</h2>
-<p><a id="refheading100311454977699"></a></p>
-<h3 id="651-the-entryjsp-view">6.5.1. The [Entry.jsp] view</h3>
+<p>These message keys are used in the two views [Saisie.jsp] and [Confirmation.jsp].</p>
+<p><span id="refheading100291454977699" name="refheading100291454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="65-the-views">6.5. <span style="color: #4f81bd">The views</span></h2>
+<p><span id="refheading100311454977699" name="refheading100311454977699" class="odt-bookmark-anchor"></span></p>
+<h3 id="651-the-view-saisiejsp">6.5.1. <span style="color: #4f81bd">The view [Saisie.jsp]</span></h3>
 <p>Visually, it looks like this:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000027200000158DF105B91.png" width="313" height="172" style="display:inline-block; margin:4px;width:8.281cm;height:4.551cm;" class="odt-zoomable" data-zoom-src="images/100000000000027200000158DF105B91.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000027200000158DF105B91.png" width="313" height="172" style="display:inline-block; margin:4px;width:8.281cm;height:4.551cm;" class="odt-zoomable" data-zoom-src="images/100000000000027200000158DF105B91.png" /></td></tr></table>
 
 <p>Its source code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1155,28 +1157,28 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 7: Displays the message for key &quot;<i>saisie.titre1</i>&quot; (Input) [1].
+  <li>Line 7: Displays the key message <i>saisie.titre1 </i>(Entry) [1].
   </li>
-  <li>line 10: displays the message for key &quot;<i>saisie.titre2</i>&quot; (Entry) [2].
+  <li>line 10: displays the key message <i>saisie.titre2 </i>(Input) [2].
   </li>
-  <li>Lines 11, 14: The <i>&lt;s:form&gt; </i>tag introduces an HTML form. All entries within this form will be sent to the web server. We say they are <i>posted </i>because the HTTP operation involved in sending this data to the server is called POST. The data is sent in the form of a string: param1=value<i>1</i>&amp;<i>param2=value2&amp;</i>... We have already encountered this string in Section 3.5 of Example 02. In both cases, the parameter string is processed in the same way by Struts 2. <i>The values </i>of <i>the parameters </i>are injected into the executed action, into fields bearing the same names as the <i>parameters</i>. To whom is the posted data sent? By default, to the action that displayed the form, here the <i>Saisir</i> action [5]. You can also use the <b>action</b> attribute to specify another action, here the [Confirmer] action.
+  <li>Lines 11, 14: The <i>&lt;s:form&gt; </i>tag introduces a form Html. All entries within this form will be sent to the web server. We say they are <i>posted </i>because the operation involved in sending this data to the server is called POST. The data is sent in the form of a string: <i>param1=value1&amp;param2=value2&amp;</i>... We have already encountered this string in Section 3.5 of Example 02. In both cases, the parameter string is processed in the same way by Struts 2. The values of <i>the parameters </i>are injected into the executed action, into fields bearing the same names as the <i>parameters</i>. To whom is the posted data sent? By default, to the action that displayed the form, in this case the action <i>Saisir </i>[5]. You can also use the <b>action</b> attribute to specify a different action, in this case the action [Confirmer].
   </li>
-  <li>Line 12: The <b>&lt;s:textfield ...&gt; </b>tag displays the input field [3]. Its <i>key</i> attribute specifies the key for the label to be displayed to the left of the input field. The label is therefore looked up in the [messages.properties] file. The <i>name</i> attribute is the name of the parameter that will be posted. The value associated with this parameter will be the text entered in the input field.
+  <li>Line 12: The <b>&lt;s:textfield ...&gt; </b>tag displays the input field [3]. Its <i>key</i> attribute specifies the label to be displayed to the left of the input field. The label is therefore retrieved from the [messages.properties] file. The <i>name</i> attribute is the name of the parameter that will be submitted. The value associated with this parameter will be the text entered in the input field.
   </li>
-  <li>Line 13: The <b>&lt;s:submit ...&gt; </b>tag displays the button [4]. Its <i>key</i> attribute specifies the key for the label to be displayed on the button. The label is therefore retrieved from the [messages.properties] file. A <i>submit</i> button triggers the form to be posted to an action. We mentioned earlier that this was the [Confirm] action due to the <i>action</i> attribute of the <i>&lt;s:form&gt; </i>tag. The <i>action</i> attribute of the <i>&lt;s:submit&gt; </i>tag allows you to specify a different action if desired. Here, we have set the action to [Confirm]. The button has a default parameter name: <i>action:action_name</i>, here <i>action:Confirm</i>. The value associated with this parameter is the button label. Ultimately, the parameter string posted to the [Confirm] action when the user clicks the [Validate] button will be:
+  <li>Line 13: The <b>&lt;s:submit ...&gt; </b>tag displays the [4] button. Its <i>key</i> attribute specifies the key for the label to be displayed on the button. The label is therefore looked up in the [messages.properties] file. A button of type <i>submit </i>triggers the form’s submission to an action. We mentioned earlier that this action is [Confirmer] due to the <i>action</i> attribute of the <i>&lt;s:form&gt; </i>tag. The <i>action</i> attribute of the <i>&lt;s:submit&gt; </i>tag allows you to specify a different action if desired. Here we have set the action to [Confirmer]. The button has a default parameter name: <i>action:nom_action</i>, here <i>action:Confirm</i>. The value associated with this parameter is the button label. Ultimately, the parameter string posted to the action [Confirmer] when the user clicks the button [Valider] will be:
   </li>
 </ul>
 
 <p><strong><em>?name=xx&amp;action:Confirm=Validate</em></strong>.</p>
 <p>where <strong><em>xx</em></strong> is the text entered by the user in the input field.</p>
-<p><a id="refheading100331454977699"></a></p>
-<h3 id="652-the-confirmationjsp-view">6.5.2. The [Confirmation.jsp] view</h3>
+<p><span id="refheading100331454977699" name="refheading100331454977699" class="odt-bookmark-anchor"></span></p>
+<h3 id="652-the-confirmationjsp-view">6.5.2. <span style="color: #4f81bd"><strong>The [Confirmation.jsp] view</strong></span></h3>
 <p>Visually, it looks like this:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005060000015A3ADCDD73.png" width="643" height="173" style="display:inline-block; margin:4px;width:17.013cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000005060000015A3ADCDD73.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005060000015A3ADCDD73.png" width="643" height="173" style="display:inline-block; margin:4px;width:17.013cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000005060000015A3ADCDD73.png" /></td></tr></table>
 
-<p>We enter a name and submit the input page. We then receive the response [1], which is the [Confirmation.jsp] view. The URL displayed in [2] is that of the [Confirm] action. In the example above, the following string was posted:</p>
+<p>We enter a name and submit the input page. We then receive the response [1], which corresponds to the view [Confirmation.jsp]. The Url displayed in [2] is that of the [Confirmer] action. In the example above, the following string was posted:</p>
 <p><strong>name=bernard&amp;action:Confirm=Validate</strong></p>
-<p>The <em>action:Confirm</em> parameter allows Struts 2 to route the request to the correct action, in this case the [Confirm] action. The value of the <em>name</em> parameter will then be injected into the <em>name</em> field of the [Confirm] action.</p>
+<p>The <em>action:Confirm</em> parameter allows Struts 2 to route the request to the correct action, in this case the [Confirmer] action. The value of the <em>name</em> parameter will then be injected into the <em>name</em> field of the [Confirmer] action.</p>
 <p>The source code for the [Confirmation.jsp] action is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1198,26 +1200,26 @@
 </code></pre></div>
 
 <ul>
-  <li>line 7: displays the key label <i>confirm.title1 </i>found in the message file [1]
+  <li>line 7: displays the key label <i>confirm.titre1 </i>found in the message file [1]
   </li>
-  <li>line 10: displays the key label <i>confirm.title2 </i>found in the message file [3]
+  <li>line 10: displays the key label <i>confirm.titre2 </i>found in the message file [3]
   </li>
-  <li>line 12: displays the <i>name</i> property of the [Confirm] action that was executed.
+  <li>line 12: displays the <i>name</i> property of the action [Confirmer] that was executed.
   </li>
-  <li>line 14: creates a link to the [Enter] action. The <i>&lt;s:url&gt; </i>tag<i>, </i>which we’ve seen before, will be generated from the browser’s URL [2]. The path will be that of [2]<i> http://localhost:8084/exemple-05/actions </i>and the action will be that of the <i>action</i> attribute, in this case <i>Enter</i>. The link&#x27;s URL will therefore be<i> http://localhost:8084/exemple-05/actions/Saisir.action</i>. The link text will be the label associated with the <i>confirm.retour </i>key [4].
+  <li>line 14: creates a link to the action [Saisir]. The <i>&lt;s:url&gt; </i>tag<i>, which </i>has already been encountered, will be generated from the browser&#x27;s Url [2]. The path will be that of [2] <i>http://localhost:8084/example-05/actions</i>, and the action will be that of the <i>action</i> attribute, in this case <i>Enter</i>. The link URL will therefore be <i>http://localhost:8084/example-05/actions/Saisir.action</i>. The link text will be the label associated with the key <i>confirm.retour </i>[4].
   </li>
 </ul>
 
-<p><a id="refheading100351454977699"></a></p>
-<h2 id="66-the-tests">6.6. The tests</h2>
+<p><span id="refheading100351454977699" name="refheading100351454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="66-tests">6.6. <span style="color: #4f81bd">Tests</span></h2>
 <p>Here are two requests:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E600000149F324D6D7.png" width="627" height="165" style="display:inline-block; margin:4px;width:16.589cm;height:4.353cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E600000149F324D6D7.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004E600000149F324D6D7.png" width="627" height="164" style="display:inline-block; margin:4px;width:16.589cm;height:4.352cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E600000149F324D6D7.png" /></td></tr></table>
 
 <p>In [1], enter a name and submit. In [2], the confirmation page.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D70000016498CD991A.png" width="620" height="178" style="display:inline-block; margin:4px;width:16.392cm;height:4.71cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D70000016498CD991A.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004D70000016498CD991A.png" width="620" height="178" style="display:inline-block; margin:4px;width:16.392cm;height:4.71cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D70000016498CD991A.png" /></td></tr></table>
 
-<p>In [3], we follow the link back to the form. In [4], the result. Everything has been explained, except the transition from [3] to [4]. Why don’t we see the name we entered in [4]?</p>
-<p>The link in [3] is a link to the URL [<em>http://localhost:8084/exemple-05/actions/Saisir.action]</em>. The [Submit] action is therefore executed. Let’s look at its configuration in [struts.xml]:</p>
+<p>In [3], we follow the link back to the form. In [4], the result. Everything has been explained, except for the transition from [3] to [4]. Why isn’t the name we entered visible in [4]?</p>
+<p>The link in [3] is a link to Url and [http://localhost:8084/exemple-05/actions/Saisir.action]. The action [Saisir] is therefore executed. Let&#x27;s look at its configuration in [struts.xml]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/actions</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Saisir</span><span style="color:#800080">&quot;&gt;</span></span></span>
@@ -1229,7 +1231,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/package&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
-<p>The [Enter] action is not associated with any action. Therefore, the [Entry.jsp] view is displayed immediately. Let&#x27;s look at the code for this view:</p>
+<p>The action [Saisir] is not associated with an action. Therefore, the view [Saisie.jsp] is displayed immediately. Let’s look at the code for this view:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1249,24 +1251,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>On line 12, the input field is displayed. Its content is initialized with the name property. Recall what was mentioned earlier regarding how the <em>&lt;s:property&gt;</em> tag works:</p>
-<p>The <strong>&lt;s:property name=&quot;property&quot;&gt;</strong> tag allows you to write the value of a property of an object called <em>ActionContext</em>. This object contains:</p>
+<p>On line 12, the input field is displayed. Its content is initialized with the <em>name</em> property (<em>name</em>). Recall what was written earlier about how the <em>&lt;s:property&gt;</em> tag works:</p>
+<p>The <strong>&lt;s:property name=&quot;property&quot;&gt;</strong> tag allows you to write the value of a property of an object named <em>ActionContext</em>. This object contains:</p>
 <ol>
   <li>the properties of the class associated with the action that was executed.
   </li>
-  <li>the attributes of the current request denoted as <i>&lt;s:property name=&quot;#request[&#x27;key&#x27;]&quot;&gt;</i>
+  <li>the attributes of the current request denoted as <i>&lt;s:property name=&quot;#request[&#x27;clé&#x27;]&quot;&gt;</i>
   </li>
-  <li>the attributes of the user’s session, denoted as <i>&lt;s:property name=&quot;#session[&#x27;key&#x27;]&quot;&gt;</i>
+  <li>the attributes of the user&#x27;s session, denoted as <i>&lt;s:property name=&quot;#session[&#x27;clé&#x27;]&quot;&gt;</i>
   </li>
-  <li>attributes of the application itself, denoted as <i>&lt;s:property name=&quot;#application[&#x27;key&#x27;]&quot;&gt;</i>
+  <li>attributes of the application itself denoted as <i>&lt;s:property name=&quot;#application[&#x27;clé&#x27;]&quot;&gt;</i>
   </li>
-  <li>the parameters sent by the client browser, denoted as <i>&lt;s:property name=&quot;#parameters[&#x27;key&#x27;]&quot;&gt;</i>
+  <li>parameters sent by the client browser, denoted as <i>&lt;s:property name=&quot;#parameters[&#x27;clé&#x27;]&quot;&gt;</i>
   </li>
-  <li>The notation <i>&lt;s:property name=&quot;#attr[&#x27;key&#x27;]&quot;&gt; </i>displays the value of an object searched for in the page, the request, the session, and the application, in that order.
+  <li>the notation <i>&lt;s:property name=&quot;#attr[&#x27;clé&#x27;]&quot;&gt; </i>displays the value of an object searched for in the page, the request, the session, and the application, in that order.
   </li>
 </ol>
 
-<p>We are in case 1 here. The [Enter] action has no associated class. The <em>name</em> property therefore does not exist. An empty string is then displayed in the input field.</p>
+<p>This is case 1. The action [Saisir] has no associated class. Therefore, the &quot;<em>name&quot;</em> property does not exist. An empty string is then displayed in the input field.</p>
 <p>To display in [4] the name that was entered in [1], we will use the user’s session.</p>
 
 

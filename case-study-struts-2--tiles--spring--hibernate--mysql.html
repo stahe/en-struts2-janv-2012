@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -836,7 +838,7 @@
   <a href="#182-the-database" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.2. The Database
+        18.2. The database
       
     </span>
   </a>
@@ -844,10 +846,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#183-jpa-entities" class="md-nav__link">
+  <a href="#183-the-entities-jpa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.3. JPA Entities
+        18.3. The entities JPA
       
     </span>
   </a>
@@ -855,10 +857,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#184-based-method-for-calculating-a-child-care-providers-salary" class="md-nav__link">
+  <a href="#184-how-to-calculate-a-child-care-providers-salary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.4. -based method for calculating a child care provider&#x27;s salary
+        18.4. How to calculate a child care provider&#x27;s salary
       
     </span>
   </a>
@@ -866,10 +868,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#185-the-business-layer-interface" class="md-nav__link">
+  <a href="#185-the-metier-layer-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.5. The [business] layer interface
+        18.5. The [métier] layer interface
       
     </span>
   </a>
@@ -909,7 +911,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -936,7 +938,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -993,87 +995,86 @@
 
 
 
-<p><a id="refheading91770522158564"></a></p>
-<h1 id="18-case-study-struts-2-tiles-spring-hibernate-mysql">18. Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL</h1>
-<p>We will conclude our introduction to Struts with a case study. To be realistic, the example we will examine will be significantly more complex than those covered previously. For beginners, it is likely best to solidify your understanding of the basics of Struts 2 through personal projects before tackling this case study.</p>
+<p><span id="refheading91770522158564" name="refheading91770522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="18-case-study-struts-2-tiles-spring-hibernate-mysql">18. <span style="color: #365f91">Case Study: Struts 2 / Tiles / Spring / Hibernate / MySQL</span></h1>
+<p>We will conclude our Struts tutorial with a case study. To ensure realism, the example we will examine will be significantly more complex than those covered previously. For beginners, it is likely best to solidify your understanding of Struts 2 fundamentals through personal projects before tackling this case study.</p>
 <p>The application will use a layered architecture:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E40000010E4B3B4132.png" width="626" height="135" style="display:inline-block; margin:4px;width:16.563cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E40000010E4B3B4132.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004E40000010E4B3B4132.png" width="626" height="135" style="display:inline-block; margin:4px;width:16.563cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E40000010E4B3B4132.png" /></td></tr></table>
 
-<p>The [business], [DAO], and [JPA/Hibernate] layers will be provided to us in the form of a JAR archive, whose features we will detail. Spring will handle the integration of these layers. The [web] layer will be implemented using Struts 2.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000466000001B4AE6F0937.png" width="563" height="218" style="display:inline-block; margin:4px;width:14.896cm;height:5.768cm;" class="odt-zoomable" data-zoom-src="images/1000000000000466000001B4AE6F0937.png" /></td></tr></table>
+<p>The set of layers [metier], [dao], and [jpa/hibernate] will be provided to us in the form of an archive jar, whose features we will detail. The integration of the layers will be handled by Spring. The [web] layer will be implemented using Struts 2.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000466000001B4AE6F0937.png" width="563" height="218" style="display:inline-block; margin:4px;width:14.896cm;height:5.768cm;" class="odt-zoomable" data-zoom-src="images/1000000000000466000001B4AE6F0937.png" /></td></tr></table>
 
-<p><a id="refheading91772522158564"></a></p>
-<h2 id="181-the-problem">18.1. The Problem</h2>
-<p>We propose to write a web application to generate pay stubs for child care providers employed by a municipality’s “Early Childhood Center.”</p>
-<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
+<p><span id="refheading91772522158564" name="refheading91772522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="181-the-problem">18.1. <span style="color: #4f81bd">The Problem</span></h2>
+<p>We propose to develop a web application to generate pay stubs for child care providers employed by a municipality’s “Early Childhood Center.”</p>
+<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.508cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
 <p>This case study is presented in the document:</p>
-<p><strong>Introduction to Java EE 5</strong> available at the URL [http://tahe.developpez.com/java/javaee]</p>
+<p><strong>Introduction to Java EE 5</strong> available at Url [http://tahe.developpez.com/java/javaee]</p>
 <p>In this document, the case study is implemented using the following multi-tier architecture:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FB00000109CB2D2940.png" width="638" height="133" style="display:inline-block; margin:4px;width:16.868cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FB00000109CB2D2940.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004FB00000109CB2D2940.png" width="638" height="133" style="display:inline-block; margin:4px;width:16.868cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FB00000109CB2D2940.png" /></td></tr></table>
 
-<p>The [web] layer is implemented using the JSF (Java Server Faces) framework. We will adopt this same architecture by implementing the [web] layer with Struts 2. To demonstrate the benefits of layered architectures, we will use the JAR archive containing the [business, DAO, JPA] layers from the JSF version and connect it to a [web / Struts 2] layer:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D50000011A2CDC3808.png" width="619" height="141" style="display:inline-block; margin:4px;width:16.365cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D50000011A2CDC3808.png" /></td></tr></table>
+<p>The [web] layer is implemented using the JSF framework (Java Server Faces). We will adopt this same architecture by implementing the [web] layer with Struts 2. To demonstrate the benefits of layered architectures, we will use the jar archive of the [metier, dao, jpa], version, and JSF layers and connect it to a [web / struts2] layer:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004D50000011A2CDC3808.png" width="619" height="141" style="display:inline-block; margin:4px;width:16.365cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D50000011A2CDC3808.png" /></td></tr></table>
 
-<p>We will present the following components of the [business, DAO, JPA] layers:</p>
+<p>We will present the following elements of the [metier, dao, jpa] layers:</p>
 <ul>
-  <li>The [web] layer interfaces with the [business] layer. We will present this interface.
+  <li>The [web] layer interfaces with the [métier] layer. We will present this interface.
   </li>
-  <li>The [JPA] layer accesses a database. We will present it.
+  <li>The [jpa] layer accesses a database. We will present it.
   </li>
-  <li>The [JPA] layer transforms rows from the database tables into JPA entities that are used by all layers of the application. We will present them.
+  <li>The [jpa] layer transforms rows from the database tables into JPA entities used by all layers of the application. We will present them.
   </li>
-  <li>The [business, DAO, JPA] layers are instantiated by Spring. We will present the configuration file that performs this instantiation and integration.
+  <li>The [metier, dao, jpa] layers are instantiated by Spring. We will present the configuration file that performs this instantiation and integration.
   </li>
 </ul>
-
-<p><a id="refheading87351112820228"></a></p>
-<h2 id="182-the-database">18.2. The Database</h2>
-<p>We will use the following MySQL database [dbpam_hibernate]:</p>
-<p><img src="images/10000000000001130000016A3B1E492F.png" width="138" height="181" style="width:3.639cm;height:4.789cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001130000016A3B1E492F.png" /></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<p><span id="refheading87351112820228" name="refheading87351112820228" class="odt-bookmark-anchor"></span></p>
+<h2 id="182-the-database">18.2. <span style="color: #4f81bd">The database</span></h2>
+<p>We will use the following MySQL [dbpam_hibernate] database:</p>
+<p><img src="images/10000000000001130000016A3B1E492F.png" width="138" height="181" style="width:3.639cm;height:4.791cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001130000016A3B1E492F.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
 <ul>
   <li>In [1], the database has three tables:
   </li>
-  <li>[employees]: a table that records the employees of a daycare center
+  <li>[employes]: a table that records the employees of a daycare center
   </li>
-  <li>[contributions]: a table that stores social security contribution rates
+  <li>[cotisations]: a table that stores social security rates
   </li>
-  <li>[indemnites]: a table that stores information used to calculate employees&#x27; pay
-  </li>
-</ul>
-
-<p><strong>[employees] table</strong></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C20000015AB83A53B5.png" width="609" height="173" style="display:inline-block; margin:4px;width:16.113cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C20000015AB83A53B5.png" /></td></tr></table>
-
-<ul>
-  <li>In [2], the employees table, and in [3], the meaning of its fields
+  <li>[indemnites]: a table that stores information used to calculate employee pay
   </li>
 </ul>
 
-<p>The table&#x27;s contents could be as follows:</p>
-<p><img src="images/10000000000002D500000045B8BBDC06.png" width="499" height="47" style="width:13.212cm;height:1.256cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D500000045B8BBDC06.png" /></p>
-<p><strong>Table [contributions]</strong></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053700000171BCB3C6F5.png" width="668" height="185" style="display:inline-block; margin:4px;width:17.662cm;height:4.882cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000171BCB3C6F5.png" /></td></tr></table>
+<p><strong>Table [employes]</strong></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004C20000015AB83A53B5.png" width="609" height="173" style="display:inline-block; margin:4px;width:16.113cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C20000015AB83A53B5.png" /></td></tr></table>
 
 <ul>
-  <li>In [4], the contributions table, and in [5], the meaning of its fields
+  <li>in [2], the employee table, and in [3], the meaning of its fields
   </li>
 </ul>
 
 <p>The table contents could be as follows:</p>
-<p><img src="images/10000000000001CF000000305ED6EA6C.png" width="324" height="34" style="width:8.571cm;height:0.891cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CF000000305ED6EA6C.png" /></p>
+<p><img src="images/10000000000002D500000045B8BBDC06.png" width="499" height="48" style="width:13.212cm;height:1.258cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D500000045B8BBDC06.png" /></p>
+<p><strong>Table [cotisations]</strong></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000053700000171BCB3C6F5.png" width="668" height="185" style="display:inline-block; margin:4px;width:17.662cm;height:4.882cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000171BCB3C6F5.png" /></td></tr></table>
+
+<ul>
+  <li>in [4], the table for cotisations, and in [5], the meaning of its fields
+  </li>
+</ul>
+
+<p>The table contents could be as follows:</p>
+<p><img src="images/10000000000001CF000000305ED6EA6C.png" width="324" height="34" style="width:8.571cm;height:0.889cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CF000000305ED6EA6C.png" /></p>
 <p><strong>Table [indemnites]</strong></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000001129FCCE31E.png" width="667" height="137" style="display:inline-block; margin:4px;width:17.635cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001129FCCE31E.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000535000001129FCCE31E.png" width="667" height="137" style="display:inline-block; margin:4px;width:17.635cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001129FCCE31E.png" /></td></tr></table>
 
 <ul>
-  <li>in [6], the allowances table, and in [7], the meaning of its fields
+  <li>in [6], the table of allowances, and in [7], the meaning of its fields
   </li>
 </ul>
 
 <p>The table contents could be as follows:</p>
-<p><img src="images/10000000000002C300000042137D36D7.png" width="495" height="46" style="width:13.09cm;height:1.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002C300000042137D36D7.png" /></p>
-<p>Exporting the database structure to an SQL file yields the following result:</p>
+<p><img src="images/10000000000002C300000042137D36D7.png" width="495" height="46" style="width:13.09cm;height:1.222cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002C300000042137D36D7.png" /></p>
+<p>Exporting the database structure to a SQL file yields the following result:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1172,16 +1173,16 @@
 <a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">`</span><span class="n">FK_EMPLOYES_INDEMNITE_ID</span><span class="o">`</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">INDEMNITE_ID</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">indemnites</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">)</span>
 <a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">7</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading91774522158564"></a></p>
-<h2 id="183-jpa-entities">18.3. JPA Entities</h2>
+<p><span id="refheading91774522158564" name="refheading91774522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="183-the-entities-jpa">18.3. <span style="color: #4f81bd">The entities JPA</span></h2>
 <p>In the following architecture</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F50000011163BB4F74.png" width="635" height="137" style="display:inline-block; margin:4px;width:16.789cm;height:3.612cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000011163BB4F74.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004F50000011163BB4F74.png" width="635" height="137" style="display:inline-block; margin:4px;width:16.789cm;height:3.612cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000011163BB4F74.png" /></td></tr></table>
 
-<p>The [Jpa] layer acts as a bridge between the objects handled by the [dao] layer and the rows in the database tables handled by the Jdbc driver. The rows read from the database tables are transformed into objects called Jpa entities. Conversely, during writing, JPA entities are converted into table rows. These entities are handled by all layers, particularly the web layer. We therefore need to understand them:</p>
-<p>The [Employee] entity represents a row in the [Employees] table</p>
-<p>IDprimary key of type autoincrementVERSIONrecord version numberFIRST_NAMEemployee&#x27;s first nameLAST NAMEher last nameADDRESSher addressZIPhis/her zip codeCITYhis/her cityINDEMNITY_IDforeign key on INDEMNITIES(ID)  </p>
-<p><img src="images/1000000000000163000000CBCEC3582C.png" width="248" height="142" style="width:6.57cm;height:3.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000163000000CBCEC3582C.png" /></p>
-<p>The [Employee] entity is as follows:</p>
+<p>The [Jpa] layer acts as a bridge between the objects handled by the [dao] layer and the rows in the database tables handled by the JDBC driver. The rows in the tables read from the database are transformed into objects called JPA entities. Conversely, during write operations, JPA entities are converted into table rows. These entities are handled by all layers, particularly the web layer. We therefore need to understand them:</p>
+<p>The [Employe] entity represents a row in the [Employes] table</p>
+<p>PRIMARY_KEY primary key of type autoincrementVERSION version number of version for the recordFIRST_NAME first name of the employeeLAST_NAME her last nameADDRESS her addressZIP her ZIP codeCITY her cityINDEMNITY_ID foreign key on INDEMNITES(ID)</p>
+<p><img src="images/1000000000000163000000CBCEC3582C.png" width="248" height="142" style="width:6.57cm;height:3.757cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000163000000CBCEC3582C.png" /></p>
+<p>The [Employe] entity is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> jpa;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1246,10 +1247,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>We will ignore annotations @ intended for the [Jpa] layer. The various fields of the class reflect the various columns of the [EMPLOYEES] table. The indemnities field (line 29) reflects the fact that the [EMPLOYEES] table has a foreign key on the [INDEMNITIES] table. When we manipulate an employee, we also manipulate their indemnities.</p>
-<p>The [Indemnite] entity is the object representation of a row in the [INDEMNITES] table:</p>
-<p>IDauto-increment primary keyVERSIONrecord version numberBASE_HEUREcost in euros for one hour of on-call dutyDAILY_MAINTENANCEdaily allowance in eurosMEAL_DAYMeal allowance in euros per day of carePAID_LEAVE_ALLOWANCESPaid leave allowances. This is a percentage to be applied to the base salary.  </p>
-<p><img src="images/100000000000019D0000009D663003AE.png" width="266" height="101" style="width:7.04cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019D0000009D663003AE.png" /></p>
+<p>We will ignore the @ annotations intended for the [Jpa] layer. The various fields of the class reflect the various columns of the [EMPLOYES] table. The indemnites field (line 29) reflects the fact that the [EMPLOYES] table has a foreign key on the [INDEMNITES] table. When you manipulate an employee, you also manipulate their benefits.</p>
+<p>The entity [Indemnite] is the object expression of a row in the table [INDEMNITES]:</p>
+<p>Primary key ID of type autoincrementVERSION number of version for the recordBASE_HOURcost in euros for one hour of on-call dutyENTRETIEN_JOURallowance in euros per day of on-call dutyREPAS_JOURmeal allowance in euros per day of on-call dutyINDEMNITES_CPpaid leave allowances. This is a percentage to be applied to the base salary.</p>
+<p><img src="images/100000000000019D0000009D663003AE.png" width="266" height="101" style="width:7.04cm;height:2.676cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019D0000009D663003AE.png" /></p>
 <p>The [Indemnite] entity is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> jpa;</span></span></span>
@@ -1305,11 +1306,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>The various fields of the class reflect the various columns of the [INDEMNITIES] table.</p>
-<p>The [Cotisation] entity is the object representation of a row in the [COTISATIONS] table:</p>
-<p>IDprimary key of type autoincrementVERSIONrecord version numberSECUsocial security contribution rate (percentage) socialPENSIONpension contribution rateCSGDcontribution rate for the general social Generalized DeductibleCSGRDScontribution rate for the and the contribution to the repayment social debt  </p>
-<p><img src="images/100000000000017C000000916AACFD59.png" width="266" height="101" style="width:7.04cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000916AACFD59.png" /></p>
-<p>The [Contribution] entity is as follows:</p>
+<p>The various fields of the class reflect the various columns of the table [INDEMNITES].</p>
+<p>The entity [Cotisation] is the object expression of a row in the table [COTISATIONS]:</p>
+<p>IDprimary key of type autoincrementVERSIONversion record numberSECU (percentage) of the social security contribution RETIREMENT contribution rate for retirement CSGD contribution rate for the deductible general social contribution CSGRD contribution rate for the general social contribution and the contribution to the repayment of the social debt</p>
+<p><img src="images/100000000000017C000000916AACFD59.png" width="266" height="102" style="width:7.04cm;height:2.686cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000916AACFD59.png" /></p>
+<p>The [Cotisation] entity is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> jpa;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1355,11 +1356,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>The different fields of the class reflect the different columns of the [INDEMNITES] table.</p>
-<p><a id="mode-calcul-salaire"></a>
-<a id="refheading87353112820228"></a></p>
-<h2 id="184-based-method-for-calculating-a-child-care-providers-salary">18.4. -based method for calculating a child care provider&#x27;s salary</h2>
-<p>The web application we are going to write will allow us to calculate an employee&#x27;s salary based on three pieces of information:</p>
+<p>The various fields of the class reflect the various columns of table [INDEMNITES].</p>
+<p><span id="refheading87353112820228" name="refheading87353112820228" class="odt-bookmark-anchor"></span>
+<span id="mode-calcul-salaire" name="mode-calcul-salaire" class="odt-bookmark-anchor"></span></p>
+<h2 id="184-how-to-calculate-a-child-care-providers-salary">18.4. <span style="color: #4f81bd">How to calculate a child care provider&#x27;s salary</span></h2>
+<p>The web application we are going to write will allow us to calculate an employee’s salary based on three pieces of information:</p>
 <ul>
   <li>the employee&#x27;s index
   </li>
@@ -1370,35 +1371,34 @@
 </ul>
 
 <p>Here is a screenshot of a salary calculation:</p>
-<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
+<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.508cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
 <p>We will now present the method for calculating a child care provider’s monthly salary. This is not intended to be the method used in real life. As an example, we will use the salary of Ms. Marie Jouveinal, who worked 150 hours over 20 days during the pay period.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The following factors are taken into account:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALHOURS</span>]: total hours worked in the month</span></span>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">The following factors are taken into account:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALHEURES</span>]: total des heures travaillées dans le mois</span></span>
 </code></pre></div>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALDAYS</span>]: total days worked in the month</span></span>
-</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[TOTALHOURS]=150
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[TOTALDAYS] = 20
+<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALJOURS</span>]: total des jours travaillés dans le mois</span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[TOTALHEURES]=150
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[TOTALJOURS]= 20
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The base salary of the</div><div style="margin:0 0 0.5em 0">is given by the following formula</div><div style="margin:0 0 0.5em 0"> :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[BASESALARY]=([TOTALHOURS]*[HOURLYRATE])*(1+[CPALLOWANCE]/100)</span><span style="background-color:#ffcc99"></span></span></span>
-</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[BASESALARY]=(150*[2.1])*(1+0.15)= 362.25
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">The base salary of the</div><div style="margin:0 0 0.5em 0">is given by the following formula</div><div style="margin:0 0 0.5em 0"> :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[SALAIREBASE]=([TOTALHEURES]*[BASEHEURE])*(1+[INDEMNITESCP]/100)</span><span style="background-color:#ffcc99"></span></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[SALAIREBASE]=(150*[2.1])*(1+0.15)= 362,25
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">A certain amount of social security contributions</div><div style="margin:0 0 0.5em 0">must be deducted from this base salary</div><div style="margin:0 0 0.5em 0">:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">General social contribution and contribution to the repayment of the social debt: <span style="background-color:#ffcc99">[BASESALARY]*[CSGRDS/100]</span></span></span>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">A certain number of social security contributions</div><div style="margin:0 0 0.5em 0">must be deducted from this base salary</div><div style="margin:0 0 0.5em 0">:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">Contribution sociale généralisée et contribution au remboursement de la dette sociale : <span style="background-color:#ffcc99">[SALAIREBASE]*[CSGRDS/100]</span></span></span>
 </code></pre></div>
-<div style="margin:0 0 0.5em 0"><mark style="background-color: #ffcc99"> </mark></div><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">Deductible general social contribution: <span style="background-color:#ffcc99">[BASESALARY]*[CSGD/100]</span></span></span>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">Contribution sociale généralisée déductible : <span style="background-color:#ffcc99">[SALAIREBASE]*[CSGD/100]</span></span></span>
 </code></pre></div>
-<div style="margin:0 0 0.5em 0"><mark style="background-color: #ffcc99"> </mark></div><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">Social Security, Widow’s Benefits, Old Age: <span style="background-color:#ffcc99">[BASESALARY]*[SECU/100]</span></span></span>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">Sécurité sociale, veuvage, vieillesse : <span style="background-color:#ffcc99">[SALAIREBASE]*[SECU/100]</span></span></span>
 </code></pre></div>
-<div style="margin:0 0 0.5em 0"><mark style="background-color: #ffcc99"> </mark></div><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">Supplementary Pension + AGPF + Unemployment Insurance: <span style="background-color:#ffcc99">[BASESALARY]*[PENSION/100]</span></span></span>
-</code></pre></div>
-<div style="margin:0 0 0.5em 0"><mark style="background-color: #ffcc99"> </mark></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">Retraite Complémentaire + AGPF + Assurance Chômage : <span style="background-color:#ffcc99">[SALAIREBASE]*[RETRAITE/100]</span></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>CSGRDS: 12.64
 </code></pre></div>
 </div>
@@ -1413,29 +1413,29 @@
 <div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Pension: 28.55
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Total Social Security Contributions:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[SOCIALCONTRIBUTIONS] = [BASESALARY] * (CSGRDS + CSGD + SECU + RETIREMENT) / 100</span><span style="background-color:#ffcc99"></span></span></span>
-</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[SOCIALCONTRIBUTIONS]=97.48
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Total Social Security Contributions:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[COTISATIONSSOCIALES]=[SALAIREBASE]*(CSGRDS+CSGD+SECU+RETRAITE)/100</span><span style="background-color:#ffcc99"></span></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[COTISATIONSSOCIALES]=97,48
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">In addition, the child care provider is entitled,</div><div style="margin:0 0 0.5em 0">for each day worked, to a</div><div style="margin:0 0 0.5em 0">as well as a meal allowance</div><div style="margin:0 0 0.5em 0">. As such, she receives the</div><div style="margin:0 0 0.5em 0"> :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[</span><span style="background-color:#ffcc99">Allowances</span><span style="background-color:#ffcc99">] = [TOTALDAYS] * (DAILYMAINTENANCE + DAILYMEAL)</span></span></span>
-</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[ALLOWANCES]=104
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">In addition, the child care provider is entitled,</div><div style="margin:0 0 0.5em 0">for each day worked, to a</div><div style="margin:0 0 0.5em 0">as well as a meal allowance</div><div style="margin:0 0 0.5em 0">. For this purpose, she receives the</div><div style="margin:0 0 0.5em 0"> :</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[</span><span style="background-color:#ffcc99">Indemnités</span><span style="background-color:#ffcc99">]=[TOTALJOURS]*(ENTRETIENJOUR+REPASJOUR)</span></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[INDEMNITES]=104
 </code></pre></div>
-</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">In the end, the net salary to be paid to the child care provider is as follows:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[BASESALARY] - [SOCIALSECURITYCONTRIBUTIONS] + [ALLOWANCES]</span><span style="background-color:#ffcc99"></span></span></span>
-</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[NET SALARY]=368.77
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">In the end, the salary net to be paid to the child care provider is as follows:</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[SALAIREBASE]-[COTISATIONSSOCIALES]+[INDEMNITÉS]</span><span style="background-color:#ffcc99"></span></span></span>
+</code></pre></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[salaire NET]=368,77
 </code></pre></div>
 </div></td></tr></table>
 
-<p><a id="refheading91776522158564"></a></p>
-<h2 id="185-the-business-layer-interface">18.5. The [business] layer interface</h2>
-<p>Let&#x27;s take a look at the architecture of the application we&#x27;re building:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005060000011099A38967.png" width="643" height="136" style="display:inline-block; margin:4px;width:17.013cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000005060000011099A38967.png" /></td></tr></table>
+<p><span id="refheading91776522158564" name="refheading91776522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="185-the-metier-layer-interface">18.5. <span style="color: #4f81bd">The [métier] layer interface</span></h2>
+<p>Let’s revisit the architecture of the application we are building:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005060000011099A38967.png" width="643" height="136" style="display:inline-block; margin:4px;width:17.013cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000005060000011099A38967.png" /></td></tr></table>
 
-<p>The [web / Struts 2] layer communicates with the interface of the [business] layer. This is as follows:</p>
+<p>The [web / struts 2] layer communicates with the interface of the [métier] layer. This interface is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1457,7 +1457,7 @@
   </li>
 </ul>
 
-<p>The <em>calculatePaystub</em> method returns an instance of the following [Paystub] class:</p>
+<p>The <em>calculerFeuillesalaire</em> method returns an instance of the following [FeuilleSalaire] class:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1499,7 +1499,7 @@
 <ul>
   <li>line 10: information about the employee whose salary is being calculated
   </li>
-  <li>line 11: the various contribution rates
+  <li>line 11: the various rates for cotisations
   </li>
   <li>line 12: salary components
   </li>
@@ -1553,9 +1553,9 @@
   </li>
 </ul>
 
-<p><a id="refheading91778522158564"></a></p>
-<h2 id="186-the-spring-configuration-file">18.6. The Spring configuration file</h2>
-<p>The integration of the [business, DAO, JPA] layers is handled by the following Spring configuration file:</p>
+<p><span id="refheading91778522158564" name="refheading91778522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="186-the-spring-configuration-file">18.6. <span style="color: #4f81bd">The Spring configuration file</span></h2>
+<p>The integration of the [métier, dao, jpa] layers is handled by the following Spring configuration file:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;beans</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/beans</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span></span></span>
@@ -1610,8 +1610,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/beans&gt;</span></span>
 </code></pre></div>
 
-<p>We will not attempt to explain this configuration. It is necessary for the instantiation and integration of the [business, DAO, JPA] layers. Our web application, which will rely on these layers, must therefore adopt this configuration. Note that lines 32– –37 configure the JDBC properties of the database. Readers who wish to change the database must modify these lines.</p>
-<p>For more information on this configuration, refer to the document <strong>Introduction to Java EE 5</strong> available at the URL [http://tahe.developpez.com/java/javaee].</p>
+<p>We will not attempt to explain this configuration. It is necessary for the instantiation and integration of the [métier, dao, jpa] layers. Our web application, which will rely on these layers, must therefore adopt this configuration. Note that lines 32–37 configure the JDBC properties of the database. Readers who wish to change the database must modify these lines.</p>
+<p>For more information on this configuration, refer to the document <strong>Introduction to Java EE 5</strong> available at Url [http://tahe.developpez.com/java/javaee].</p>
 
 
 

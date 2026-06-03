@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -771,7 +773,7 @@
   <a href="#161-the-netbeans-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.1. The NetBeans project
+        16.1. The Netbeans project
       
     </span>
   </a>
@@ -801,10 +803,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#164-the-messages-file" class="md-nav__link">
+  <a href="#164-the-message-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.4. The messages file
+        16.4. The message file
       
     </span>
   </a>
@@ -920,7 +922,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -947,7 +949,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -1004,24 +1006,24 @@
 
 
 
-<p><a id="refheading91738522158564"></a></p>
-<h1 id="16-example-13-the-context-of-an-action">16. Example 13 - The context of an action</h1>
+<p><span id="refheading91738522158564" name="refheading91738522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="16-example-13-the-context-of-an-action">16. <span style="color: #365f91">Example 13 - The context of an action</span></h1>
 <p>This application aims to demonstrate that an action has access to:</p>
 <ul>
   <li>request parameters
   </li>
   <li>request attributes
   </li>
-  <li>to the user session attributes
+  <li>to the user’s session attributes
   </li>
 </ul>
 
 <p><img src="images/10000000000001D1000001B754472AEB.png" width="327" height="308" style="width:8.641cm;height:8.158cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D1000001B754472AEB.png" /></p>
-<p><a id="refheading91740522158564"></a></p>
-<h2 id="161-the-netbeans-project">16.1. The NetBeans project</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015A000001DDCC02FDDD.png" width="173" height="239" style="display:inline-block; margin:4px;width:4.577cm;height:6.311cm;" class="odt-zoomable" data-zoom-src="images/100000000000015A000001DDCC02FDDD.png" /></td></tr></table>
+<p><span id="refheading91740522158564" name="refheading91740522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="161-the-netbeans-project">16.1. <span style="color: #4f81bd">The Netbeans project</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000015A000001DDCC02FDDD.png" width="173" height="238" style="display:inline-block; margin:4px;width:4.577cm;height:6.309cm;" class="odt-zoomable" data-zoom-src="images/100000000000015A000001DDCC02FDDD.png" /></td></tr></table>
 
-<p>The NetBeans project is as follows:</p>
+<p>The project Netbeans is as follows:</p>
 <ul>
   <li>in [1], the view [Context.jsp]
   </li>
@@ -1029,8 +1031,8 @@
   </li>
 </ul>
 
-<p><a id="refheading91742522158564"></a></p>
-<h2 id="162-configuration">16.2. Configuration</h2>
+<p><span id="refheading91742522158564" name="refheading91742522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="162-configuration">16.2. <span style="color: #4f81bd">Configuration</span></h2>
 <p>The project configuration is defined in [example.xml]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
@@ -1048,30 +1050,30 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 8: The request for the URL [/example/Action1] will trigger the instantiation of the [example.Action] class. Since no method is specified, the <i>execute</i> method will be executed.
+  <li>Line 8: The request for Url [/example/Action1] will cause the [example.Action] class to be instantiated. Since no method is specified, the <i>execute</i> method will be executed.
   </li>
-  <li>Line 9: Only one key is accepted. The key <i>&quot;success&quot; </i>causes the [Context.jsp] view to be displayed.
+  <li>Line 9: Only one key is accepted. The <i>success</i> key causes the [Context.jsp] view to be displayed.
   </li>
 </ul>
 
-<p>The simplified architecture for processing a request is as follows:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B10000017DE770B7FC.png" width="601" height="191" style="display:inline-block; margin:4px;width:15.889cm;height:5.041cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B10000017DE770B7FC.png" /></td></tr></table>
+<p>The simplified architecture for processing a request will be as follows:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004B10000017DE770B7FC.png" width="601" height="191" style="display:inline-block; margin:4px;width:15.889cm;height:5.041cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B10000017DE770B7FC.png" /></td></tr></table>
 
 <p>The request will be processed by two components of the web application: the action [Action1] [1] and the view [Context.jsp] [2]. These two components have access to different types of data:</p>
 <ul>
-  <li><i>Application-scope</i> data [3], i.e., data accessible to all requests from all users. It is almost always read-only. This data often contains the application’s initial configuration. Here, [Action1] and [Context.jsp] have access to this data.
+  <li><i>Application-scope</i> data [3], c.a.d. Data accessible to all requests from all users. It is almost always read-only. This data often includes the application’s initial configuration. Here, [Action1] and [Context.jsp] have access to this data.
   </li>
-  <li><i>Session-scope</i> data [4], i.e., data accessible to all requests from the same user. This data is read/write. Here, [Action1] will use the session in read/write mode, while [Context.jsp] will use it in read-only mode.
+  <li><i>Session-scope</i> data: [4], c.a.d. Data accessible to all requests from the same user. It is read/write. Here, [Action1] will use the session in read/write mode, while [Context.jsp] will use it in read-only mode.
   </li>
-  <li><i>Request-scope</i> data [5], accessible to all elements processing the request. Here, [Action1] will store data in this memory, and [Context.jsp] will retrieve it. Request-scope data allows element N to pass information to element N+1.
+  <li><i>Request-scope</i> data [5], accessible to all elements processing the request. Here, [Action1] will store data in this memory, and [Context.jsp] will retrieve it. Request scope data allows element N to pass information to element N+1.
   </li>
-  <li>Request parameters [6] sent by the client. They are used in read-only mode by the components processing the request.
+  <li>The parameters of the [6] request sent by the client. They are used in read-only mode by the components processing the request.
   </li>
 </ul>
 
-<p><a id="refheading91744522158564"></a></p>
-<h2 id="163-the-action1-action">16.3. The [Action1] action</h2>
-<p>The code for the [Action1] class is as follows:</p>
+<p><span id="refheading91744522158564" name="refheading91744522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="163-the-action1-action">16.3. <span style="color: #4f81bd">The [Action1] action</span></h2>
+<p>The code for class [Action1] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1087,7 +1089,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// constructor without parameters</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Action1() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Session, Request, Parametres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Session, Request, Parameters</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  Map&lt;String, Object&gt; session;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  Map&lt;String, Object&gt; request;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  Map&lt;String, String[]&gt; parameters;</span></span>
@@ -1139,35 +1141,35 @@
   </li>
   <li><b>SessionAware</b>: to access the session attributes dictionary (line 16). This interface has only one method, the one on line 46.
   </li>
-  <li><b>RequestAware</b>: to access the dictionary of request attributes (line 17). This interface has only one method, the one on line 51.
+  <li><b>RequestAware</b>: to access the request attributes dictionary (line 17). This interface has only one method, the one on line 51.
   </li>
-  <li><b>ParameterAware</b>: to access the request parameter dictionary (line 18). Note that each key (the parameter name) corresponds to an array of values. This is necessary to handle input fields that submit multiple values, such as a multi-select list. The <b>ParameterAware</b> interface has only one method, the one on line 56.
+  <li><b>ParameterAware</b>: to access the query parameter dictionary (line 18). Note that each key (the parameter name) corresponds to an array of values. This is necessary to account for input fields that submit multiple values, such as a multi-select list. The <b>ParameterAware</b> interface has only one method, the one on line 56.
   </li>
-  <li>Line 21: the <i>execute</i> method, which is executed when the [Action1] action is requested. By the time it runs, the interceptors have done their job:
+  <li>Line 21: the <i>execute</i> method, which is executed when the [Action1] action is requested. When it runs, the interceptors have done their job:
   </li>
-  <li>the <b>setParameters</b> method (line 56) has been called, and the <b>parameters</b> dictionary on line 18 contains all the request parameters.
+  <li>the <b>setParameters</b> method (line 56) has been called, and the <b>parameters</b> dictionary on line 18 contains all the parameters of the request.
   </li>
-  <li>The <b>setSession</b> method (line 46) has been called, and the <b>session</b> dictionary on line 16 contains all the session attributes.
+  <li>The method <b>setSession </b>(line 46) was called, and the <b>session</b> dictionary on line 16 contains all the session attributes.
   </li>
-  <li>the <b>setRequest</b> method (line 51) has been called, and the <b>request</b> dictionary on line 17 contains all the request attributes.
+  <li>The method <b>setRequest </b>(line 51) was called, and the <b>request</b> dictionary on line 17 contains all the request attributes.
   </li>
-  <li>Lines 31–38: The value associated with the `<i>compteur` </i>key is written to the session
+  <li>Lines 31–38: The value associated with the <i>counter</i> key is written to the session
   </li>
-  <li>Lines 32–34: The <i>`compteur` </i>key is looked up in the session. If it is not found, it is added with the integer value 0.
+  <li>Lines 32–34: The <i>counter</i> key is searched for in the session. If it is not found, it is added to the session with the integer value 0.
   </li>
-  <li>Lines 35–37: The `<i>counter` </i>key is looked up in the session, its value is incremented, and then the key is put back into the session.
+  <li>Lines 35–37: The <i>counter</i> key is searched for in the session, its value is incremented, and then the key is put back into the session.
   </li>
-  <li>line 38: the value associated with the <i>counter</i> key is displayed. Since the increment is performed with each request on the [Action1] action, we should see the counter value increase as requests are made.
+  <li>line 38: the value associated with the <i>counter</i> key is displayed. Since the increment is performed with each request on action [Action1], we should see the counter value increase as requests are made.
   </li>
-  <li>Line 40: An attribute with the key <i>`info1` </i>and the value `<i>information1</i>` is inserted into the request attributes dictionary. Request attributes are different from request parameters. Parameters are sent by the web application client. Request attributes, on the other hand, enable communication between the various components of the web application that process the request. Thus, after executing [Action1], the [Context.jsp] view will be displayed. We will see that it is capable of retrieving the request attributes.
+  <li>Line 40: An attribute with the key <i>&quot;info1&quot; </i>and the value &quot;<i>information1&quot; </i>is inserted into the request attributes dictionary. Request attributes are different from request parameters. Parameters are sent by the web application client. The request attributes, on the other hand, enable communication between the various components of the web application that process it. Thus, after executing [Action1], the view [Context.jsp] will be displayed. We will see that it is capable of retrieving the request attributes.
   </li>
-  <li>Line 42: The <i>execute</i> method returns the &quot;<i>success&quot; </i>key.
+  <li>Line 42: The <i>execute</i> method returns the <i>success</i> key.
   </li>
 </ul>
 
-<p><a id="refheading91746522158564"></a></p>
-<h2 id="164-the-messages-file">16.4. The messages file</h2>
-<p>The [messages.properties] file is as follows:</p>
+<p><span id="refheading91746522158564" name="refheading91746522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="164-the-message-file">16.4. <span style="color: #4f81bd">The message file</span></h2>
+<p>The file [messages.properties] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Context.titre=</span><span style="color:#2a00ff">Contexte</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">l&#x27;&#x27;action</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Context.message=</span><span style="color:#2a00ff">Contexte</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">l&#x27;&#x27;action</span></span></span>
@@ -1176,9 +1178,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Context.request=</span><span style="color:#2a00ff">Attributs</span><span style="color:#000000"> </span><span style="color:#2a00ff">de</span><span style="color:#000000"> </span><span style="color:#2a00ff">requ\u00EAte</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading91748522158564"></a></p>
-<h2 id="165-the-contextjsp-view">16.5. The [Context.jsp] view</h2>
-<p>The [Context.jsp] view is responsible for displaying:</p>
+<p><span id="refheading91748522158564" name="refheading91748522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="165-the-contextjsp-view">16.5. <span style="color: #4f81bd">The [Context.jsp] view</span></h2>
+<p>The [Context.jsp] view is designed to display:</p>
 <ul>
   <li>certain request parameters
   </li>
@@ -1219,9 +1221,9 @@
 </code></pre></div>
 
 <ul>
-  <li>Lines 12–14: display all values associated with the &quot;<i>name&quot; </i>parameter
+  <li>lines 12-14: display all values associated with the <i>name</i> parameter
   </li>
-  <li>lines 15-17: display all values associated with the <i>&#x27;first_name&#x27;</i> parameter
+  <li>lines 15-17: display all values associated with the <i>first_name</i> parameter
   </li>
   <li>lines 18-20: display all values associated with the <i>age</i> parameter
   </li>
@@ -1231,32 +1233,32 @@
   </li>
 </ul>
 
-<p><a id="refheading91750522158564"></a></p>
-<h2 id="166-the-tests">16.6. The tests</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002360000020948DA9C15.png" width="283" height="261" style="display:inline-block; margin:4px;width:7.488cm;height:6.893cm;" class="odt-zoomable" data-zoom-src="images/10000000000002360000020948DA9C15.png" /></td></tr></table>
+<p><span id="refheading91750522158564" name="refheading91750522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="166-the-tests">16.6. <span style="color: #4f81bd">The tests</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002360000020948DA9C15.png" width="283" height="261" style="display:inline-block; margin:4px;width:7.488cm;height:6.893cm;" class="odt-zoomable" data-zoom-src="images/10000000000002360000020948DA9C15.png" /></td></tr></table>
 
 <ul>
   <li>In [1], <i>Action1 </i>is called without parameters
   </li>
-  <li>in [2], [Context.jsp] did not find any parameters
+  <li>In [2], [Context.jsp] did not find any parameters
   </li>
-  <li>in [3], [Context.jsp] found the <i>counter</i> key in the session
+  <li>In [3], [Context.jsp] found the <i>counter</i> key in the session
   </li>
-  <li>in [4], [Context.jsp] found the key <i>info1 </i>in the request
+  <li>in [4], [Context.jsp] found the <i>info1</i> key in the query
   </li>
 </ul>
 
 <p>Let&#x27;s run another test:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003550000027C124BE9F7.png" width="427" height="318" style="display:inline-block; margin:4px;width:11.285cm;height:8.414cm;" class="odt-zoomable" data-zoom-src="images/10000000000003550000027C124BE9F7.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003550000027C124BE9F7.png" width="427" height="318" style="display:inline-block; margin:4px;width:11.285cm;height:8.414cm;" class="odt-zoomable" data-zoom-src="images/10000000000003550000027C124BE9F7.png" /></td></tr></table>
 
 <ul>
-  <li>In [1], <i>Action1 </i>is requested with parameters
+  <li>in [1], <i>Action1 </i>is requested with parameters
   </li>
-  <li>In [2], [Context.jsp] displays these parameters
+  <li>in [2], [Context.jsp] displays these parameters
   </li>
-  <li>In [3], [Context.jsp] found the key &quot;<i>compteur&quot; </i>in the session. The counter was indeed incremented by 1, demonstrating that data was successfully retained between the two requests.
+  <li>In [3], [Context.jsp] found the <i>counter</i> key in the session. The counter was indeed incremented by 1, demonstrating that data was indeed cached between the two requests.
   </li>
-  <li>In [4], [Context.jsp] found the &quot;<i>info1&quot; </i>key in the request
+  <li>In [4], [Context.jsp] found the <i>info1</i> key in the request
   </li>
 </ul>
 
@@ -1275,11 +1277,11 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>Session...
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>compteur=2
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading91752522158564"></a></p>
-<h2 id="167-conclusion">16.7. Conclusion</h2>
+<p><span id="refheading91752522158564" name="refheading91752522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="167-conclusion">16.7. <span style="color: #4f81bd">Conclusion</span></h2>
 <p>Keep the following points in mind:</p>
 <ul>
-  <li>To store information to be shared across all requests from all users, we will use the application&#x27;s memory. We will show an example of this shortly.
+  <li>To store information to be shared by all requests from all users, we will use the application&#x27;s memory. We will show an example of this shortly.
   </li>
   <li>To store information to be shared by all requests from the same user, we will use that user’s session.
   </li>

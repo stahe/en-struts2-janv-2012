@@ -18,7 +18,7 @@
         <link rel="prev" href="a-first-example.html">
       
       
-        <link rel="next" href="example-03---navigation-keys.html">
+        <link rel="next" href="example-03---the-keys-of-navigation.html">
       
       
         
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -417,10 +419,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#31-the-netbeans-project" class="md-nav__link">
+  <a href="#31-the-project-netbeans" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. The NetBeans project
+        3.1. The project Netbeans
       
     </span>
   </a>
@@ -486,14 +488,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -567,14 +569,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -898,7 +900,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -925,7 +927,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -982,11 +984,11 @@
 
 
 
-<p><a id="refheading99831454977699"></a></p>
-<h1 id="3-example-02-parameter-injection-into-the-action">3. Example 02 – Parameter Injection into the Action</h1>
-<p><a id="refheading99851454977699"></a></p>
-<h2 id="31-the-netbeans-project">3.1. The NetBeans project</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B1000001BF4FC60F4E.png" width="473" height="224" style="display:inline-block; margin:4px;width:12.502cm;height:5.914cm;" class="odt-zoomable" data-zoom-src="images/10000000000003B1000001BF4FC60F4E.png" /></td></tr></table>
+<p><span id="refheading99831454977699" name="refheading99831454977699" class="odt-bookmark-anchor"></span></p>
+<h1 id="3-example-02-parameter-injection-into-the-action">3. <span style="color: #365f91">Example 02 – Parameter Injection into the Action</span></h1>
+<p><span id="refheading99851454977699" name="refheading99851454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="31-the-project-netbeans">3.1. <span style="color: #4f81bd"><strong>The project Netbeans</strong></span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003B1000001BF4FC60F4E.png" width="473" height="224" style="display:inline-block; margin:4px;width:12.502cm;height:5.914cm;" class="odt-zoomable" data-zoom-src="images/10000000000003B1000001BF4FC60F4E.png" /></td></tr></table>
 
 <ul>
   <li>in [1,2], the configuration files
@@ -995,13 +997,13 @@
   </li>
   <li>in [4], the view
   </li>
-  <li>in [5], the project libraries
+  <li>to [5], the project libraries
   </li>
 </ul>
 
-<p><a id="refheading99871454977699"></a></p>
-<h2 id="32-the-configuration-files">3.2. The configuration files</h2>
-<p>The [web.xml] file is as follows:</p>
+<p><span id="refheading99871454977699" name="refheading99871454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="32-the-configuration-files">3.2. <span style="color: #4f81bd">The configuration files</span></h2>
+<p>The file [web.xml] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1017,7 +1019,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/filter&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;filter-mapping&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;filter-name&gt;</span><span style="color:#000000">struts2</span><span style="color:#800080">&lt;/filter-name&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;url-pattern&gt;</span><span style="color:#000000">/*</span><span style="color:#800080">&lt;/url-pattern&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/filter-mapping&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;session-config&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;session-timeout&gt;</span></span></span>
@@ -1027,8 +1029,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/web-app&gt;</span></span>
 </code></pre></div>
 
-<p><span style="color: #800080"> </span></p>
-<p>We have already commented on this file. We won’t do so again. Just remember that it ensures all URLs (line 15) are passed through the Struts filter (line 10).</p>
+<p>We have already commented on this file. We will not do so again. Just remember that it ensures that all Url (line 15) are passed through the Struts filter (line 10).</p>
 <p>The [struts.xml] file is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
@@ -1055,25 +1056,25 @@
 </code></pre></div>
 
 <ul>
-  <li>Lines 7–15: define the [default] package, which is used when an action cannot be found in another package.
+  <li>lines 7-15: define the [default] package, which is used when an action could not be found in another package.
   </li>
   <li>line 8: defines a default action for this package named <i>index</i>.
   </li>
-  <li>Lines 9–14: configure the action named <i>index</i>. Note that it is not associated with a class (the <i>class</i> attribute is missing on line 9).
+  <li>lines 9-14: configure the action named <i>index</i>. Note that it is not associated with a class (the <i>class</i> attribute is missing on line 9).
   </li>
-  <li>line 10: the result is for the <i>success</i> key (the <i>name</i> attribute is missing). It is of type <i>redirectAction </i>(<i>type</i> attribute). This type allows an action to be redirected to another action. Here, when the client requests the <i>/index</i> action, it will be redirected to the <i>/actions/Action1</i> action (lines 11-12).
+  <li>Line 10: The result is for the <i>success</i> key (the <i>name</i> attribute is missing). It is of type <i>redirectAction </i>(<i>type</i> attribute). This type allows an action to be redirected to another action. Here, when the client requests the <i>/index</i> action, it will be redirected to the <i>/actions/Action1</i> action (lines 11–12).
   </li>
-  <li>Lines 16–20: define the actions package (<i>name</i>) associated with the actions at the URL <i>/actions/Action </i>(<i>class</i>).
+  <li>Lines 16–20: define the actions package (<i>name</i>) associated with the actions of Url <i>/actions/Action </i>(<i>class</i>).
   </li>
-  <li>Lines 17–19: configure the <i>/actions/Action1</i> action (name). When this action is invoked, Struts will instantiate the <i>actions.Action1 </i>class (<i>class</i>), and then the <i>execute</i> method of that class will be executed. This method must return the <i>&quot;success&quot;</i> key, as it is the only key defined on line 18.
+  <li>Lines 17–19: configure the <i>/actions/Action1</i> action (name). When this action is requested, Struts will instantiate the <i>actions.Action1</i> class, and then the <i>execute</i> method of that class will be executed. This method must return the <i>success</i> key, as it is the only key defined on line 18.
   </li>
-  <li>Line 18: For the <i>success</i> key, the view to be displayed will be the JSP page [vues/Action1.jsp].
+  <li>Line 18: For the <i>&quot;success&quot; </i>key, the view to be displayed will be the JSP page [vues/Action1.jsp].
   </li>
 </ul>
 
-<p>Ultimately, we should note that the Struts project can only execute the action at the URL [actions/Action1].</p>
-<p><a id="refheading99891454977699"></a></p>
-<h2 id="33-the-action">3.3. The action</h2>
+<p>In summary, the Struts project can only execute the action Url [actions/Action1].</p>
+<p><span id="refheading99891454977699" name="refheading99891454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="33-the-action">3.3. <span style="color: #4f81bd">The action</span></h2>
 <p>The <em>Action1</em> action is represented by the following class:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
@@ -1112,16 +1113,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li>lines 8-9: two fields accessible via get/set methods (lines 18-32)
+  <li>lines 8-9: two fields accessible via get / set (lines 18-32)
   </li>
-  <li><i>lines</i> 12–14: The <i>execute</i> method returns the key as expected. It does nothing else.
+  <li>lines 12-14: the <i>execute</i> method returns the <i>success</i> flag as expected. It does nothing else.
   </li>
 </ul>
 
-<p><a id="refheading99911454977699"></a></p>
-<h2 id="34-the-jsp-view">3.4. The JSP view</h2>
+<p><span id="refheading99911454977699" name="refheading99911454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="34-the-jsp-view">3.4. <span style="color: #4f81bd">The JSP view</span></h2>
 <p>The <em>Action1.jsp</em> view is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1141,13 +1141,13 @@
 </code></pre></div>
 
 <p>This view is displayed after the <em>[Action1].execute</em> method is executed. It displays the values of the <em>param1</em> (line 11) and <em>param2</em> (line 19) fields of the [Action1] class.</p>
-<p><a id="refheading99931454977699"></a></p>
-<h2 id="35-tests">3.5. Tests</h2>
-<p>Let’s run the [example-02] project:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003860000018484D84349.png" width="451" height="194" style="display:inline-block; margin:4px;width:11.933cm;height:5.133cm;" class="odt-zoomable" data-zoom-src="images/10000000000003860000018484D84349.png" /></td></tr></table>
+<p><span id="refheading99931454977699" name="refheading99931454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="35-tests">3.5. <span style="color: #4f81bd">Tests</span></h2>
+<p>Let’s run the [exemple-02] project:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003860000018484D84349.png" width="451" height="194" style="display:inline-block; margin:4px;width:11.933cm;height:5.133cm;" class="odt-zoomable" data-zoom-src="images/10000000000003860000018484D84349.png" /></td></tr></table>
 
 <ul>
-  <li>in [1], the requested URL. Note that the initial requested URL was [/example-02] without an action. The [web.xml] and [struts.xml] files were then used. We saw that the [web.xml] file entrusted the processing of all requests to Struts 2. The [struts.xml] file was then used:
+  <li>in [1], the requested Url. Note that the initial requested Url was [/exemple-02] with no action. The files [web.xml] and [struts.xml] were then used. We observed that the file [web.xml] delegated the processing of all requests to Struts 2. The file [struts.xml] was then exploited:
   </li>
 </ul>
 
@@ -1170,8 +1170,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
 </code></pre></div>
 
-<p>The URL [/example-02] without an action was handled by the <em>default</em> package in lines 2–10. Since there was no action in the URL, the action became <em>&quot;index&quot;</em> due to line 3 (default action). Lines 4–8 caused Struts to return a redirect URL [/example-02/actions/Action1] to the client, as shown in [1].</p>
-<p>The [Action1] action was then executed as configured in lines 12–14. Its <em>execute</em> method was executed. We saw that it returned the <em>success</em> code. Line 13 of [struts.xml] caused the page [/views/Action1.jsp] to be returned to the browser:</p>
+<p>The Url [/exemple-02] without an action was handled by the <em>default</em> package in lines 2–10. Since there was no action in the Url, the action became <em>&quot;index&quot;</em> due to line 3 (default action). Lines 4–8 caused Struts to return a Url redirection to the client for [/exemple-02/actions/Action1], as shown in [1].</p>
+<p>The [Action1] action then executed as configured in lines 12–14. Its <em>execute</em> method was executed. We saw that it returned the <em>success</em> code. Line 13 of [struts.xml] caused the page [/vues/Action1.jsp] to be returned to the browser:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">...</span><span style="color:#008080"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
@@ -1187,14 +1187,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>Lines 9 and 10 displayed the values of the <em>param1</em> and <em>param2</em> fields from [Action1]. This is shown in [2].</p>
-<p>Let’s request another URL:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034C000001185B560D39.png" width="422" height="140" style="display:inline-block; margin:4px;width:11.165cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/100000000000034C000001185B560D39.png" /></td></tr></table>
+<p>Lines 9 and 10 displayed the values of the <em>param1</em> and <em>param2</em> fields from [Action1]. This is what [2] shows.</p>
+<p>Let’s request another Url:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000034C000001185B560D39.png" width="422" height="140" style="display:inline-block; margin:4px;width:11.165cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/100000000000034C000001185B560D39.png" /></td></tr></table>
 
-<p>In [1], the [Action1] action is requested with the parameters <em>param1</em> and <em>param2</em>. Let’s return to the execution flow of a Struts action:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AA000000F511158BE2.png" width="341" height="123" style="display:inline-block; margin:4px;width:9.022cm;height:3.242cm;" class="odt-zoomable" data-zoom-src="images/10000000000002AA000000F511158BE2.png" /></td></tr></table>
+<p>In [1], the [Action1] action is requested with the parameters <em>param1</em> and <em>param2</em>. Let’s return to the Struts action execution flowchart:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002AA000000F511158BE2.png" width="341" height="122" style="display:inline-block; margin:4px;width:9.022cm;height:3.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000002AA000000F511158BE2.png" /></td></tr></table>
 
-<p>The [FilterDispatcher] controller executes the action’s <em>execute</em> method. The execution flow passes through interceptors. One of them processes the parameter string<a id="parametres-get"></a> <em>param1=something&amp;param2=somethingelse</em> . It then uses the <em>setParam1</em> and <em>setParam2</em> methods of the <em>Action1</em> action:</p>
+<p>The controller [FilterDispatcher] executes the action’s <em>execute</em> method. The execution flow passes through interceptors. One of them processes the parameter string<span id="parametres-get" name="parametres-get" class="odt-bookmark-anchor"></span> <em>param1=something&amp;param2=somethingelse</em>. It then uses the <em>setParam1</em> and <em>setParam2</em> methods of the <em>Action1</em> action:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1232,17 +1232,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <p>The <em>params</em> interceptor executes the following methods:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Action1].setParam1(&quot;qqchose&quot;) ;
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Action1].setParam2(&quot;autrechose&quot;) ;
 </code></pre></div>
-<p>Therefore, they must exist. Note the following: to retrieve the <em>params</em> from an HTTP request, the called Struts action must have fields with the same names as the parameters and associated get/set methods.</p>
+<p>Therefore, they must exist. Note the following: to retrieve the <em>parami</em> parameters from a Http request, the called Struts action must have fields with the same names as the parameters and associated get / set methods.</p>
 <p>When the <em>execute</em> method of [Action1] runs, the <em>param1</em> and <em>param2</em> fields have been initialized by the <em>params</em> interceptor<em>:</em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>param1=&quot;qqchose&quot;
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>param2=&quot;autrechose&quot;
 </code></pre></div>
-<p>The <em>execute</em> method returns the <em>success</em> key, and the [Action1.jsp] page is displayed with the new values for <em>param1</em> and <em>param2</em> [2].</p>
+<p>The <em>execute</em> method returns the <em>success</em> key, and the [Action1.jsp] page is displayed with the new values for <em>param1</em> and <em>param2 from</em> [2].</p>
 
 
 

@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -382,14 +384,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -463,14 +465,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -794,7 +796,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -821,7 +823,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -888,13 +890,13 @@
 
 
 
-<p><a id="refheading92085522158564"></a></p>
-<h1 id="21-conclusion">21. Conclusion</h1>
+<p><span id="refheading92085522158564" name="refheading92085522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="21-conclusion">21. <span style="color: #365f91">Conclusion</span></h1>
 <p>We have explored the basics of the Struts 2 framework and presented an application that combines several technologies. Beginners and intermediate-level readers will find material in this document to help them learn and improve. A reference book is still needed. I once again recommend the book:</p>
-<p>&quot;<strong>Struts 2 in Action</strong>&quot; written by Donald Brown, Chad Michael Davis, and Scott Stanlick, published by Manning.</p>
+<p>&quot;<strong>Struts 2 in Action</strong>&quot; by Donald Brown, Chad Michael Davis, and Scott Stanlick, published by Manning.</p>
 <p>I would like to conclude by highlighting some issues I encountered while writing the examples in this document. I have already noted some unexpected behaviors of Struts 2, particularly when entering numbers and dates. Here are a few other issues I encountered:</p>
 <p>Let’s unload the [pam-01] application from the Tomcat server:</p>
-<p><img src="images/100000000000010E00000110D67F5588.png" width="189" height="190" style="width:5.001cm;height:5.039cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010E00000110D67F5588.png" /></p>
+<p><img src="images/100000000000010E00000110D67F5588.png" width="189" height="190" style="width:5.001cm;height:5.038cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010E00000110D67F5588.png" /></p>
 <p>The Apache console then displays the following logs:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -912,8 +914,8 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">janv</span><span class="o">.</span> <span class="mi">05</span><span class="p">,</span> <span class="mi">2012</span> <span class="mi">11</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">00</span> <span class="n">AM</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">startup</span><span class="o">.</span><span class="n">HostConfig</span> <span class="n">checkResources</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">Infos</span><span class="p">:</span> <span class="n">Repli</span> <span class="p">(</span><span class="n">undeploy</span><span class="p">)</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;application web ayant pour chemin de contexte /pam-01</span>
 </code></pre></div></td></tr></table></div>
-<p>The unloading was successful.</p>
-<p>Let&#x27;s unload [pam-02] in the same way. The logs are as follows:</p>
+<p>The unloading went well.</p>
+<p>Let’s unload [pam-02] in the same way. The logs are as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -950,31 +952,31 @@
 <a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="n">janv</span><span class="o">.</span> <span class="mi">05</span><span class="p">,</span> <span class="mi">2012</span> <span class="mi">11</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">08</span> <span class="n">AM</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">startup</span><span class="o">.</span><span class="n">HostConfig</span> <span class="n">checkResources</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="n">Infos</span><span class="p">:</span> <span class="n">Repli</span> <span class="p">(</span><span class="n">undeploy</span><span class="p">)</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;application web ayant pour chemin de contexte /pam-02</span>
 </code></pre></div></td></tr></table></div>
-<p>Lines 12, 14, 16: serious errors are reported. Two of them indicate a potential memory leak. Indeed, the [pam-02] application has memory leaks. After a while, the application becomes unusable. You must then close NetBeans and redeploy the application.</p>
+<p>Lines 12, 14, 16: serious errors are reported. Two of them indicate a potential memory leak. Indeed, the [pam-02] application exhibits memory leaks. After a while, the application becomes unusable. You must then close Netbeans and redeploy the application.</p>
 <p>The errors all refer to threads. The [pam-02] application does not use threads on its own. We must therefore suspect the frameworks used: Struts 2, Spring 2.5, and Tiles. We can reasonably rule out Tiles, which likely does not handle threads. That leaves Struts and Spring.</p>
 <p>We then conduct another experiment:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F00000010B41EFCBAD.png" width="632" height="134" style="display:inline-block; margin:4px;width:16.722cm;height:3.533cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F00000010B41EFCBAD.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004F00000010B41EFCBAD.png" width="632" height="133" style="display:inline-block; margin:4px;width:16.722cm;height:3.531cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F00000010B41EFCBAD.png" /></td></tr></table>
 
 <p>We implement the [web] layer using the JSF framework instead of Struts 2. Nothing else changes. We then get the same error messages as with Struts 2.</p>
-<p>So the culprit seems to be Spring, the <strong>dbcp</strong> connection pool used here by Spring, or perhaps myself if I didn’t use Spring correctly. I might have forgotten a Spring configuration that would clean up the created threads; I might have… The solution to this memory leak problem therefore remains to be found.</p>
-<p>Another experiment. The NetBeans IDE comes bundled with the Tomcat and GlassFish servers. Let’s try running an application created in this document on GlassFish:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F50000037B1D85EE4A.png" width="635" height="446" style="display:inline-block; margin:4px;width:16.789cm;height:11.788cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000037B1D85EE4A.png" /></td></tr></table>
+<p>So the culprit seems to be Spring, the <strong>dbcp</strong> connection pool used here by Spring, or perhaps myself if I didn’t use Spring correctly. I might have forgotten a Spring configuration that would clean up the created threads, I might have... The solution to this memory leak problem therefore remains to be found.</p>
+<p>Another experiment. IDE and Netbeans are installed with the Tomcat and Glassfish servers. Let’s try running an application created in this document on Glassfish:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004F50000037B1D85EE4A.png" width="635" height="446" style="display:inline-block; margin:4px;width:16.789cm;height:11.788cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000037B1D85EE4A.png" /></td></tr></table>
 
 <ul>
-  <li>in [2] the properties of the [example-08] project [1]
+  <li>in [2], the project properties for [exemple-08] and [1]
   </li>
-  <li>in [3], the web server selection
+  <li>in [3], the choice of web server
   </li>
 </ul>
 
 <p>Here is the page retrieved in the browser:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034200000210318DF67E.png" width="417" height="264" style="display:inline-block; margin:4px;width:11.033cm;height:6.985cm;" class="odt-zoomable" data-zoom-src="images/100000000000034200000210318DF67E.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000034200000210318DF67E.png" width="417" height="264" style="display:inline-block; margin:4px;width:11.033cm;height:6.985cm;" class="odt-zoomable" data-zoom-src="images/100000000000034200000210318DF67E.png" /></td></tr></table>
 
 <p>The expected portability is not achieved. There are two errors here:</p>
 <ul>
   <li>in [1], internationalization did not work
   </li>
-  <li>in [2], there is an exception
+  <li>in [2], we have an exception
   </li>
 </ul>
 

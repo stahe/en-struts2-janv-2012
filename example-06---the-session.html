@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/en-struts2-janv-2012/example-06---the-session.html">
       
       
-        <link rel="prev" href="example-05b---navigating-a-data-entry-form.html">
+        <link rel="prev" href="example-05b---navigation-in-an-input-form.html">
       
       
         <link rel="next" href="example-07---form-tags.html">
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -566,7 +568,7 @@
   <a href="#82-the-netbeans-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.2. The NetBeans Project
+        8.2. The Netbeans project
       
     </span>
   </a>
@@ -585,10 +587,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#84-the-confirm-action" class="md-nav__link">
+  <a href="#84-the-action-confirmer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4. The [Confirm] action
+        8.4. The action [Confirmer]
       
     </span>
   </a>
@@ -596,10 +598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#85-the-confirmationjsp-and-saisiejsp-views" class="md-nav__link">
+  <a href="#85-the-views-confirmationjsp-and-saisiejsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.5. The [Confirmation.jsp] and [Saisie.jsp] views
+        8.5. The views [Confirmation.jsp] and [Saisie.jsp]
       
     </span>
   </a>
@@ -607,10 +609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#86-the-delete-action" class="md-nav__link">
+  <a href="#86-the-action-effacer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.6. The [Delete] action
+        8.6. The action [Effacer]
       
     </span>
   </a>
@@ -909,7 +911,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -936,7 +938,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -993,28 +995,28 @@
 
 
 
-<p><a id="refheading100371454977699"></a></p>
-<h1 id="8-example-06-the-session">8. Example 06 – The Session</h1>
-<p><a id="refheading100391454977699"></a></p>
-<h2 id="81-the-concept-of-a-session">8.1. The concept of a session</h2>
+<p><span id="refheading100371454977699" name="refheading100371454977699" class="odt-bookmark-anchor"></span></p>
+<h1 id="8-example-06-the-session">8. <span style="color: #365f91">Example 06 – The Session</span></h1>
+<p><span id="refheading100391454977699" name="refheading100391454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="81-the-concept-of-a-session">8.1. <span style="color: #4f81bd">The concept of a session</span></h2>
 <p>When a client browser connects to a web application for the first time, it receives a session token, a unique string of characters that it sends back with every new request it makes to the web application. This allows the web application to recognize the client browser. The web application can then associate data with this session token. This data belongs to a single client browser. Thus, as the client browser makes requests, a memory is built up.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004770000010FF6B0E2AA.png" width="572" height="136" style="display:inline-block; margin:4px;width:15.122cm;height:3.586cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004770000010FF6B0E2AA.png" width="572" height="135" style="display:inline-block; margin:4px;width:15.122cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
 
-<p>As shown above, each user (browser) has its own memory, known as its session. This memory is shared by all requests from the same user. There is also a higher-level memory called application memory. This memory is shared by all requests from all users. It is generally read-only.</p>
-<p><a id="refheading100411454977699"></a></p>
-<h2 id="82-the-netbeans-project">8.2. The NetBeans Project</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000490000001F532AB0F8B.png" width="584" height="251" style="display:inline-block; margin:4px;width:15.452cm;height:6.629cm;" class="odt-zoomable" data-zoom-src="images/1000000000000490000001F532AB0F8B.png" /></td></tr></table>
+<p>As shown above, each user (browser) has its own memory, known as its session. This memory is shared by all requests from the same user. There is also a higher-level memory called the application memory. This memory is shared by all requests from all users. It is generally read-only.</p>
+<p><span id="refheading100411454977699" name="refheading100411454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="82-the-netbeans-project">8.2. <span style="color: #4f81bd"><strong>The Netbeans project</strong></span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000490000001F532AB0F8B.png" width="584" height="251" style="display:inline-block; margin:4px;width:15.452cm;height:6.629cm;" class="odt-zoomable" data-zoom-src="images/1000000000000490000001F532AB0F8B.png" /></td></tr></table>
 
-<p>The [example-06] project is created by copying the [example-05] project. We will change a few elements to</p>
+<p>The [exemple-06] project is created by cloning the [exemple-05] project. We will change a few elements to</p>
 <ul>
-  <li>take advantage of the user session.
+  <li>take advantage of the user&#x27;s session.
   </li>
-  <li>add a new action [Clear] [1] to clear the input field.
+  <li>add a new action [Effacer] [1] to clear the input field.
   </li>
 </ul>
 
-<p><a id="refheading100431454977699"></a></p>
-<h2 id="83-configuration">8.3. Configuration</h2>
+<p><span id="refheading100431454977699" name="refheading100431454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="83-configuration">8.3. <span style="color: #4f81bd">Configuration</span></h2>
 <p>The [struts.xml] file changes as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
@@ -1050,9 +1052,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
 </code></pre></div>
 
-<p>Lines 27–29 define a new action [Delete] associated with a class [Delete]. The response to this action is the view [Input.jsp].</p>
-<p><a id="refheading100451454977699"></a></p>
-<h2 id="84-the-confirm-action">8.4. The [Confirm] action</h2>
+<p>Lines 27–29 define a new action [Effacer] associated with a class [Effacer]. The response to this action is the view [Saisie.jsp].</p>
+<p><span id="refheading100451454977699" name="refheading100451454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="84-the-action-confirmer">8.4. <span style="color: #4f81bd">The action [Confirmer]</span></h2>
 <p>It evolves as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
@@ -1095,15 +1097,15 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 7: The [Confirm] class implements the <b>SessionAware</b> interface. This interface has only one method, the <b>setSession</b> method on lines 25–27. Before the <i>execute</i> method is called, one of the request interceptors will inject, via the <i>setSession</i> method, the user’s session in the form of a <i>Map&lt;String, Object&gt; </i>dictionary (line 25). We choose to store this dictionary in the <i>session</i> field on line 12.
+  <li>line 7: the class [Confirmer] implements the interface <b>SessionAware</b>. This interface has only one method, the method <b>setSession </b>on lines 25–27. Before the <i>execute</i> method is called, one of the request interceptors will inject, via the <i>setSession</i> method, the user’s session in the form of a <i>Map&lt;String, Object&gt; </i>dictionary (line 25). We choose to store this dictionary in the <i>session</i> field on line 12.
   </li>
-  <li>Lines 30–34: the action’s `<i>execute` </i>method. When it executes, the <i>session</i> field has been initialized by one of the interceptors, and the <i>name</i> field by another interceptor. We use this <i>session</i> dictionary to store the <i>name</i> field. Thus, the name will be part of the user’s session and available to all of their requests.
+  <li>Lines 30–34: the action’s <i>execute</i> method. When it runs, the <i>session</i> field has been initialized by one of the interceptors, and the <i>name</i> field by another interceptor. We use this <i>session</i> dictionary to store the <i>name</i> field. Thus, the name will be part of the user’s session and available for all of their requests.
   </li>
 </ul>
 
-<p><a id="refheading100471454977699"></a></p>
-<h2 id="85-the-confirmationjsp-and-saisiejsp-views">8.5. The [Confirmation.jsp] and [Saisie.jsp] views</h2>
-<p>The [Confirmation.jsp] view remains unchanged. The [Saisie.jsp] view changes as follows:</p>
+<p><span id="refheading100471454977699" name="refheading100471454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="85-the-views-confirmationjsp-and-saisiejsp">8.5. <span style="color: #4f81bd">The views [Confirmation.jsp] and [Saisie.jsp]</span></h2>
+<p>The view [Confirmation.jsp] remains unchanged. The view [Saisie.jsp] changes as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1125,15 +1127,15 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 12: We add a <i>`value`</i> attribute to the <i>`&lt;s:textfield&gt;` </i>tag<i>. </i>This attribute sets the value to be displayed in the input field. If this attribute is omitted, <i>`value` </i>defaults to <i>`name`</i>. Here, the value of the attribute is an OGNL (Object-Graph Navigation Language) expression in the form <i>`%{expression_to_evaluate}`</i>. Here, the expression to be evaluated is <i>#attr[&#x27;name&#x27;]</i>. The <i>name</i> attribute will be searched for in the current action, the page, the request, the session, and the application, in that order. Since the [Confirm] action places the <i>name</i> attribute in the session, it will be found there. This is shown by the following request:
+  <li>Line 12: We add a <i>&quot;value&quot;</i> attribute to the <i>&lt;s:textfield&gt; </i>tag<i>. </i>This attribute sets the value to be displayed in the input field. If this attribute is omitted, <i>the value </i>defaults to <i>name</i>. Here, the value of the attribute is a OGNL expression (Object-Graph Navigation Language) of the form <i>%{expression_à_évaluer}</i>. Here, the expression to be evaluated is <i>#attr[&#x27;nom&#x27;]</i>. The <i>name</i> attribute will be searched for in the current action, page, request, session, and application, in that order. Since the action [Confirmer] sets the <i>name</i> attribute in the session, it will be found there. This is shown by the following request:
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BC0000019860FC6267.png" width="606" height="204" style="display:inline-block; margin:4px;width:16.034cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC0000019860FC6267.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004BC0000019860FC6267.png" width="606" height="204" style="display:inline-block; margin:4px;width:16.034cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC0000019860FC6267.png" /></td></tr></table>
 
-<p>In [1], the entered name was <em>ST</em>. We know that the [Confirm] action placed this name in the session. The link [2] takes us to the URL [3]. The [Saisie.jsp] view is displayed. For the input field, the attribute <em>%{#attr[&#x27;name&#x27;]}</em> retrieves the name from the session.</p>
+<p>In [1], the name entered was <em>ST</em>. We know that the action [Confirmer] placed this name in the session. The link [2] leads us to Url and [3]. The view [Saisie.jsp] is displayed. For the input field, the attribute <em>%{#attr[&#x27;nom&#x27;]}</em> retrieves the name from the session.</p>
 <ul>
-  <li>Line 14: the [Clear] button, which triggers the execution of the [Clear] action and the display of the [Saisie.jsp] view
+  <li>Line 14: the [Effacer] button, which triggers the execution of the [Effacer] action and the display of the [Saisie.jsp] view
   </li>
 </ul>
 
@@ -1143,9 +1145,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
-<p><a id="refheading100491454977699"></a></p>
-<h2 id="86-the-delete-action">8.6. The [Delete] action</h2>
-<p>The code for the [Delete] action is as follows:</p>
+<p><span id="refheading100491454977699" name="refheading100491454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="86-the-action-effacer">8.6. <span style="color: #4f81bd">The action [Effacer]</span></h2>
+<p>The code for action [Effacer] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">actions;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1177,37 +1179,36 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> </span></p>
 <ul>
-  <li>Line 7: The [Delete] class implements the [SessionAware] interface, just as the [Confirm] action did.
+  <li>Line 7: The [Effacer] class implements the [SessionAware] interface, just as the [Confirmer] action did.
   </li>
-  <li>line 13: The [Delete] action must clear the contents of the name input field in the [Input.jsp] view. We know that this view retrieves this name from the session. We must therefore remove the name from the session. This is what the <i>execute</i> method does.
+  <li>line 13: the [Effacer] action must clear the contents of the name input field in the [Saisie.jsp] view. We know that this view retrieves this name from the session. We must therefore remove the name from the session. This is what the <i>execute</i> method does.
   </li>
 </ul>
 
-<p>Let’s see how this works:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000019296DA5187.png" width="649" height="201" style="display:inline-block; margin:4px;width:17.171cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000019296DA5187.png" /></td></tr></table>
+<p>Let’s see what happens:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005120000019296DA5187.png" width="649" height="201" style="display:inline-block; margin:4px;width:17.171cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000019296DA5187.png" /></td></tr></table>
 
-<p>In [1], we want to clear the input field. We click the [Clear] button.</p>
+<p>In [1], we want to clear the input field. We click the [Effacer] button.</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:submit</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;saisie.effacer&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;Effacer&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p>The [Clear] action will be executed. In [2], we notice that the URL called was that of the [Confirm] action. This comes from the <em>&lt;s:form&gt;</em> tag in the form:</p>
+<p>The action [Effacer] will be executed. In [2], we notice that the Url called was that of the [Confirmer] action. This comes from the <em>&lt;s:form&gt;</em> tag in the form:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:form action=&quot;Confirmer&quot;</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>which causes the form to be submitted to the [Confirm] action. When the [Clear] button is clicked, the parameter</p>
+<p>which causes the form to be submitted to the action [Confirmer]. When the [Effacer] button is clicked, the parameter</p>
 <p><strong>action:Delete=Delete</strong></p>
-<p>was posted to the URL [/actions/Confirm.action]. Struts uses this parameter to process the data posted by the [Delete] action. This action removes the session name. The [Input.jsp] page is the response to the [Delete] action:</p>
+<p>was posted to the Url [/actions/Confirmer.action] action. Struts uses this parameter to have the posted data processed by the [Effacer] action. This action removes the session name. The page [Saisie.jsp] is the response from the action [Effacer]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">Effacer</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">actions.Effacer</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;result</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">success</span><span style="color:#800080">&quot;&gt;</span><span style="color:#000000">/vues/Saisie.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;/action&gt;</span><span style="color:#800080"></span></span></span>
 </code></pre></div>
 
-<p>This one, which displays the session name, then displays an empty string [3].</p>
+<p>This page, which displays the session name, then displays an empty string: [3].</p>
 <p>We have written several simple examples to introduce important concepts of Struts 2:</p>
 <ul>
   <li>page internationalization

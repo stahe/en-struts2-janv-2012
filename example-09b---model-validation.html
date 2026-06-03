@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -806,7 +808,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -833,7 +835,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -890,14 +892,13 @@
 
 
 
-<p><a id="refheading91674522158564"></a></p>
-<h1 id="12-example-09b-model-validation">12. Example 09B – Model Validation</h1>
-<p><span style="color: #000000"> </span></p>
+<p><span id="refheading91674522158564" name="refheading91674522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="12-example-09b-model-validation">12. <span style="color: #365f91">Example 09B – Model Validation</span></h1>
 <p><span style="color: #000000">The following application is a variation of the previous one. Previously, for action </span><strong><span style="color: #000000">A</span></strong><span style="color: #000000">:</span></p>
 <ul>
   <li>the validation rules file was named <b>A-validation.xml</b>
   </li>
-  <li>the validation error messages file was named <b>A.properties</b>
+  <li>the validation error message file was named <b>A.properties</b>
   </li>
 </ul>
 
@@ -905,20 +906,20 @@
 <ul>
   <li>the validation rules file is named <b>M-validation.xml</b>
   </li>
-  <li>the validation error messages file is named <b>M.properties</b>
+  <li>the validation error message file is named <b>M.properties</b>
   </li>
-  <li>The <b>A-validation.xml </b>file still exists, but its contents redirect the validation rules to the <b>M-validation.xml </b>file.
+  <li>The file <b>A-validation.xml </b>still exists, but its contents redirect the validation rules to the file <b>M-validation.xml</b>.
   </li>
 </ul>
 
 <p>These are the only changes we will make to the previous version.</p>
-<p>The NetBeans project is as follows:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001830000017319E91CC2.png" width="194" height="186" style="display:inline-block; margin:4px;width:5.121cm;height:4.909cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000017319E91CC2.png" /></td></tr></table>
+<p>The Netbeans project is as follows:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001830000017319E91CC2.png" width="194" height="186" style="display:inline-block; margin:4px;width:5.121cm;height:4.909cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000017319E91CC2.png" /></td></tr></table>
 
 <ul>
   <li>in [1], the [FormInt] action and its validation file
   </li>
-  <li>in [2], its model [FormIntModel], the validation file for this model, and the messages associated with this model.
+  <li>in [2], its template [FormIntModel], the validation file for this template, and the messages associated with this template.
   </li>
 </ul>
 
@@ -930,7 +931,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">--&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">validators</span> <span style="color:#808080">PUBLIC</span> <span style="color:#008080">&quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">EN&quot;</span> <span style="color:#3f7f5f">&quot;http://localhost:8084/exemple-09B/example/xwork-validator-1.0.2.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://localhost:8084/example-09B/example/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;model&quot;</span> <span style="color:#008080">&gt;</span></span></span>
@@ -942,8 +943,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>We won’t attempt to explain the contents of this file. We’ll take it at face value, keeping in mind its purpose: to delegate validation rules to the model. You might wonder what this is for. In fact, the model, its validation rules, and its messages may already exist and be used by different actions. Rather than repeating the same validation rules and messages for different actions, it is better to delegate these functionalities to the model.</p>
-<p>The [FormIntModel-validation.xml] file is identical to the [FormInt-validation.xml] file from the previous version.</p>
+<p>We won’t attempt to explain the contents of this file. We’ll take it as is, keeping in mind its purpose: to delegate validation rules to the model. You might wonder what this is for. In fact, the model, its validation rules, and its messages may already exist and be used by different actions. Rather than repeating the same validation rules and messages for different actions, it is better to delegate these functionalities to the model.</p>
+<p>The file [FormIntModel-validation.xml] is identical to the file [FormInt-validation.xml] from the previous version.</p>
 <p>The [FormIntModel.properties] file is identical to the [FormInt.properties] file from the previous version.</p>
 <p>Readers are invited to test this new version.</p>
 

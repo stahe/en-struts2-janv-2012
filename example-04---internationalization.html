@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/en-struts2-janv-2012/example-04---internationalization.html">
       
       
-        <link rel="prev" href="example-03---navigation-keys.html">
+        <link rel="prev" href="example-03---the-keys-of-navigation.html">
       
       
         <link rel="next" href="example-05---the-input-form.html">
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -474,7 +476,7 @@
   <a href="#51-the-netbeans-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. The NetBeans project
+        5.1. The Netbeans project
       
     </span>
   </a>
@@ -485,7 +487,7 @@
   <a href="#52-project-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Project Configuration
+        5.2. Project configuration
       
     </span>
   </a>
@@ -515,10 +517,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#55-testing" class="md-nav__link">
+  <a href="#55-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.5. Testing
+        5.5. Tests
       
     </span>
   </a>
@@ -567,14 +569,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -898,7 +900,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -925,7 +927,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -982,14 +984,14 @@
 
 
 
-<p><a id="refheading100071454977699"></a></p>
-<h1 id="5-example-04-internationalization">5. Example 04 – Internationalization</h1>
-<p>This example revisits the internationalization covered in the first example.</p>
-<p><a id="refheading100091454977699"></a></p>
-<h2 id="51-the-netbeans-project">5.1. The NetBeans project</h2>
-<p><img src="images/10000000000000EA0000011845084917.png" width="164" height="196" style="width:4.33cm;height:5.189cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EA0000011845084917.png" /></p>
-<p><img src="images/1000000000000186000000B9DB5D31CF.png" width="273" height="130" style="width:7.22cm;height:3.431cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000186000000B9DB5D31CF.png" /></p>
-<p>It includes:</p>
+<p><span id="refheading100071454977699" name="refheading100071454977699" class="odt-bookmark-anchor"></span></p>
+<h1 id="5-example-04-internationalization">5. <span style="color: #365f91">Example 04 – Internationalization</span></h1>
+<p>This example revisits the internationalization discussed in the first example.</p>
+<p><span id="refheading100091454977699" name="refheading100091454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="51-the-netbeans-project">5.1. <span style="color: #4f81bd">The Netbeans project</span></h2>
+<p><img src="images/10000000000000EA0000011845084917.png" width="164" height="196" style="width:4.33cm;height:5.181cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EA0000011845084917.png" /></p>
+<p><img src="images/1000000000000186000000B9DB5D31CF.png" width="273" height="129" style="width:7.22cm;height:3.425cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000186000000B9DB5D31CF.png" /></p>
+<p>It contains:</p>
 <ul>
   <li>a view [Page1.jsp]
   </li>
@@ -999,8 +1001,8 @@
   </li>
 </ul>
 
-<p><a id="refheading100111454977699"></a></p>
-<h2 id="52-project-configuration">5.2. Project Configuration</h2>
+<p><span id="refheading100111454977699" name="refheading100111454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="52-project-configuration">5.2. <span style="color: #4f81bd">Project configuration</span></h2>
 <p>The [struts.xml] file is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
@@ -1031,14 +1033,14 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 8 defines a Struts constant that specifies the name of the internationalized messages file, in this case <i>`messages</i>`. The `[messages_xx.properties]` files will be searched for in the project&#x27;s <i>ClassPath</i>. For this reason, they have been placed here at the root of [Source Packages] [1].
+  <li>Line 8 defines a Struts constant that specifies the name of the internationalized messages file, in this case <i>messages</i>. The [messages_xx.properties] files will be searched for in the <i>ClassPath</i> directory of the project. For this reason, they have been placed here at the root of [Source Packages] and [1].
   </li>
-  <li>Lines 21–23: define an action [Action1] without an associated class. A default Struts class will then be used, whose <i>execute</i> method returns the key <i>&quot;success&quot;</i>. The view [/views/Page1.jsp] will then be returned to the client. It is important to understand that this is not the same as directly calling the view [/views/Page1.jsp]. In fact, calling an action triggers the execution of interceptors, which a direct call to a view does not do. One of the interceptors handles internationalization.
+  <li>Lines 21–23: define a [Action1] action without an associated class. A default Struts class will then be used, whose <i>execute</i> method returns the <i>success</i> key. The [/vues/Page1.jsp] view will then be sent back to the client. It is important to understand that this is not the same as directly calling the view [/vues/Page1.jsp]. Indeed, calling an action triggers the execution of interceptors, which a direct call to a view does not do. One of the interceptors handles internationalization.
   </li>
 </ul>
 
-<p><a id="refheading100131454977699"></a></p>
-<h2 id="53-the-message-files">5.3. The message files</h2>
+<p><span id="refheading100131454977699" name="refheading100131454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="53-the-message-files">5.3. <span style="color: #4f81bd">The message files</span></h2>
 <p><u><strong>messages.properties</strong></u></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.texte=</span><span style="text-decoration:underline;color:#2a00ff">Ici</span><span style="color:#2a00ff">,</span><span style="color:#000000"> </span><span style="color:#2a00ff">on</span><span style="color:#000000"> </span><span style="color:#2a00ff">met</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">un</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">texte</span><span style="color:#000000"> </span><span style="text-decoration:underline;color:#2a00ff">fran</span><span style="color:#2a00ff">\u00e7ais...</span></span></span>
@@ -1053,7 +1055,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">page.titre2=</span><span style="color:#2a00ff">English</span></span></span>
 </code></pre></div>
 
-<p>They define three keys<em>: page.text</em>, <em>page.title1</em>, and <em>page.title2</em>. The [<strong>messages_en</strong>.properties] file will be used if the page language is English (<strong>en</strong>). The [messages.properties] file will be used for all other languages. This is the default message file. The language used is either:</p>
+<p>They define three keys: <em>page.texte</em>, <em>page.titre1</em>, <em>page.titre2</em>. The file [messages_en.properties] will be used if the page language is English (<strong>en</strong>). The file [messages.properties] will be used for all other languages. This is the default message file. The language used is either:</p>
 <ul>
   <li>the language of the client browser as specified in its preferences sent to the server
   </li>
@@ -1061,8 +1063,8 @@
   </li>
 </ul>
 
-<p><a id="refheading100151454977699"></a></p>
-<h2 id="54-the-page1jsp-view">5.4. The [Page1.jsp] view</h2>
+<p><span id="refheading100151454977699" name="refheading100151454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="54-the-page1jsp-view">5.4. <span style="color: #4f81bd">The [Page1.jsp] view</span></h2>
 <p>The view is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1081,33 +1083,33 @@
 </code></pre></div>
 
 <ul>
-  <li>line 7: displays the message for key <i>page.title1</i>
+  <li>line 7: displays the key message <i>page.titre1</i>
   </li>
-  <li>line 10: displays the message with the key <i>page.title2</i>
+  <li>line 10: displays the message with key <i>page.titre2</i>
   </li>
-  <li>line 11: displays the message with the key <i>page.text</i>
+  <li>line 11: displays the key message <i>page.texte</i>
   </li>
 </ul>
 
-<p><a id="refheading100171454977699"></a></p>
-<h2 id="55-testing">5.5. Testing</h2>
+<p><span id="refheading100171454977699" name="refheading100171454977699" class="odt-bookmark-anchor"></span></p>
+<h2 id="55-tests">5.5. <span style="color: #4f81bd">Tests</span></h2>
 <p>Let&#x27;s run the project:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052B00000140CE7B3713.png" width="662" height="160" style="display:inline-block; margin:4px;width:17.503cm;height:4.233cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B00000140CE7B3713.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000052B00000140CE7B3713.png" width="662" height="160" style="display:inline-block; margin:4px;width:17.503cm;height:4.233cm;" class="odt-zoomable" data-zoom-src="images/100000000000052B00000140CE7B3713.png" /></td></tr></table>
 
 <ul>
-  <li>In [1], the page was displayed in French. The [messages.properties] file was used because the browser had French set as its preferred language.
+  <li>In [1], the page was displayed in French. The file [messages.properties] was used because the browser had French as its preferred language.
   </li>
-  <li>In [3], the page was displayed in English. The [<b>messages_en</b>.properties] file was used because the URL [2] used the <i><b>request_locale=en</b></i> parameter.
+  <li>In [3], the page displayed in English. The file [messages_en.properties] was used because Url and [2] used the parameter <i><b>request_locale=en</b></i>.
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051A000001B3528BAD60.png" width="653" height="218" style="display:inline-block; margin:4px;width:17.277cm;height:5.756cm;" class="odt-zoomable" data-zoom-src="images/100000000000051A000001B3528BAD60.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000051A000001B3528BAD60.png" width="653" height="218" style="display:inline-block; margin:4px;width:17.277cm;height:5.756cm;" class="odt-zoomable" data-zoom-src="images/100000000000051A000001B3528BAD60.png" /></td></tr></table>
 
 <p>In [4], a page in German (de) is requested. Since there is no [messages_de.properties] file, the default file [messages.properties] is used [5].</p>
 <p>In [6], English is set as the browser&#x27;s preferred language.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026200000120488B7024.png" width="305" height="144" style="display:inline-block; margin:4px;width:8.07cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/100000000000026200000120488B7024.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000026200000120488B7024.png" width="305" height="144" style="display:inline-block; margin:4px;width:8.07cm;height:3.81cm;" class="odt-zoomable" data-zoom-src="images/100000000000026200000120488B7024.png" /></td></tr></table>
 
-<p>In [7], the [Action1] action is requested without language parameters. The request comes from a browser whose preferred language is English (en). Therefore, the [messages_en.properties] file is used [8].</p>
+<p>In [7], the action [Action1] is requested without language parameters. The request comes from a browser whose preferred language is English (en). Therefore, the file [messages_en.properties] is used instead of [8].</p>
 <p>From now on, all projects will have a single [messages.properties] file that will be used for all languages. This will require us to write views that use the keys from this file. Internationalizing into English will simply involve creating the [messages_en.properties] file for English messages. No other changes are needed.</p>
 
 

@@ -29,7 +29,7 @@
     
     
       
-        <title>20. Case Study – Version 2 - An Introduction to Struts 2 Through Examples</title>
+        <title>20. Case Study – version 2 - An Introduction to Struts 2 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              20. Case Study – Version 2
+              20. Case Study – version 2
             
           </span>
         </div>
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -796,7 +798,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -832,7 +834,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -890,30 +892,30 @@
 
 
 
-<p><a id="refheading91822522158564"></a></p>
-<h1 id="20-case-study-version-2">20. Case Study – Version 2</h1>
+<p><span id="refheading91822522158564" name="refheading91822522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="20-case-study-version-2">20. <span style="color: #365f91">Case Study – version 2</span></h1>
 <p>We now present the final version of our application:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F900000103F5E63927.png" width="637" height="130" style="display:inline-block; margin:4px;width:16.842cm;height:3.427cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F900000103F5E63927.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004F900000103F5E63927.png" width="637" height="130" style="display:inline-block; margin:4px;width:16.842cm;height:3.427cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F900000103F5E63927.png" /></td></tr></table>
 
-<p>The new NetBeans project [pam-02] is created by cloning the [pam-01] project:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C2000002AE3E61B19A.png" width="609" height="343" style="display:inline-block; margin:4px;width:16.113cm;height:9.075cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C2000002AE3E61B19A.png" /></td></tr></table>
+<p>The new Netbeans project is obtained by copying the [pam-02] project:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000004C2000002AE3E61B19A.png" width="609" height="343" style="display:inline-block; margin:4px;width:16.113cm;height:9.075cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C2000002AE3E61B19A.png" /></td></tr></table>
 
 <ul>
-  <li>In [1], copy the new project
+  <li>In [1], we copy the new project
   </li>
-  <li>in [2], name the new project [pam-02] and specify its directory
+  <li>in [2], we name the new project [pam-02] and specify its folder
   </li>
   <li>in [3], the new project [pam-02]
   </li>
 </ul>
 
-<p>To &quot;connect&quot; the real [business] layer to the web layer we built, we need to do three things:</p>
+<p>To &quot;connect&quot; the actual layer [metier] to the web layer we built, you need to do three things:</p>
 <ol>
-  <li>delete the simulated [business] layer we created
+  <li>delete the simulated layer [metier] that we created
   </li>
-  <li>configure Spring to instantiate the real [business] layer located in the [pam-spring-metier-dao-jpa-hibernate.jar] archive
+  <li>configure Spring to instantiate the real [metier] layer found in the [pam-spring-metier-dao-jpa-hibernate.jar] archive
   </li>
-  <li>add all the necessary archives to the project (Spring, Hibernate, JPA, MySQL JDBC driver).
+  <li>add all the necessary archives to the project (Spring, Hibernate, JPA, and the MySQL JDBC driver).
   </li>
 </ol>
 
@@ -977,13 +979,13 @@
 </code></pre></div>
 
 <p>Lines 36–41 configure database access.</p>
-<p>New libraries (Spring, Hibernate, JPA, MySQL JDBC driver) are added from the [lib] folder [2]. The entire folder is included. There are several dozen .jar files to add [1]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045F000002802B3E6C26.png" width="560" height="320" style="display:inline-block; margin:4px;width:14.804cm;height:8.467cm;" class="odt-zoomable" data-zoom-src="images/100000000000045F000002802B3E6C26.png" /></td></tr></table>
+<p>The new libraries (Spring, Hibernate, JPA, and the MySQL JDBC driver) are added from the [lib] and [2] folders. The entire folder is used. There are several dozen .jar files to add to [1]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000045F000002802B3E6C26.png" width="560" height="320" style="display:inline-block; margin:4px;width:14.804cm;height:8.467cm;" class="odt-zoomable" data-zoom-src="images/100000000000045F000002802B3E6C26.png" /></td></tr></table>
 
-<p>It was quite difficult to assemble this library because these frameworks sometimes use the same archives. Duplicates must therefore be removed. These files have been gathered in the [lib] folder [2] in the example archive for this document so that the reader does not have to rebuild this library themselves.</p>
-<p>That’s it. The new application [pam-02] will now work with the DBMS. Here is a screenshot of a salary calculation:</p>
-<p><img src="images/100000000000031300000347F8A10D5E.png" width="551" height="587" style="width:14.58cm;height:15.54cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031300000347F8A10D5E.png" /></p>
-<p>This time, the calculated salary is the actual salary, not the fictitious salary from version 1. The reader is invited to test the new application.</p>
+<p>It was quite difficult to build this library because these frameworks sometimes use the same archives. Duplicates must therefore be removed. These files have been collected in the [lib] [2] folder within the examples archive of this document so that the reader does not have to rebuild this library themselves.</p>
+<p>That’s it. The new [pam-02] application will now work with SGBD. Here is a screenshot of a salary calculation:</p>
+<p><img src="images/100000000000031300000347F8A10D5E.png" width="551" height="587" style="width:14.58cm;height:15.543cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031300000347F8A10D5E.png" /></p>
+<p>This time, the calculated salary is the actual salary and not the fictitious salary from version 1. The reader is invited to test the new application.</p>
 
 
 

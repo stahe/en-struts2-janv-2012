@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -717,7 +719,7 @@
   <a href="#141-the-netbeans-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.1. The NetBeans project
+        14.1. The Netbeans project
       
     </span>
   </a>
@@ -736,10 +738,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#143-message-files" class="md-nav__link">
+  <a href="#143-the-message-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.3. Message files
+        14.3. The message files
       
     </span>
   </a>
@@ -942,7 +944,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -969,7 +971,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -1026,10 +1028,10 @@
 
 
 
-<p><a id="refheading91700522158564"></a></p>
-<h1 id="14-example-11-date-conversion-and-validation">14. Example 11 – Date Conversion and Validation</h1>
-<p>The new application features date input:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053600000200047A26E8.png" width="667" height="256" style="display:inline-block; margin:4px;width:17.648cm;height:6.773cm;" class="odt-zoomable" data-zoom-src="images/100000000000053600000200047A26E8.png" /></td></tr></table>
+<p><span id="refheading91700522158564" name="refheading91700522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="14-example-11-date-conversion-and-validation">14. <span style="color: #365f91">Example 11 – Date Conversion and Validation</span></h1>
+<p>The new application features date entry:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000053600000200047A26E8.png" width="667" height="256" style="display:inline-block; margin:4px;width:17.648cm;height:6.773cm;" class="odt-zoomable" data-zoom-src="images/100000000000053600000200047A26E8.png" /></td></tr></table>
 
 <ul>
   <li>in [1], the input form
@@ -1039,15 +1041,15 @@
 </ul>
 
 <p>The application works similarly to the integer input, so we will only comment on the points that differ.</p>
-<p><a id="refheading91702522158564"></a></p>
-<h2 id="141-the-netbeans-project">14.1. The NetBeans project</h2>
-<p>The NetBeans project is as follows:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000347000001CB4C22D6CA.png" width="420" height="230" style="display:inline-block; margin:4px;width:11.1cm;height:6.073cm;" class="odt-zoomable" data-zoom-src="images/1000000000000347000001CB4C22D6CA.png" /></td></tr></table>
+<p><span id="refheading91702522158564" name="refheading91702522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="141-the-netbeans-project">14.1. <span style="color: #4f81bd">The Netbeans project</span></h2>
+<p>The Netbeans project is as follows:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000347000001CB4C22D6CA.png" width="420" height="230" style="display:inline-block; margin:4px;width:11.1cm;height:6.073cm;" class="odt-zoomable" data-zoom-src="images/1000000000000347000001CB4C22D6CA.png" /></td></tr></table>
 
 <ul>
   <li>in [1], the application views
   </li>
-  <li>[Home.jsp]: the home page
+  <li>[Accueil.jsp]: the home page
   </li>
   <li>[FormDate.jsp]: the input form
   </li>
@@ -1061,18 +1063,18 @@
   </li>
   <li>[FormDate-validation.xml]: the validation rules for the [FormDate] action. This file delegates these validations to the model.
   </li>
-  <li>[FormDateModel]: the model for the [FormDate] action
+  <li>[FormDateModel]: the model for action [FormDate]
   </li>
-  <li>[FormDateModel-validation.xml]: the validation rules for the model
+  <li>[ FormDateModel-validation.xml]: the validation rules for the model
   </li>
-  <li>[FormDateModel.properties]: the model&#x27;s message file
+  <li>[FormDateModel.properties]: the model message file
   </li>
   <li>[example.xml]: Struts secondary configuration file
   </li>
 </ul>
 
-<p><a id="refheading91704522158564"></a></p>
-<h2 id="142-project-configuration">14.2. Project configuration</h2>
+<p><span id="refheading91704522158564" name="refheading91704522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="142-project-configuration">14.2. <span style="color: #4f81bd">Project configuration</span></h2>
 <p>The project is primarily configured by the following [example.xml] file:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span> <span style="color:#008080">?&gt;</span></span></span>
@@ -1095,9 +1097,9 @@
 </code></pre></div>
 
 <p>It is similar to the one discussed for entering integers.</p>
-<p><a id="refheading91706522158564"></a></p>
-<h2 id="143-message-files">14.3. Message files</h2>
-<p>The [messages.properties] file is as follows:</p>
+<p><span id="refheading91706522158564" name="refheading91706522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="143-the-message-files">14.3. <span style="color: #4f81bd">The message files</span></h2>
+<p>The file [messages.properties] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Accueil.titre=</span><span style="color:#2a00ff">Accueil</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Accueil.message=</span><span style="color:#2a00ff">Struts</span><span style="color:#000000"> </span><span style="color:#2a00ff">2</span><span style="color:#000000"> </span><span style="color:#2a00ff">-</span><span style="color:#000000"> </span><span style="color:#2a00ff">Conversions</span><span style="color:#000000"> </span><span style="color:#2a00ff">et</span><span style="color:#000000"> </span><span style="color:#2a00ff">validations</span></span></span>
@@ -1116,7 +1118,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">xwork.default.invalid.fieldvalue=</span><span style="color:#2a00ff">Valeur</span><span style="color:#000000"> </span><span style="color:#2a00ff">invalide</span><span style="color:#000000"> </span><span style="color:#2a00ff">pour</span><span style="color:#000000"> </span><span style="color:#2a00ff">le</span><span style="color:#000000"> </span><span style="color:#2a00ff">champ</span><span style="color:#000000"> </span><span style="color:#2a00ff">&quot;</span><span style="font-weight:bold;color:#7f0055">{0}</span><span style="color:#2a00ff">&quot;.</span></span></span>
 </code></pre></div>
 
-<p>The [FormDateModel.properties] file is as follows:</p>
+<p>The file [FormDateModel.properties] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">date.format=</span><span style="color:#2a00ff">{0,date,dd/MM/yyyy}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">date1.prompt=</span><span style="color:#2a00ff">1-Tapez</span><span style="color:#000000"> </span><span style="color:#2a00ff">une</span><span style="color:#000000"> </span><span style="color:#2a00ff">date</span><span style="color:#000000"> </span><span style="color:#2a00ff">au</span><span style="color:#000000"> </span><span style="color:#2a00ff">format</span><span style="color:#000000"> </span><span style="color:#2a00ff">JJ/MM/AAAA</span></span></span>
@@ -1133,10 +1135,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">date6.error=</span><span style="color:#2a00ff">Date</span><span style="color:#000000"> </span><span style="color:#2a00ff">errron\u00E9e</span></span></span>
 </code></pre></div>
 
-<p>Line 1 plays an important role. We will come back to this.</p>
-<p><a id="refheading91708522158564"></a></p>
-<h2 id="144-the-input-form">14.4. The input form</h2>
-<p>The [FormDate.jsp] view is as follows:</p>
+<p>Line 1 plays an important role. We will come back to it later.</p>
+<p><span id="refheading91708522158564" name="refheading91708522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="144-the-input-form">14.4. <span style="color: #4f81bd">The input form</span></h2>
+<p>The view [FormDate.jsp] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1169,8 +1171,8 @@
 </code></pre></div>
 
 <p>Lines 13 through 18 are the six date input fields. The <em>date2</em> through <em>date5</em> fields have a complex <em>value</em> attribute, the same as for real number input. Since the same difficulties were encountered, they were resolved in the same way.</p>
-<p><a id="refheading91710522158564"></a></p>
-<h2 id="145-the-confirmation-view">14.5. The confirmation view</h2>
+<p><span id="refheading91710522158564" name="refheading91710522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="145-the-confirmation-view">14.5. <span style="color: #4f81bd">The confirmation view</span></h2>
 <p>The confirmation view [ConfirmationFormDate.jsp] is as follows:</p>
 <p><img src="images/10000000000001E50000012247AE2918.png" width="339" height="203" style="width:8.98cm;height:5.369cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E50000012247AE2918.png" /></p>
 <p>Its code is as follows:</p>
@@ -1238,19 +1240,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>The [ConfirmationFormDate.jsp] view simply displays the [FormDateModel]. Lines 47–49 show how a date is displayed. We want this display to follow a specific date format. To do this, we use the <em>&lt;s:text&gt;</em> tag, which we have previously used for the application’s internationalization.</p>
-<p>Here, the message key used is <code>*date.format*</code>. This key is found in the <code>FormDateModel.properties</code> file:</p>
+<p>The view [ConfirmationFormDate.jsp] simply displays the template [FormDateModel]. Lines 47–49 show the display of a date. We want this display to take a date format into account. To do this, we use the <em>&lt;s:text&gt;</em> tag that we had previously used for the application’s internationalization.</p>
+<p>Here, the message key used is <em>date.format</em>. This key is found in the file [FormDateModel.properties]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">date.format=</span><span style="color:#2a00ff">{0,date,dd/MM/yyyy}</span></span></span>
 </code></pre></div>
 
-<p>The value associated with the key is not a message here, but a display format:</p>
+<p>The value associated with the key here is not a message, but a display format:</p>
 <ul>
   <li><b>0 </b>is a parameter representing the value to be displayed. Here, it will be the <i>date5</i> field of the model.
   </li>
   <li><b>date </b>represents a date. Previously, we used <i>number </i>for a number.
   </li>
-  <li><b>dd/MM/yyyy </b>represents the date format. Here, we want it in the form dd/mm/yyyy. The appropriate Java format is dd/MM/yyyy (d: day, M: month, y: year)
+  <li><b>dd/MM/yyyy </b>represents the date format. Here, we want it in the form dd/mm/yyyy. The appropriate Java format is dd/MM/yyyy (d: day, M: Month, y: year)
   </li>
 </ul>
 
@@ -1261,10 +1263,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:text</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">displays the message </span><em><span style="color: #000000">{0, date, dd/MM/yyyy}</span></em><span style="color: #000000">, where the </span><em><span style="color: #000000">date5</span></em><span style="color: #000000"> parameter (line 2) replaces the</span><em><span style="color: #000000"> 0</span></em><span style="color: #000000"> parameter in the format. Thus, the </span><em><span style="color: #000000">date5</span></em><span style="color: #000000"> model will be displayed in the dd/mm/yyyy format.</span></p>
-<p><a id="refheading91712522158564"></a></p>
-<h2 id="146-the-formdatemodel-template">14.6. The [FormDateModel] template</h2>
-<p>The <em>date1</em> through <em>date6</em> fields from the [FormDate.jsp] form are injected into the following [FormDateModel] template:</p>
+<p><span style="color: #000000">displays the message </span><em><span style="color: #000000">{0, date, dd/MM/yyyy}</span></em><span style="color: #000000">, where the </span><em><span style="color: #000000">date5</span></em><span style="color: #000000"> parameter (line 2) replaces the</span><em><span style="color: #000000"> 0</span></em><span style="color: #000000"> parameter in the format. Thus, the </span><em><span style="color: #000000">date5</span></em><span style="color: #000000"> template will be displayed in the dd/mm/yyyy format.</span></p>
+<p><span id="refheading91712522158564" name="refheading91712522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="146-the-formdatemodel-template">14.6. <span style="color: #4f81bd">The [FormDateModel] template</span></h2>
+<p>The <em>date1</em> to <em>date6</em> fields from the [FormDate.jsp] form are injected into the following [FormDateModel] template:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1305,17 +1307,17 @@
   </li>
 </ul>
 
-<p><a id="refheading91714522158564"></a></p>
-<h2 id="147-model-validation">14.7. Model validation</h2>
+<p><span id="refheading91714522158564" name="refheading91714522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="147-model-validation">14.7. <span style="color: #4f81bd"><strong>Model validation</strong></span></h2>
 <p>Model validation is controlled by two files: [FormDate-validation.xml] and [FormDateModel-validation.xml].</p>
-<p>The [FormDate-validation.xml] file delegates validations to [FormDateModel-validation.xml]:</p>
+<p>The file [FormDate-validation.xml] delegates validations to [FormDateModel-validation.xml]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!--</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE validators PUBLIC &quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">--&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">validators</span> <span style="color:#808080">PUBLIC</span> <span style="color:#008080">&quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">EN&quot;</span> <span style="color:#3f7f5f">&quot;http://localhost:8084/exemple-10/example/xwork-validator-1.0.2.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://localhost:8084/exemple-10/example/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;model&quot;</span> <span style="color:#008080">&gt;</span></span></span>
@@ -1328,8 +1330,7 @@
 </code></pre></div>
 
 <p>We have already encountered this file.</p>
-<p>The [FormDateModel-validation.xml] file contains the following validation rules:</p>
-<p><span style="color: #008080"> </span></p>
+<p>The file [FormDateModel-validation.xml] contains the following validation rules:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!--</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE validators PUBLIC &quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span>
@@ -1400,7 +1401,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">message</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;date5.error&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field-validator</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">field</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;date6&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;requiredstring&quot;</span> <span style="color:#7f007f">short-circuit</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">message</span> <span style="color:#7f007f">key</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;date6.error&quot;</span><span style="color:#008080">/&gt;</span></span></span>
@@ -1415,10 +1416,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #008080"> </span></p>
-<p><span style="color: #008080"> </span></p>
 <ul>
-  <li>The rule in lines 11–20 verifies that the <i>date1</i> input field follows the pattern of a regular expression representing a date in the format dd/mm/yyyy. Note that we verify that the string has the form of a date but do not verify that it is a valid date. Thus, 02/29/2011 has the form of a date but is not a valid date.
+  <li>The rule in lines 11–20 verifies that the <i>date1</i> input field follows the pattern of a regular expression representing a date in the format dd/mm/yyyy. Note that we verify that the string is in the form of a date, but we do not verify that it is a valid date. Thus, 02/29/2011 is in the form of a date but is not a valid date.
   </li>
   <li>The rule in lines 22–29 checks that the <i>date2</i> input field is a valid date.
   </li>
@@ -1428,13 +1427,13 @@
   </li>
   <li>The rule in lines 57–69 verifies that the <i>date5</i> input field is a valid date &lt;= June 20, 2001 and &gt;= May 18, 2000.
   </li>
-  <li>The rule in lines 71–80 verifies that the <i>date6</i> field is in the format dd/mm/yyyy.
+  <li>The rule for lines 71–80 verifies that the <i>date6</i> field is in the format dd/mm/yyyy.
   </li>
 </ul>
 
-<p>Once the [FormDateModel-validation.xml] file is processed by the validation interceptor, the latter executes the <em>validate</em> method of the [FormDate] action if it exists. We will present it along with the entire action.</p>
-<p><a id="refheading91716522158564"></a></p>
-<h2 id="148-the-formdate-action">14.8. The [FormDate] action</h2>
+<p>Once the file [FormDateModel-validation.xml] has been processed by the validation interceptor, the latter executes the <em>validate</em> method of the action [FormDate] if it exists. We will present it along with the entire action.</p>
+<p><span id="refheading91716522158564" name="refheading91716522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="148-the-formdate-action">14.8. <span style="color: #4f81bd">The [FormDate] action</span></h2>
 <p>The [FormDate] action is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> example;</span></span></span>
@@ -1477,7 +1476,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// SessionAware</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  Map&lt;String, Object&gt; session;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setSession(Map&lt;String, Object&gt; session) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.session = session;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -1517,9 +1516,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>The [FormDate] action is built on the same model as the [FormInt] action. We will only comment on the <em>validate</em> method. Recall that the <em>validate</em> method is executed after the validation file [FormDateModel-validation.xml] is processed and before the <em>execute</em> method is executed.</p>
+<p>Action [FormDate] is built on the same model as action [FormInt]. We will only comment on the <em>validate</em> method. Note that the <em>validate</em> method is executed after the validation file [FormDateModel-validation.xml] is processed and before the <em>execute</em> method is executed.</p>
 <ul>
-  <li>The <i>validate</i> method completes the validation of the <i>date1 </i>and <i>date6 </i>fields. The validation file [FormDateModel-validation.xml] had already verified that the entered strings were in date format. We now verify that they are indeed valid dates. Note also that <i>date1 </i>and <i>date6 </i>were the only two fields in the model of type <i>String</i>.
+  <li>The <i>validate</i> method completes the validation of the <i>date1 </i>and <i>date6 </i>fields. The validation file [FormDateModel-validation.xml] had verified that the entered strings were in date format. We now verify that these are indeed valid dates. Note also that <i>date1 </i>and <i>date6 </i>were the only two fields in the model of type <i>String</i>.
   </li>
   <li>Line 50: We create a date format dd/mm/yyyy to verify that strings of this type are indeed valid dates.
   </li>
@@ -1529,7 +1528,7 @@
   </li>
   <li>Line 56: We verify that <i>date1 </i>is a valid date in the dd/mm/yyyy format.
   </li>
-  <li>Line 58: If this is not the case, an error message is associated with the <i>date1</i> field.
+  <li>line 58: if this is not the case, an error message is associated with the <i>date1</i> field.
   </li>
   <li>Line 62: <i>date6</i> is validated only if this field has passed the previous validations.
   </li>
@@ -1539,10 +1538,10 @@
   </li>
 </ul>
 
-<p><a id="refheading91718522158564"></a></p>
-<h2 id="149-final-details">14.9. Final details</h2>
+<p><span id="refheading91718522158564" name="refheading91718522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="149-final-details">14.9. <span style="color: #4f81bd">Final details</span></h2>
 <p>The previous form has flaws, as shown in the following example:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053F000001C014F88B05.png" width="672" height="224" style="display:inline-block; margin:4px;width:17.768cm;height:5.927cm;" class="odt-zoomable" data-zoom-src="images/100000000000053F000001C014F88B05.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000053F000001C014F88B05.png" width="672" height="224" style="display:inline-block; margin:4px;width:17.768cm;height:5.927cm;" class="odt-zoomable" data-zoom-src="images/100000000000053F000001C014F88B05.png" /></td></tr></table>
 
 <ul>
   <li>In [1], an invalid date is entered
@@ -1551,7 +1550,7 @@
   </li>
 </ul>
 
-<p>The fields <em>date2</em> through <em>date5,</em> which are linked to <em>Date-type</em> models, all have this issue. Again, perhaps I missed something in the documentation. The fields <em>date1</em> and <em>date6,</em> which are linked to <em>String-type</em> models, do not have this issue.</p>
+<p>The <em>date2</em> through <em>date5</em> fields, which are linked to <em>Date-type</em> models, all have this issue. Again, perhaps I missed something in the documentation. The <em>date1</em> and <em>date6</em> fields, which are linked to <em>String-type</em> models, do not have this issue.</p>
 
 
 

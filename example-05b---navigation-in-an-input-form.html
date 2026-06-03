@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-struts2-janv-2012/example-05b---navigating-a-data-entry-form.html">
+        <link rel="canonical" href="https://stahe.github.io/en-struts2-janv-2012/example-05b---navigation-in-an-input-form.html">
       
       
         <link rel="prev" href="example-05---the-input-form.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>7. Example 05B – Navigating a Data Entry Form - An Introduction to Struts 2 Through Examples</title>
+        <title>7. Example 05B – Navigation in an input form - An Introduction to Struts 2 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#7-example-05b-navigating-a-data-entry-form" class="md-skip">
+        <a href="#7-example-05b-navigation-in-an-input-form" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. Example 05B – Navigating a Data Entry Form
+              7. Example 05B – Navigation in an input form
             
           </span>
         </div>
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="example-03---navigation-keys.html" class="md-nav__link">
+      <a href="example-03---the-keys-of-navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Example 03 – Navigation Keys
+    4. Example 03 – The keys of navigation
   
 
     
@@ -481,7 +483,7 @@
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -492,14 +494,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="example-05b---navigating-a-data-entry-form.html" class="md-nav__link md-nav__link--active">
+      <a href="example-05b---navigation-in-an-input-form.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Example 05B – Navigating a Data Entry Form
+    7. Example 05B – Navigation in an input form
   
 
     
@@ -528,7 +530,7 @@
   <a href="#71-the-netbeans-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1. The NetBeans project
+        7.1. The Netbeans project
       
     </span>
   </a>
@@ -558,10 +560,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#74-the-dosomethingjsp-view" class="md-nav__link">
+  <a href="#74-the-view-dosomethingjsp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.4. The [DoSomething.jsp] view
+        7.4. The view [DoSomething.jsp]
       
     </span>
   </a>
@@ -569,10 +571,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#75-actions" class="md-nav__link">
+  <a href="#75-the-actions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.5. Actions
+        7.5. The actions
       
     </span>
   </a>
@@ -909,7 +911,7 @@
   <span class="md-ellipsis">
     
   
-    19. Case Study – Version 1
+    19. Case Study – version 1
   
 
     
@@ -936,7 +938,7 @@
   <span class="md-ellipsis">
     
   
-    20. Case Study – Version 2
+    20. Case Study – version 2
   
 
     
@@ -993,17 +995,17 @@
 
 
 
-<p><a id="refheading91614522158564"></a></p>
-<h1 id="7-example-05b-navigating-a-data-entry-form">7. Example 05B – Navigating a Data Entry Form</h1>
-<p>We are examining a form with several buttons to submit the entered data to an action.</p>
-<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
-<p><a id="refheading91616522158564"></a></p>
-<h2 id="71-the-netbeans-project">7.1. The NetBeans project</h2>
-<p>The NetBeans project is as follows:</p>
-<p><img src="images/10000000000000E000000137EE5DE662.png" width="157" height="218" style="width:4.15cm;height:5.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000137EE5DE662.png" /></p>
+<p><span id="refheading91614522158564" name="refheading91614522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="7-example-05b-navigation-in-an-input-form">7. <span style="color: #365f91">Example 05B – Navigation in an input form</span></h1>
+<p>We are examining a form with several buttons to submit (submit) the entered data to an action.</p>
+<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.447cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
+<p><span id="refheading91616522158564" name="refheading91616522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="71-the-netbeans-project">7.1. <span style="color: #4f81bd">The Netbeans project</span></h2>
+<p>The Netbeans project is as follows:</p>
+<p><img src="images/10000000000000E000000137EE5DE662.png" width="157" height="218" style="width:4.15cm;height:5.763cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000137EE5DE662.png" /></p>
 <p>The project components are as follows:</p>
 <ul>
-  <li>[DoSomething.jsp]: the application’s single view, which displays the three navigation buttons and a link.
+  <li>[DoSomething.jsp]: the only view in the application that displays the three buttons from navigation as well as a link.
   </li>
   <li>[DoSomething.java] and [DoSomethingElse.java]: the two actions of the project
   </li>
@@ -1013,8 +1015,8 @@
   </li>
 </ul>
 
-<p><a id="refheading91618522158564"></a></p>
-<h2 id="72-configuration">7.2. Configuration</h2>
+<p><span id="refheading91618522158564" name="refheading91618522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="72-configuration">7.2. <span style="color: #4f81bd">Configuration</span></h2>
 <p>The following [struts.xml] file configures the application:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">struts</span> <span style="color:#808080">PUBLIC</span></span></span>
@@ -1035,14 +1037,14 @@
 </code></pre></div>
 
 <ul>
-  <li>The action [/actions/DoSomething] will instantiate the class [actions.DoSomething], and its <i>execute</i> method will be executed by default. This default behavior can be overridden if the parameters passed to the [DoSomething] action specify a different method. Regardless of which method is executed, it must return the navigation key <i>&quot;success&quot; </i>since only this key has been defined. The view [DoSomething.jsp] will then be displayed.
+  <li>The action [/actions/DoSomething] will instantiate the class [actions.DoSomething], and its <i>execute</i> method will be executed by default. This default behavior can be overridden if the parameters passed to the action [Something] specify a different method. Regardless of which method is executed, it must return the key for navigation <i>as &quot;success&quot; </i>since only this key has been defined. The view [DoSomething.jsp] will then be displayed.
   </li>
-  <li>The configuration of the action [/actions/DoSomethingElse] is identical.
+  <li>The configuration of action [/actions/DoSomethingElse] is identical.
   </li>
 </ul>
 
-<p><a id="refheading91620522158564"></a></p>
-<h2 id="73-the-message-file">7.3. The message file</h2>
+<p><span id="refheading91620522158564" name="refheading91620522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="73-the-message-file">7.3. <span style="color: #4f81bd">The message file</span></h2>
 <p>The message file [messages.properties] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.titre1=</span><span style="color:#2a00ff">Actions</span><span style="color:#000000"> </span><span style="color:#2a00ff">et</span><span style="color:#000000"> </span><span style="color:#2a00ff">M\u00e9thodes</span></span></span>
@@ -1053,10 +1055,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">formulaire.action3=</span><span style="color:#2a00ff">DoSomething.action3</span></span></span>
 </code></pre></div>
 
-<p><a id="refheading91622522158564"></a></p>
-<h2 id="74-the-dosomethingjsp-view">7.4. The [DoSomething.jsp] view</h2>
-<p>The [DoSomething.jsp] view is as follows:</p>
-<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.45cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
+<p><span id="refheading91622522158564" name="refheading91622522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="74-the-view-dosomethingjsp">7.4. <span style="color: #4f81bd">The view [DoSomething.jsp]</span></h2>
+<p>The view [DoSomething.jsp] is as follows:</p>
+<p><img src="images/100000000000017C000000F0553673BC.png" width="266" height="168" style="width:7.04cm;height:4.447cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000F0553673BC.png" /></p>
 <p>Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span><span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html&quot;</span> <span style="color:#7f007f">pageEncoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#bf5f3f">%&gt;</span></span></span>
@@ -1081,19 +1083,19 @@
 </code></pre></div>
 
 <ul>
-  <li>Line 11: The form will be submitted to the [DoSomething] action. This does not necessarily mean that this action will be triggered. It depends on the <i>submit</i> button used for the POST.
+  <li>line 11: the form will be posted to the [DoSomething] action. This does not necessarily mean that this action will be triggered. It depends on the <i>submit</i> button used for the POST.
   </li>
-  <li>line 12: the <i>submit</i> button specifies neither an action nor a method. The [DoSomething] action specified by the &lt;form&gt; tag will be instantiated. The method executed will be the one defined in the [struts.xml] file, the <i>execute</i> method.
+  <li>Line 12: The <i>submit</i> button specifies neither an action nor a method. The [DoSomething] action specified by the &lt;form&gt; tag will be instantiated. The method executed will be the one defined in the [struts.xml] file, the <i>execute</i> method.
   </li>
-  <li>Line 13: The <i>submit</i> button specifies a method. The [DoSomething] action specified by the &lt;form&gt; tag will be instantiated. The method executed will be the <i>action1</i> method.
+  <li>Line 13: The <i>submit</i> button specifies a method. The action [DoSomething], specified by the &lt;form&gt; tag, will be instantiated. The method executed will be the <i>action1</i> method.
   </li>
-  <li>Line 14: The <i>submit</i> button specifies an action and a method. The [DoSomethingElse] action will be instantiated. The method executed will be <i>action2</i>.
+  <li>Line 14: The <i>submit</i> button specifies an action and a method. The [DoSomethingElse] action will be instantiated. The method executed will be the <i>action2</i> method.
   </li>
-  <li>Lines 16–17: A link to the [DoSomething] action and the <i>action3</i> method. The [DoSomething] action will be instantiated and its <i>action3</i> method executed. Unlike the <i>submit</i> buttons, clicking the link triggers a GET request rather than a POST request. Therefore, no parameters are posted.
+  <li>Lines 16–17: A link to the action [DoSomething] and the method <i>action3</i>. The action [DoSomething] will be instantiated and its method <i>action3 </i>executed. Unlike the <i>submit</i> buttons, clicking the link does not trigger a POST but a GET. Therefore, no parameters are posted.
   </li>
 </ul>
 
-<p>The HTML code generated by this code, when the URL [http://localhost:8084/exemple-05B/actions/DoSomething.action] is requested, is as follows:</p>
+<p>The Html code generated by this code, when requesting the Url [http://localhost:8084/exemple-05B/actions/DoSomething.action], is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1137,24 +1139,23 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>Line 9: The <i>form</i> tag for the HTML form. The <i>action</i> attribute specifies the URL to which the form parameters will be posted. This URL is that of the [DoSomething] action.
+  <li>Line 9: the <i>form</i> tag for the Html form. The <i>action</i> attribute specifies the Url to which the form parameters will be posted. This Url corresponds to the [DoSomething] action.
   </li>
   <li>Lines 11, 13, 15: The <i>name</i> attributes of the buttons will be posted to the target action of the <i>submit</i> button. This is what allows Struts to determine which action to instantiate and which method to execute.
   </li>
-  <li>Line 13: The <i>name=method:action1 </i>attribute indicates that the <i>DoSomething.action1 </i>method must be executed.
+  <li>line 13: the attribute <i>name=method:action1 </i>indicates that the method <i>DoSomething.action1 </i>should be executed.
   </li>
-  <li>Line 15: The attribute <i>name=action:DoSomethingElse!action2 </i>indicates that the <i>DoSomethingElse.action2 </i>method must be executed.
+  <li>Line 15: The attribute <i>name= action:DoSomethingElse!action2 </i>indicates that the method <i>DoSomethingElse.action2 </i>must be executed.
   </li>
-  <li>Line 11: The attribute <i>name=&quot;form.execute</i>&quot; specifies neither an action nor a method. Therefore, the <i>DoSomething.execute </i>method will be executed.
+  <li>Line 11: The attribute <i>name= formulaire.execute </i>specifies neither an action nor a method. Therefore, the method <i>DoSomething.execute </i>will be executed.
   </li>
-  <li>Line 19: The link explicitly requests the execution of the <i>DoSomething.action3 </i>method
+  <li>Line 19: The link explicitly requests execution of the <i>DoSomething.action3</i> method
   </li>
 </ul>
 
-<p><a id="refheading91624522158564"></a></p>
-<h2 id="75-actions">7.5. Actions</h2>
-<p>The [DoSomething] action is as follows:</p>
-<p><span style="color: #3f7f5f"> </span></p>
+<p><span id="refheading91624522158564" name="refheading91624522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="75-the-actions">7.5. <span style="color: #4f81bd">The actions</span></h2>
+<p>The action [DoSomething] is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> actions;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1185,14 +1186,14 @@
 </code></pre></div>
 
 <ul>
-  <li>The <i>execute</i>, <i>action1, </i>and <i>action3 </i>methods write to the web server console and return the <i>success</i> navigation key.
+  <li>The methods <i>execute</i>, <i>action1, </i>and <i>action3 </i>write to the web server console and set the key of navigation <i>to success</i>.
   </li>
   <li>Line 8: The constructor also writes to the web server console
   </li>
 </ul>
 
-<p>The various console outputs allow you to see which methods are executed during a request.</p>
-<p>The [DoSomethingElse] action is similar:</p>
+<p>The various console outputs allow you to determine which methods are executed during a request.</p>
+<p>The action [DoSomethingElse] is similar:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> actions;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1217,8 +1218,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><a id="refheading91626522158564"></a></p>
-<h2 id="76-the-tests">7.6. The tests</h2>
+<p><span id="refheading91626522158564" name="refheading91626522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="76-the-tests">7.6. <span style="color: #4f81bd">The tests</span></h2>
 <p>The tests show the following results (on the web server console):</p>
 <ul>
   <li>When the [DoSomething.execute] button is clicked, the [DoSomething] action is instantiated and its <i>execute</i> method is executed.
